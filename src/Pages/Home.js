@@ -414,8 +414,8 @@ function Home() {
             We love our clients
           </h3>
         </div>
-        {/* <Carousel /> */}
-        <PruebaPage />
+        <Carousel />
+        {/* <PruebaPage /> */}
       </div>
       {/* <StackedCards /> */}
       <div style={{ backgroundColor: "#F2F2F2" }}>
