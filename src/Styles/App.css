@@ -5,11 +5,14 @@
 @tailwind utilities;
 
 body {
-  cursor: none !important;
+  /* cursor: none !important; */
   font-family: "Satoshi-Regular";
-
   overflow-x: hidden;
 }
+html {
+  cursor: url("../Assets/dot-cursor.svg"), auto;
+}
+
 a {
   cursor: none !important;
 }
@@ -139,6 +142,7 @@ a {
   filter: blur(300px);
   pointer-events: none; /* To allow interactions with elements beneath it */
   z-index: -1;
+  transform: rotate3D(0, 0, 1, 180deg);
 }
 
 .work {
@@ -158,7 +162,7 @@ a {
   backdrop-filter: blur(10px);
   width: 133px;
   height: 43px;
-  cursor: pointer;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -230,7 +234,7 @@ a {
   border: solid 1px gray;
   width: 133px;
   height: 43px;
-  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,10 +339,25 @@ a {
   }
   .contact.expanded {
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
+    backdrop-filter: (10px);
   }
 }
 
-::-webkit-scrollbar {
-  display: none;
+#circleCursor {
+  position: fixed;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid black 1px;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+#circleCursor:before {
+  content: var(--before-content, "");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

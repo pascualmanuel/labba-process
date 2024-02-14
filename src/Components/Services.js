@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import Asset from "../Assets/plus.svg";
 import AssetTwo from "../Assets/mnius.svg";
-
+import SmoothScroll from "../Hooks/SmoothScroll";
+import SmootHook from "../Hooks/SmootHook";
+import ScrollTrigger from "gsap/ScrollTrigger";
 function Services() {
   const [expDesign, setExpanded] = useState(false);
 
@@ -16,82 +18,130 @@ function Services() {
     setExpBuild(!expBuild);
   };
 
-  useEffect(() => {
-    const plusCursorParagraphs = document.querySelectorAll(".plusCursorDos");
+  // useEffect(() => {
+  //   const plusCursorParagraphs = document.querySelectorAll(".plusCursorDos");
 
-    const handleMouseEnter = () => {
-      // Change cursor behavior when entering the plusCursor
-      // For example, you can change the cursor style or add animations here
+  //   const handleMouseEnter = () => {
+  //     // Change cursor behavior when entering the plusCursor
+  //     // For example, you can change the cursor style or add animations here
 
-      // Change the cursor's background based on the state
-      const cursor = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.backgroundImage = `url(${expBuild ? AssetTwo : Asset})`;
-        cursor.style.backgroundSize = "70%";
-        cursor.style.backgroundRepeat = "no-repeat";
-        cursor.style.backgroundPosition = "center";
-      }
-    };
+  //     // Change the cursor's background based on the state
+  //     const cursor = document.querySelector(".cursor");
+  //     if (cursor) {
+  //       cursor.style.backgroundImage = `url(${expBuild ? AssetTwo : Asset})`;
+  //       cursor.style.backgroundSize = "70%";
+  //       cursor.style.backgroundRepeat = "no-repeat";
+  //       cursor.style.backgroundPosition = "center";
+  //     }
+  //   };
 
-    const handleMouseLeave = () => {
-      // Restore default cursor behavior when leaving the plusCursor
+  //   const handleMouseLeave = () => {
+  //     // Restore default cursor behavior when leaving the plusCursor
 
-      // Reset the cursor's background image to none
-      const cursor = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.backgroundImage = "none";
-      }
-    };
+  //     // Reset the cursor's background image to none
+  //     const cursor = document.querySelector(".cursor");
+  //     if (cursor) {
+  //       cursor.style.backgroundImage = "none";
+  //     }
+  //   };
 
-    plusCursorParagraphs.forEach((paragraph) => {
-      paragraph.addEventListener("mouseenter", handleMouseEnter);
-      paragraph.addEventListener("mouseleave", handleMouseLeave);
-    });
+  //   plusCursorParagraphs.forEach((paragraph) => {
+  //     paragraph.addEventListener("mouseenter", handleMouseEnter);
+  //     paragraph.addEventListener("mouseleave", handleMouseLeave);
+  //   });
 
-    // Clean up event listeners when the component unmounts
-    return () => {
-      plusCursorParagraphs.forEach((paragraph) => {
-        paragraph.removeEventListener("mouseenter", handleMouseEnter);
-        paragraph.removeEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-  }, [expBuild]);
-  useEffect(() => {
-    const plusCursorParagraphs = document.querySelectorAll(".plusCursor");
+  //   // Clean up event listeners when the component unmounts
+  //   return () => {
+  //     plusCursorParagraphs.forEach((paragraph) => {
+  //       paragraph.removeEventListener("mouseenter", handleMouseEnter);
+  //       paragraph.removeEventListener("mouseleave", handleMouseLeave);
+  //     });
+  //   };
+  // }, [expBuild]);
+  // useEffect(() => {
+  //   const plusCursorParagraphs = document.querySelectorAll(".plusCursor");
 
-    const handleMouseEnter = () => {
-      const cursor = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.backgroundImage = `url(${expDesign ? AssetTwo : Asset})`;
-        cursor.style.backgroundSize = "70%";
-        cursor.style.backgroundRepeat = "no-repeat";
-        cursor.style.backgroundPosition = "center";
-      }
-    };
+  //   const handleMouseEnter = () => {
+  //     const cursor = document.querySelector(".cursor");
+  //     if (cursor) {
+  //       cursor.style.backgroundImage = `url(${expDesign ? AssetTwo : Asset})`;
+  //       cursor.style.backgroundSize = "70%";
+  //       cursor.style.backgroundRepeat = "no-repeat";
+  //       cursor.style.backgroundPosition = "center";
+  //     }
+  //   };
 
-    const handleMouseLeave = () => {
-      const cursor = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.backgroundImage = "none";
-      }
-    };
+  //   const handleMouseLeave = () => {
+  //     const cursor = document.querySelector(".cursor");
+  //     if (cursor) {
+  //       cursor.style.backgroundImage = "none";
+  //     }
+  //   };
 
-    plusCursorParagraphs.forEach((paragraph) => {
-      paragraph.addEventListener("mouseenter", handleMouseEnter);
-      paragraph.addEventListener("mouseleave", handleMouseLeave);
-    });
+  //   plusCursorParagraphs.forEach((paragraph) => {
+  //     paragraph.addEventListener("mouseenter", handleMouseEnter);
+  //     paragraph.addEventListener("mouseleave", handleMouseLeave);
+  //   });
 
-    return () => {
-      plusCursorParagraphs.forEach((paragraph) => {
-        paragraph.removeEventListener("mouseenter", handleMouseEnter);
-        paragraph.removeEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-  }, [expDesign, expBuild]);
+  //   return () => {
+  //     plusCursorParagraphs.forEach((paragraph) => {
+  //       paragraph.removeEventListener("mouseenter", handleMouseEnter);
+  //       paragraph.removeEventListener("mouseleave", handleMouseLeave);
+  //     });
+  //   };
+  // }, [expDesign, expBuild]);
+  gsap.registerPlugin(ScrollTrigger);
+
+  const containerRef = useRef(null);
+
+  // useEffect(() => {
+  //   // GSAP animation for your elements
+  //   gsap.from(".l-desk, .b1-desk", {
+  //     opacity: 0,
+  //     y: 50,
+  //     duration: 1,
+  //     stagger: 0.5,
+  //     scrollTrigger: {
+  //       trigger: containerRef.current,
+  //       start: "top 80%", // Adjust this value to trigger the animation at a different scroll position
+  //       end: "bottom 20%",
+  //       scrub: 0.5,
+  //     },
+  //   });
+
+  //   gsap.from(".plusCursor, .plusCursorDos", {
+  //     opacity: 0,
+  //     x: -50,
+  //     duration: 1,
+  //     stagger: 0.5,
+  //     scrollTrigger: {
+  //       trigger: containerRef.current,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: 0.5,
+  //     },
+  //   });
+
+  //   gsap.from(".list-disc li", {
+  //     opacity: 0,
+  //     y: 20,
+  //     duration: 1,
+  //     stagger: 0.2,
+  //     scrollTrigger: {
+  //       trigger: containerRef.current,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: 0.5,
+  //     },
+  //   });
+  // }, []); // Run this effect only once when the component mounts
 
   return (
     <>
-      <div className="flex sm:flex-row mx-11 flex-col mt-24 sm:mt-72 sm:ml-36  ">
+      <div
+        className="flex sm:flex-row mx-11 flex-col mt-24 sm:mt-72 sm:ml-36 "
+        ref={containerRef} // Use the containerRef for the trigger element
+      >
         <div className="sm:w-1/2  w-full ">
           <p className="l-desk">SERVICES</p>
           <h3 className="b1-desk">
@@ -99,14 +149,17 @@ function Services() {
             the limits of design to reach new horizons.
           </h3>
         </div>
-        <div className="sm:w-1/2 w-full flex flex-col sm:pl-72 md:pl-24 xl:pl-72 justify-center ">
+        <div className="sm:w-1/2 w-full flex flex-col sm:pl-72 md:pl-24 xl:pl-72  ">
           <div
             className={`sm:w-1/2 w-full  flex flex-col sm:pl-72 justify-center plusCursor services  ${
               expDesign ? "expDesign" : ""
             }`}
             onClick={toggleDesign}
           >
-            <p className="sp1-desk flex mt-12 sm:mt-0 mb-2 sm:mb-2 sm:mb-2 plusCursor ">
+            <p
+              className="sp1-desk flex mt-12 sm:mt-0 mb-2 sm:mb-2  plusCursor"
+              id="pasando"
+            >
               DESIGN <span className="small-numb">5</span>
             </p>
             {expDesign ? (
@@ -128,7 +181,7 @@ function Services() {
             }`}
             onClick={toggleBuild}
           >
-            <p className="sp1-desk flex mb-2 plusCursorDos ">
+            <p className="sp1-desk flex mb-2 plusCursorDos" id="pasando">
               BUILD <span className="small-numb">4</span>
             </p>
             {expBuild ? (

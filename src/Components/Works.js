@@ -7,69 +7,113 @@ function Works() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Selecciona el elemento que quieres animar
-    const elemento = document.querySelector(".elemento-animado");
-
-    // Crea una animación con GSAP para cambiar la posición de "fixed" a "absolute"
-    const animacion = gsap.to(elemento, {
-      y: 0, // Restaura la posición vertical original
-      duration: 0.3, // Duración de la animación en segundos
+    const animacion = gsap.to(".elemento-animado", {
+      y: 0,
+      duration: 0.3,
       scrollTrigger: {
-        trigger: elemento, // El elemento que desencadenará la animación
-        start: "top top", // Comienza la animación cuando el elemento llega al límite superior
-        end: "+=1800", // Finaliza la animación cuando el elemento se desplace hacia abajo en 1000px
-        pin: true, // Fija el elemento
-        pinSpacing: false, // Evita que se espacie automáticamente el contenido
-        scrub: true, // Hace que la animación se sincronice con el desplazamiento
-        markers: false,
+        trigger: ".elemento-animado",
+        start: "top top-=50",
+        end: "+=1800",
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+        markers: true,
       },
     });
 
-    // Animación de los cuatro divs que pasan por encima de "inside-cont"
-    const divs = document.querySelectorAll(".div-animado");
-    divs.forEach((div, index) => {
-      gsap.to(div, {
-        y: 0, // Restaura la posición vertical original
-        duration: 0.3, // Duración de la animación en segundos
-        scrollTrigger: {
-          trigger: div,
-          start: "bottom center", // Comienza la animación cuando el div llega al centro de la ventana
-          end: "top center", // Finaliza la animación cuando el div llega a la parte superior de la ventana
-          scrub: true, // Hace que la animación se sincronice con el desplazamiento
-          markers: false,
-        },
-      });
+    // ... (tu código existente)
+
+    const firstProAnimation = gsap.to(".first-pro", {
+      y: -600,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 16,
+      },
     });
 
-    // Limpia la animación cuando el componente se desmonta
+    const secondProAnimation = gsap.to(".second-pro", {
+      y: 170,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 10,
+      },
+    });
+
+    const thirdProAnimation = gsap.to(".third-pro", {
+      y: -280,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 8,
+      },
+    });
+
+    const fourthProAnimation = gsap.to(".fourth-pro", {
+      y: -280,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-container",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 8,
+      },
+    });
+
     return () => {
+      // Limpia las animaciones cuando el componente se desmonta
       animacion.kill();
+      firstProAnimation.kill();
+      secondProAnimation.kill();
+      thirdProAnimation.kill();
+      fourthProAnimation.kill();
     };
   }, []);
 
   return (
-    <div className="scroll-container">
-      <div className="elemento-animado">
-        <div
-          className="inside-cont"
-          style={{ width: "100vw", height: "100vh" }}
-        ></div>
-      </div>
-      <div className="scroll-content">
-        <div className="div-animado">
-          <div className="project-container">
-            <div className="project first-pro"></div>
-            <div className="project second-pro"></div>
+    <>
+      <div className="scroll-container">
+        <div className="elemento-animado">
+          <div
+            className="inside-cont"
+            style={{ width: "100vw", height: "110vh" }}
+          ></div>
+        </div>
+        <div className="scroll-content">
+          <div className="div-animado">
+            <div className="project-container">
+              <a>
+                <div className="project first-pro " id="pasando"></div>
+              </a>
+
+              <a>
+                <div className="project second-pro" id="pasando">
+                  a
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className="div-animado" style={{ marginTop: "40vh" }}>
+            <div className="project-container">
+              <a>
+                <div className="project third-pro" id="pasando"></div>
+              </a>
+              <a>
+                <div className="project fourth-pro" id="pasando"></div>
+              </a>
+            </div>
           </div>
         </div>
-        <div className="div-animado" style={{ marginTop: "40vh" }}>
-          <div className="project-container">
-            <div className="project first-pro"></div>
-            <div className="project second-pro"></div>
-          </div>
-        </div>
       </div>
-    </div>
+      <div className="h-[60vh] bg-red"></div>
+    </>
   );
 }
 

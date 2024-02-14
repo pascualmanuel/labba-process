@@ -18,6 +18,8 @@ import { useLanguage } from "../Hooks/LanguageContext";
 import LabbaBottom from "../Assets/labba/labba-bottom.svg";
 import { Link } from "react-router-dom"; // Import Link from React Router
 import Pruebas from "../Components/Pruebas";
+import StackedCards from "../Components/StackedCard";
+import PruebaPage from "./PruebaPage";
 
 function Home() {
   const { userLanguage, translateText } = useLanguage();
@@ -25,8 +27,8 @@ function Home() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
-  console.log(viewportWidth);
-  console.log(viewportHeight);
+  // console.log(viewportWidth);
+  // console.log(viewportHeight);
 
   // Use useEffect to ensure the component is mounted before running JavaScript
 
@@ -61,22 +63,102 @@ function Home() {
       ellipseShadow.style.left = x + "px";
       ellipseShadow.style.top = y + "px";
     });
+
+    // Cursor!!!!!!!!!!!!
+    // rewf
+    // grewfe
+    // grkewk
+
+    const circleCursor = document.getElementById("circleCursor");
+
+    if (!circleCursor) {
+      // Check if the element exists to prevent errors
+      return;
+    }
+
+    const cursorWidth = 20; // Replace with the actual width of your ellipse
+    const cursorHeight = 20; // Replace with the actual height of your ellipse
+    const mitiWidth = cursorWidth / 2;
+    const mitiHeight = cursorHeight / 2;
+
+    let targetX = 0;
+    let targetY = 0;
+    let isMoving = false;
+
+    // Update the ellipse's position based on the cursor's coordinates
+    document.addEventListener("mousemove", (e) => {
+      targetX = e.clientX - mitiWidth; // Center horizontally
+      targetY = e.clientY - mitiHeight; // Center vertically
+
+      if (!isMoving) {
+        isMoving = true;
+        updateCursor();
+      }
+    });
+
+    function isCursorOverLink(element) {
+      return element.id === "pasando";
+    }
+
+    // Update the cursor style based on whether it's over a link or not
+    function updateCursorStyle(isOverLink) {
+      if (isOverLink) {
+        // Modify the cursor style when over a link
+        circleCursor.style.width = "100px";
+        circleCursor.style.height = "100px";
+        circleCursor.style.setProperty("--before-content", "'CLICK'"); // Use a custom property
+
+        // circleCursor.style.transition = "0.1s";
+
+        // Add other style modifications as needed
+      } else {
+        // Reset the cursor style when not over a link
+        circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+        circleCursor.style.width = "35px";
+        circleCursor.style.height = "35px";
+        circleCursor.style.transition = "0.1s";
+        circleCursor.style.setProperty("--before-content", "''"); // Use a custom property
+
+        // Add other style modifications as needed
+      }
+    }
+
+    function updateCursor() {
+      // Calculate the current cursor position
+      const currentX = parseFloat(circleCursor.style.left) || 0;
+      const currentY = parseFloat(circleCursor.style.top) || 0;
+
+      // Calculate the distance to move in this frame
+      const deltaX = Math.round((targetX - currentX) * 0.1); // Round the position values
+      const deltaY = Math.round((targetY - currentY) * 0.1); // Round the position values
+
+      // Update the cursor position
+      circleCursor.style.left = Math.round(currentX + deltaX) + "px";
+      circleCursor.style.top = Math.round(currentY + deltaY) + "px";
+
+      const isOverLink = isCursorOverLink(
+        document.elementFromPoint(currentX + mitiWidth, currentY + mitiHeight)
+      );
+
+      // Update the cursor style
+      updateCursorStyle(isOverLink);
+      // Check if the cursor has reached the target
+      if (
+        Math.abs(targetX - currentX) > 0.1 ||
+        Math.abs(targetY - currentY) > 0.1
+      ) {
+        // Continue updating in the next animation frame
+        requestAnimationFrame(updateCursor);
+      } else {
+        isMoving = false;
+      }
+    }
+
+    // er3eerjek932857483wkedskn
+    // dsadjds
   }, []); // Empty dependency array to ensure useEffect runs only once
 
   useEffect(() => {
-    // const handleScroll = (event) => {
-    //   event.preventDefault();
-    //   window.scrollTo(0, window.scrollY + event.deltaY * 0.5); // Adjust the factor to control scroll speed
-    // };
-
-    // window.addEventListener("wheel", handleScroll, { passive: false });
-
-    // return () => {
-    //   // Clean up the event listener when the component unmounts
-    //   window.removeEventListener("wheel", handleScroll);
-    // };
-
-    // let hola = ".parallax";
     const section = document.querySelector(".parallax");
 
     if (!section) {
@@ -275,31 +357,28 @@ function Home() {
 
   // Define a style object based on the scrollY value
 
-  console.log(scrollY);
+  // console.log(scrollY);
   return (
     <>
       <div id={shadowOn}></div>
+      <div id="circleCursor"></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
       <div className="homecont" style={{ height: "100vh" }}>
         <HomeHero />
-        <p>{viewportWidth}</p>
-        <p>{viewportHeight}</p>
       </div>
-
-      {/* <div> */}
       <div className="second-section parallax">
         <div className="work"></div>
       </div>
       <Works />
-      <div
+      {/* <div
         className="third-section"
         style={{ color: "red", height: "430px" }}
-      ></div>
-      <div className="fourth-section"></div>
+      ></div> */}
+      {/* <div className="fourth-section"></div> */}
 
       {/* <Claim /> */}
-      <div className={`claim-container`}>
+      {/* <div className={`claim-container`}>
         <div className="">
           <div id="container">
             <div id="container2">
@@ -320,7 +399,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="services-cont">
         <Services />
@@ -335,8 +414,10 @@ function Home() {
             We love our clients
           </h3>
         </div>
-        <Carousel />
+        {/* <Carousel /> */}
+        <PruebaPage />
       </div>
+      {/* <StackedCards /> */}
       <div style={{ backgroundColor: "#F2F2F2" }}>
         <div
           className={`prefooter ${shouldShrink ? "shrink" : ""}`}

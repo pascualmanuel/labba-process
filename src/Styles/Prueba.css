@@ -2,7 +2,7 @@
   background: no-repeat;
   background-image: url("../Assets/work.svg");
   background-size: contain;
-  background-position-y: bottom;
+  background-position: center;
   background-color: #121212;
 }
 
@@ -15,6 +15,7 @@
 .div-animado {
   width: 100vw;
   height: 500px;
+  z-index: 9999;
 }
 
 .project-container {
@@ -24,11 +25,11 @@
 }
 
 .first-pro {
-  background-image: url("../Assets/manno.png");
+  background-image: url("../Assets/borja.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 482px;
-  height: 482px;
+  width: 582px;
+  height: 582px;
   margin-bottom: -309px;
 }
 .second-pro {
@@ -37,6 +38,22 @@
   background-repeat: no-repeat;
   width: 582px;
   height: 582px;
+}
+
+.third-pro {
+  background-image: url("../Assets/borja.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 582px;
+  height: 582px;
+}
+
+.fourth-pro {
+  background-image: url("../Assets/borja.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 482px;
+  height: 482px;
 }
 
 .fourth-section {
@@ -69,7 +86,7 @@
 }
 
 .services {
-  cursor: pointer;
+  /* cursor: pointer; */
   display: flex;
   justify-content: flex-start;
   padding: 0;
@@ -81,26 +98,19 @@
   height: 200px;
 }
 
-/* vgruhiejdops[sodfeirue */
+/* vgruhiejdops[sodfeirudfghjklkjhgwr425783ieme */
 :root {
   --card-height: 870px;
   --card-margin: 4vw;
   --card-top-offset: 1em;
-  --numcards: 5;
+  --numcards: 6;
   --outline-width: 1px;
-}
-
-#cards {
-  padding-bottom: calc(
-    var(--numcards) * var(--card-top-offset)
-  ); /* Make place at bottom, as items will slide to that position*/
-  margin-bottom: var(
-    --card-margin
-  ); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
 #card_1 {
   --index: 1;
+  top: 50px;
+  left: 1px;
 }
 
 #card_2 {
@@ -118,13 +128,17 @@
 #card_5 {
   --index: 5;
 }
+#card_6 {
+  --index: 6;
+}
 
 .card {
   position: sticky;
-  top: 0;
+  top: 150px;
   padding-top: calc(var(--index) * var(--card-top-offset));
+  display: flex;
+  justify-content: center;
 }
-
 header,
 main {
   width: 100vw;
@@ -158,6 +172,32 @@ header {
   display: flex;
 }
 
+.card-1 {
+  width: 820px !important;
+  height: 310px !important;
+}
+.card-2 {
+  width: 840px;
+  height: 320px;
+}
+.card-3 {
+  width: 850px;
+  height: 330px;
+}
+.card-4 {
+  width: 860px;
+  height: 340px;
+}
+.card-5 {
+  width: 890px;
+  height: 350px;
+}
+
+.card-6 {
+  width: 900px;
+  height: 360px;
+}
+
 .card-inside {
   display: flex;
   align-items: center;
@@ -181,7 +221,7 @@ header {
   height: 100px;
 }
 
-/* card-terimna
+/* card-terimna !!!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
 
 .swiper.swiper-initialized.swiper-horizontal.mySwiper {
@@ -237,7 +277,7 @@ header {
 }
 
 .services-cont {
-  margin-top: -790px;
+  /* margin-top: 790px; */
   margin-bottom: 400px;
 }
 
@@ -249,11 +289,9 @@ header {
   display: none;
 }
 
-.content-claim{
-  
+.content-claim {
 }
-.content-inside{
-  
+.content-inside {
 }
 
 @media (max-width: 1200px) {
@@ -407,4 +445,74 @@ header {
 }
 .two {
   background-color: #121212;
+}
+
+.massiveImage {
+  height: 100vh;
+  width: 400vw;
+  background-size: cover;
+  background-position: center;
+}
+.header-section {
+  padding-bottom: 50vh;
+  margin-bottom: 0;
+}
+/* rjeofwidqps[segniterieodl;fjkgnerewdml;s */
+.massiveImage {
+  height: 100vh;
+  width: 400vw;
+  background-size: cover;
+  background-position: center;
+}
+.header-section {
+  padding-bottom: 50vh;
+  margin-bottom: 0;
+}
+
+/* .circle {
+  position: fixed;
+  width: 34px;
+  height: 34px;
+  margin: -10px 0 0 -10px;
+  border: 1px solid rgb(228, 0, 0);
+  border-radius: 80%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 10001;
+}
+
+.circleCursor {
+} */
+
+.mySwiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.card {
+  --index0: calc(var(--index) - 1); /* 0-based index */
+  --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+  --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+}
+
+@keyframes scale {
+  to {
+    transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+  }
+}
+
+#cards {
+  --numcards: 5;
+  view-timeline-name: --cards-element-scrolls-in-body;
+}
+
+.card__content {
+  --start-range: calc(var(--index0) / var(--numcards) * 100%);
+  --end-range: calc((var(--index)) / var(--numcards) * 100%);
+
+  animation: linear scale forwards;
+  animation-timeline: --cards-element-scrolls-in-body;
+  animation-range: exit-crossing var(--start-range) exit-crossing
+    var(--end-range);
 }

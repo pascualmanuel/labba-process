@@ -21,8 +21,6 @@ const CustomCursor = () => {
     backdropFilter: "blur(2px)",
   };
 
-
-
   const plusCursorRef = useRef(null);
 
   useEffect(() => {
