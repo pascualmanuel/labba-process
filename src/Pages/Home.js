@@ -165,22 +165,17 @@ function Home() {
       return;
     }
 
-    const initialScale = 0.5;
-    const maxScale = 1.0; // Maximum scale value when the section is full width
-    const scaleMultiplier = 0.001; // Adjust this value to control the scaling speed
+    const initialScale = 0.8;
+    const maxScale = 1.0;
+    const scaleMultiplier = 0.001;
+
+    // Set the initial scale explicitly
+    section.style.transform = `scale(${initialScale})`;
 
     const updateSectionScale = () => {
       const scrollY = window.scrollY || window.pageYOffset;
 
-      // Verificar si la transformación ya es igual a 1
-      // if (section.style.transform === "scale(1)") {
-      //   // Si ya es igual a 1, no hagas nada
-      //   return;
-      // }
-
       let newScale = initialScale + scrollY * scaleMultiplier;
-
-      // Ensure the scale doesn't exceed the maximum scale value
       newScale = Math.min(newScale, maxScale);
 
       section.style.transform = `scale(${newScale})`;
@@ -192,6 +187,7 @@ function Home() {
       window.removeEventListener("scroll", updateSectionScale);
     };
   }, []);
+
   const prefooterRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -364,7 +360,7 @@ function Home() {
       <div id="circleCursor"></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
-      <div className="homecont" style={{ height: "100vh" }}>
+      <div className="homecont" style={{ height: "74vh" }}>
         <HomeHero />
       </div>
       <div className="second-section parallax">

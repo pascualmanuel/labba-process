@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useLanguage } from "../Hooks/LanguageContext";
 
@@ -9,29 +9,38 @@ gsap.registerPlugin(ScrollTrigger); // Registra el plugin ScrollTrigger
 function HomeHero() {
   const { userLanguage, translateText } = useLanguage();
 
+  const [isSticky, setIsSticky] = useState(true);
+
   useEffect(() => {
-    // Configura la animación con ScrollTrigger
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".home-hero-1",
-        start: "top-=140 top",
-        end: "bottom top-=200",
-        scrub: true,
-        markers: true,
-      },
-    });
+    const handleScroll = () => {
+      // Adjust the threshold value as needed
+      const threshold = 800;
+      const scrollY = window.scrollY || window.pageYOffset;
 
-    // Hace que HomeHero se quede fijo durante 4 segundos
-    timeline.to(".home-hero-1", { position: "fixed", duration: 4 });
+      if (scrollY > threshold) {
+        setIsSticky(false);
+      } else {
+        setIsSticky(true);
+      }
+    };
 
-    // Restaura la posición original después de 4 segundos
-    timeline.to(".home-hero-1", { position: "sticky", duration: 0 });
-  }, []); // Se eje
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); //
 
   return (
     <>
       <div>
-        <div className="mx-6 sm:mx-20 mt-8	sticky home-hero-1 w-screen">
+        <div
+          className={`mx-6 sm:mx-20 mt-8 ${
+            isSticky ? " fixed home-hero-1" : "hidden"
+          } w-screen`}
+        >
           <div className="flex h-[28rem] sm:h-[35rem]">
             <div className="max-w-[900px] lg:min-w-[880px] md:min-w-[800px] sm:min-w-[600px]">
               <p className="h1-desk decoration-slate-100">
