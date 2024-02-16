@@ -12,7 +12,7 @@ function Works() {
       duration: 0.3,
       scrollTrigger: {
         trigger: ".elemento-animado",
-        start: "top top-=50",
+        start: "top",
         end: "+=1800",
         pin: true,
         pinSpacing: false,
@@ -20,8 +20,6 @@ function Works() {
         markers: true,
       },
     });
-
-    // ... (tu código existente)
 
     const firstProAnimation = gsap.to(".first-pro", {
       y: -600,

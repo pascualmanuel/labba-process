@@ -39,33 +39,41 @@ if (isMobile) {
 }
 const Carousel = () => {
   return (
-    <Swiper
-      slidesPerView={slides}
-      spaceBetween={30}
-      loop={true}
-      speed={3000}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-      }}
-      modules={[Pagination, Autoplay]}
-      className="mySwiper mt-24"
-    >
-      {images.map((image, index) => (
-        <SwiperSlide>
-          <div className="caro-inside">
-            <img
-              key={index}
-              src={image}
-              alt={`Slide ${index}`}
-              //   width={"auto"}
-              //   height={30}
-              //   height={50}
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <div className="relative">
+        <Swiper
+          slidesPerView={slides}
+          spaceBetween={30}
+          loop={true}
+          speed={5000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          modules={[Pagination, Autoplay]}
+          className="mySwiper mt-24"
+        >
+          {images.map((image, index) => (
+            <SwiperSlide>
+              <div className="caro-inside">
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Slide ${index}`}
+                  //   width={"auto"}
+                  //   height={30}
+                  //   height={50}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="left-blur"></div>
+        {/* <div className="left-cont-blur"></div> */}
+        <div className="right-blur"></div>
+        {/* <div className="right-cont-blur"></div> */}
+      </div>
+    </>
   );
 };
 

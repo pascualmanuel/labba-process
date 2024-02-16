@@ -76,7 +76,7 @@ function App() {
             }
           />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/prueba" element={<PruebaPage />} />
+          <Route path="/prueba" element={<Pruebas />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
