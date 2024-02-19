@@ -6,30 +6,56 @@ import Second from "../Assets/numbers/02.svg";
 import Third from "../Assets/numbers/03.svg";
 import Fourth from "../Assets/numbers/04.svg";
 import Fifth from "../Assets/numbers/05.svg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Services() {
-  useEffect(() => {
-    // Aquí puedes agregar cualquier código JavaScript personalizado si es necesario
-  }, []);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   const processAnimation = gsap.to(".process-section", {
+  //     // x: "-37%",
+  //     duration: 0.3,
+  //     scrollTrigger: {
+  //       trigger: ".process-section",
+  //       start: "top top",
+  //       end: "+=1800",
+  //       pin: true,
+  //       pinSpacing: false,
+  //       scrub: false,
+  //       markers: false,
+  //       // onEnter: () => {
+  //       //   document.body.classList.add("pinned-scroll");
+  //       // },
+  //       // onLeaveBack: () => {
+  //       //   document.body.classList.remove("pinned-scroll");
+  //       // },
+  //     },
+  //   });
+
+  //   return () => {
+  //     processAnimation.kill();
+  //   };
+  // }, []);
 
   return (
-    <div className="process-container sm:pt-0 pt-12 pb-28">
+    <div className="process-container sm:pt-0 pt-12 pb-28 process-section">
       <div className="process" id="process">
-        {/* <div className=" w-full" style={{ marginBottom: "70px" }}>
+        <div className=" w-full" style={{ marginBottom: "70px" }}>
           <p className="l-desk ml-11 sm:ml-36">PROCESS</p>
           <h3 className="b1-desk ml-11 sm:ml-36">This is how we roll</h3>
-        </div> */}
+        </div>
       </div>
 
       <main className="flex justify-center">
         <ul id="cards">
-          <li className="card" id="card_1">
+          {/* <li className="card" id="card_1">
             <div className=" card-1 ">
               <div className=" w-full" style={{ marginLeft: "-170px" }}>
                 <p className="l-desk ">PROCESS</p>
                 <h3 className="b1-desk ">This is how we roll</h3>
               </div>
             </div>
-          </li>
+          </li> */}
 
           <li className="card" id="card_2">
             <div className=" card-2 card__content">

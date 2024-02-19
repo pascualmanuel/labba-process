@@ -1,58 +1,77 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Claim() {
   // useEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
-
-  //   gsap.set(".massiveImage", {
-  //     backgroundImage: `url(https://source.unsplash.com/random)`,
-  //   });
-
-  //   gsap.to(".massiveImage", {
-  //     xPercent: -100,
-  //     x: () => window.innerWidth,
-  //     ease: "none",
+  //   const animacion = gsap.to(".claim-section", {
+  //     y: 0,
+  //     duration: 0.3,
   //     scrollTrigger: {
-  //       trigger: ".massiveImage",
-  //       start: "top top", // Cambiado de 'top bottom' a 'top top'
-  //       end: () => window.innerWidth * 3,
-  //       scrub: true,
+  //       trigger: ".claim-section",
+  //       start: "top top",
+  //       end: "+=1800",
   //       pin: true,
-  //       invalidateOnRefresh: true,
-  //       anticipatePin: 1,
+  //       pinSpacing: false,
+  //       scrub: true,
+  //       markers: true,
   //     },
   //   });
+  //   return () => {
+  //     animacion.kill();
+  //   };
   // }, []);
 
   useEffect(() => {
-    // Select the .massiveImage element
+    gsap.registerPlugin(ScrollTrigger);
 
-    // Ensure the element exists before proceeding
-
-    // Set up a timeline
-    const animacion = gsap.to(".massiveImage2", {
-      y: 0,
+    const animacion = gsap.to(".claim-section", {
+      x: "-37%",
       duration: 0.3,
       scrollTrigger: {
-        trigger: ".massiveImage2",
+        trigger: ".claim-section",
         start: "top top",
         end: "+=1800",
         pin: true,
         pinSpacing: false,
         scrub: true,
         markers: true,
+        onEnter: () => {
+          document.body.classList.add("pinned-scroll");
+        },
+        onLeaveBack: () => {
+          document.body.classList.remove("pinned-scroll");
+        },
       },
     });
-    // Add animations to the timeline if needed
-    // For example, you can use timeline.to() or timeline.from() to animate properties
 
-    // Pin for 5 seconds
-  }, []); //
+    return () => {
+      animacion.kill();
+    };
+  }, []);
+
   return (
     <>
-      <div className="massiveImage2 h-[50vh] w-[200vw] bg-white">`</div>;
+      <div
+        className="h-[101vh] claim-section w-[300vw] bg-[#121212] flex items-center"
+        style={{ marginBottom: "235vh" }}
+      >
+        <div
+          className="claim-inside"
+          style={{ overflowX: "visible", whiteSpace: "nowrap" }}
+        >
+          <p
+            className="h2-desk claim"
+            style={{
+              transform: "translateX(10%)", // Initially hides the phrase
+            }}
+          >
+            At <span style={{ color: "white" }}> Labba,</span> we craft digital
+            products that balance users and business needs.
+          </p>
+        </div>
+      </div>
     </>
   );
 }

@@ -245,6 +245,15 @@ a {
   right: 2.5rem;
 }
 
+.claim-inside {
+  overflow-x: auto;
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 1000px) {
   .h1-desk {
     font-size: 90px;

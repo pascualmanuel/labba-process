@@ -37,7 +37,7 @@ function HomeHero() {
     <>
       <div>
         <div
-          className={`mx-6 sm:mx-20 mt-8 ${
+          className={`mx-6 sm:mx-[10%] mt-8 ${
             isSticky ? " fixed home-hero-1" : "hidden"
           } w-screen`}
         >
@@ -50,7 +50,7 @@ function HomeHero() {
                 )}
               </p>
             </div>
-            <div className="absolute bottom-20 right-60">
+            <div className="absolute bottom-20 right-[21%]">
               <p className="b2-desk">
                 <a href="/hola">
                   We design & build human-centered <br /> digital experiences.

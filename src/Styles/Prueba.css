@@ -25,35 +25,35 @@
 }
 
 .first-pro {
-  background-image: url("../Assets/borja.png");
+  background-image: url("../Assets/work/work-borja.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 582px;
-  height: 582px;
-  margin-bottom: -309px;
+  width: 552px;
+  height: 552px;
+  margin-bottom: 0px;
 }
 .second-pro {
-  background-image: url("../Assets/borja.png");
+  background-image: url("../Assets/work/work-manno.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 582px;
-  height: 582px;
+  width: 450px;
+  height: 450px;
 }
 
 .third-pro {
-  background-image: url("../Assets/borja.png");
+  background-image: url("../Assets/work/work-manno.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 582px;
-  height: 582px;
+  width: 450px;
+  height: 450px;
 }
 
 .fourth-pro {
-  background-image: url("../Assets/borja.png");
+  background-image: url("../Assets/work/work-borja.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 482px;
-  height: 482px;
+  width: 552px;
+  height: 552px;
 }
 
 .fourth-section {
@@ -92,6 +92,7 @@
   padding: 0;
   transition: all 0.3s ease;
   cursor: none !important;
+  margin-bottom: 12px;
 }
 
 .services.expanded {
@@ -134,7 +135,9 @@
 
 .card {
   position: sticky;
-  top: 150px;
+  /* top: 150px; */
+  top: 15px;
+
   padding-top: calc(var(--index) * var(--card-top-offset));
   display: flex;
   justify-content: center;
@@ -156,7 +159,7 @@ header {
   outline: none;
   display: grid;
   grid-template-columns: 1fr;
-  /* grid-template-rows: repeat(var(--numcards), var(--card-height)); */
+  grid-template-rows: repeat(var(--numcards), var(--card-height));
   gap: var(--card-margin);
 }
 
@@ -173,29 +176,29 @@ header {
 }
 
 .card-1 {
-  width: 820px !important;
-  height: 310px !important;
+  width: 840px !important;
+  height: 330px !important;
 }
 .card-2 {
-  width: 840px;
-  height: 320px;
+  width: 840px !important;
+  height: 330px !important;
 }
 .card-3 {
-  width: 850px;
-  height: 330px;
+  width: 840px !important;
+  height: 330px !important;
 }
 .card-4 {
-  width: 860px;
-  height: 340px;
+  width: 840px !important;
+  height: 330px !important;
 }
 .card-5 {
-  width: 890px;
-  height: 350px;
+  width: 840px !important;
+  height: 330px !important;
 }
 
 .card-6 {
-  width: 900px;
-  height: 360px;
+  width: 840px !important;
+  height: 330px !important;
 }
 
 .card-inside {
@@ -479,45 +482,6 @@ header {
   background-color: #121212;
 }
 
-.massiveImage {
-  height: 100vh;
-  width: 400vw;
-  background-size: cover;
-  background-position: center;
-}
-.header-section {
-  padding-bottom: 50vh;
-  margin-bottom: 0;
-}
-/* rjeofwidqps[segniterieodl;fjkgnerewdml;s */
-.massiveImage {
-  height: 100vh;
-  width: 400vw;
-  background-size: cover;
-  background-position: center;
-}
-.header-section {
-  padding-bottom: 50vh;
-  margin-bottom: 0;
-}
-
-/* .circle {
-  position: fixed;
-  width: 34px;
-  height: 34px;
-  margin: -10px 0 0 -10px;
-  border: 1px solid rgb(228, 0, 0);
-  border-radius: 80%;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
-  z-index: 10001;
-}
-
-.circleCursor {
-} */
-
 .mySwiper .swiper-wrapper {
   transition-timing-function: linear;
 }
@@ -540,7 +504,7 @@ header {
 }
 
 .card__content {
-  --start-range: calc(var(--index0) / var(--numcards) * 100%);
+  /* --start-range: calc(var(--index0) / var(--numcards) * 100%); */
   --end-range: calc((var(--index)) / var(--numcards) * 100%);
 
   animation: linear scale forwards;

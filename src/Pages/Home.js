@@ -64,10 +64,6 @@ function Home() {
       ellipseShadow.style.top = y + "px";
     });
 
-    // Cursor!!!!!!!!!!!!
-    // rewf
-    // grewfe
-    // grkewk
 
     const circleCursor = document.getElementById("circleCursor");
 
@@ -367,37 +363,10 @@ function Home() {
         <div className="work"></div>
       </div>
       <Works />
-      {/* <div
-        className="third-section"
-        style={{ color: "red", height: "430px" }}
-      ></div> */}
-      {/* <div className="fourth-section"></div> */}
 
-      {/* <Claim /> */}
-      {/* <div className={`claim-container`}>
-        <div className="">
-          <div id="container">
-            <div id="container2">
-              <div className="box one">
-                <div>
-                  <p
-                    className="h2-desk claim"
-                    style={{
-                      whiteSpace: "nowrap",
-                      transform: "translateX(10%)",
-                    }}
-                  >
-                    At <span style={{ color: "white" }}> Labba,</span> we craft
-                    digital products that balance users and business needs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      <Claim />
 
-      <div className="services-cont">
+      <div className="services-cont pt-[20px]">
         <Services />
       </div>
       <Process />

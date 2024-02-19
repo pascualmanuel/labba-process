@@ -13,7 +13,7 @@ function Works() {
       scrollTrigger: {
         trigger: ".elemento-animado",
         start: "top top",
-        end: "+=1800",
+        end: "+=2100",
         pin: true,
         pinSpacing: false,
         scrub: true,
@@ -21,101 +21,103 @@ function Works() {
       },
     });
 
-    // ... (tu código existente)
+    // const firstProAnimation = gsap.to(".first-pro", {
+    //   y: -600,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".project-container",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: 16,
+    //   },
+    // });
 
-    const firstProAnimation = gsap.to(".first-pro", {
-      y: -600,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".project-container",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 16,
-      },
-    });
+    // const secondProAnimation = gsap.to(".second-pro", {
+    //   y: 170,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".project-container",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: 10,
+    //   },
+    // });
 
-    const secondProAnimation = gsap.to(".second-pro", {
-      y: 170,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".project-container",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 10,
-      },
-    });
+    // const thirdProAnimation = gsap.to(".third-pro", {
+    //   y: -280,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".project-container",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: 8,
+    //   },
+    // });
 
-    const thirdProAnimation = gsap.to(".third-pro", {
-      y: -280,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".project-container",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 8,
-      },
-    });
-
-    const fourthProAnimation = gsap.to(".fourth-pro", {
-      y: -280,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".project-container",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 8,
-      },
-    });
+    // const fourthProAnimation = gsap.to(".fourth-pro", {
+    //   y: -280,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".project-container",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: 8,
+    //   },
+    // });
 
     return () => {
       // Limpia las animaciones cuando el componente se desmonta
       animacion.kill();
-      firstProAnimation.kill();
-      secondProAnimation.kill();
-      thirdProAnimation.kill();
-      fourthProAnimation.kill();
+      // firstProAnimation.kill();
+      // secondProAnimation.kill();
+      // thirdProAnimation.kill();
+      // fourthProAnimation.kill();
     };
   }, []);
 
-  let parallax = "parallax";
+  useEffect(() => {
+    // Set up GSAP animations
+    gsap.to(".first-pro", {
+      y: 300, // Adjust the distance of the movement for the first project
+      scrollTrigger: {
+        trigger: ".first-pro",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
 
-  // useEffect(() => {
-  //   const section = document.querySelector(".parallax");
+    gsap.to(".second-pro", {
+      y: -80, // Adjust the distance of the movement for the second project
+      scrollTrigger: {
+        // ease: "1s",
+        trigger: ".second-pro",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
 
-  //   if (!section) {
-  //     return;
-  //   }
+    gsap.to(".third-pro", {
+      y: -200, // Adjust the distance of the movement for the third project
+      scrollTrigger: {
+        trigger: ".third-pro",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
 
-  //   const initialScale = 0.5;
-  //   const maxScale = 1.0; // Maximum scale value when the section is full width
-  //   const scaleMultiplier = 0.001; // Adjust this value to control the scaling speed
-
-  //   const updateSectionScale = () => {
-  //     const scrollY = window.scrollY || window.pageYOffset;
-
-  //     // Verificar si la transformación ya es igual a 1
-  //     if (section.style.transform === "scale(1)") {
-  //       // Si ya es igual a 1, no hagas nada
-  //       section.classList.remove("parallax");
-  //       section.classList.add("hola");
-
-  //       console.log(section.style.transform);
-  //     }
-
-  //     let newScale = initialScale + scrollY * scaleMultiplier;
-
-  //     // Ensure the scale doesn't exceed the maximum scale value
-  //     newScale = Math.min(newScale, maxScale);
-
-  //     section.style.transform = `scale(${newScale})`;
-  //   };
-
-  //   window.addEventListener("scroll", updateSectionScale);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", updateSectionScale);
-  //   };
-  // }, []);
+    gsap.to(".fourth-pro", {
+      y: -100, // Adjust the distance of the movement for the fourth project
+      scrollTrigger: {
+        trigger: ".fourth-pro",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
 
   return (
     <>
@@ -131,12 +133,14 @@ function Works() {
             <div className="div-animado">
               <div className="project-container">
                 <a>
-                  <div className="project first-pro " id="pasando"></div>
+                  <div className="project first-pro " id="pasando">
+                    First PRO
+                  </div>
                 </a>
 
                 <a>
                   <div className="project second-pro" id="pasando">
-                    a
+                    SECOND PRO
                   </div>
                 </a>
               </div>
@@ -144,16 +148,20 @@ function Works() {
             <div className="div-animado" style={{ marginTop: "40vh" }}>
               <div className="project-container">
                 <a>
-                  <div className="project third-pro" id="pasando"></div>
+                  <div className="project third-pro" id="pasando">
+                    Third PRO
+                  </div>
                 </a>
                 <a>
-                  <div className="project fourth-pro" id="pasando"></div>
+                  <div className="project fourth-pro" id="pasando">
+                    FOurth PRO
+                  </div>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-[60vh] bg-red"></div>
+        <div className="h-[80vh]"></div>
       </div>
     </>
   );
