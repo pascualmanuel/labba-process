@@ -6,8 +6,7 @@ import Second from "../Assets/numbers/02.svg";
 import Third from "../Assets/numbers/03.svg";
 import Fourth from "../Assets/numbers/04.svg";
 import Fifth from "../Assets/numbers/05.svg";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function Services() {
   // useEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
