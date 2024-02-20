@@ -50,7 +50,7 @@ function HomeHero() {
                 )}
               </p>
             </div>
-            <div className="absolute bottom-20 right-[21%]">
+            <div className="home-desc-hero">
               <p className="b2-desk">
                 <a href="/hola">
                   We design & build human-centered <br /> digital experiences.

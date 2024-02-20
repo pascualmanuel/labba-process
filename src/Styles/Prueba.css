@@ -312,7 +312,7 @@ header {
 }
 
 .services-cont {
-  /* margin-top: 790px; */
+  margin-top: -260vh;
   margin-bottom: 400px;
 }
 
@@ -322,6 +322,12 @@ header {
 
 .labba-bottom {
   display: none;
+}
+
+.home-desc-hero {
+  position: absolute;
+  bottom: 5rem;
+  right: 21%;
 }
 
 .content-claim {
@@ -346,7 +352,18 @@ header {
     display: none;
   }
   .services-cont {
-    margin-top: 0px;
+    /* margin-top: 0px; */
+  }
+}
+
+@media (min-width: 1000px) and (max-height: 690px) {
+  /* Your styles for the specified viewport dimensions go here */
+  .h1-desk {
+    margin-right: 100px;
+    font-size: 100px;
+  }
+  .home-desc-hero {
+    bottom: 11rem;
   }
 }
 

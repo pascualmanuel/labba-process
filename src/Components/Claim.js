@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -23,20 +23,64 @@ function Claim() {
   //   };
   // }, []);
 
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+      // You can add additional logic here based on the viewport size
+      // if (window.innerWidth < 1415) {
+      //   console.log("- a 1415");
+      // }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once during component mount
+
+  let xAnimation = "-37%";
+
+  if (viewportWidth < 1415) {
+    xAnimation = "-40%";
+  }
+
+  if (viewportWidth < 1380) {
+    xAnimation = "-45%";
+  }
+
+  if (viewportWidth < 1280) {
+    xAnimation = "-50%";
+  }
+
+  if (viewportWidth < 1190) {
+    xAnimation = "-60%";
+  }
+  if (viewportWidth < 1090) {
+    xAnimation = "-65%";
+  }
+  // if (viewportWidth > 1415) {
+  //   console.log("+ a 1415");
+  // }
+  // let xAnimation = "-63%";
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const animacion = gsap.to(".claim-section", {
-      x: "-37%",
+      x: xAnimation,
       duration: 0.3,
       scrollTrigger: {
         trigger: ".claim-section",
         start: "top top",
         end: "+=1800",
         pin: true,
-        pinSpacing: false,
+        // pinSpacing: false,
         scrub: true,
-        markers: true,
+        // markers: true,
         onEnter: () => {
           document.body.classList.add("pinned-scroll");
         },

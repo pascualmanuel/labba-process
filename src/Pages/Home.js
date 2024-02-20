@@ -307,19 +307,18 @@ function Home() {
     };
   }, []);
 
-  const isCursorOverElement = (element) => {
-    if (!element) return false;
-    const rect = element.getBoundingClientRect();
-    return (
-      mouseX >= rect.left &&
-      mouseX <= rect.right &&
-      mouseY >= rect.top &&
-      mouseY <= rect.bottom
-    );
-  };
-
-  let mouseX = 0;
-  let mouseY = 0;
+  // const isCursorOverElement = (element) => {
+  //   if (!element) return false;
+  //   const rect = element.getBoundingClientRect();
+  //   return (
+  //     mouseX >= rect.left &&
+  //     mouseX <= rect.right &&
+  //     mouseY >= rect.top &&
+  //     mouseY <= rect.bottom
+  //   );
+  // };
+  // let mouseX = 0;
+  // let mouseY = 0;
 
   const [scrollY, setScrollY] = useState(0);
 
@@ -335,20 +334,19 @@ function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  let blabla = {
-    position: "relative",
-    // top: "0px",
-  };
 
-  if (scrollY > 450) {
-    blabla = {
-      position: "relative",
-    };
-  }
+  // let blabla = {
+  //   position: "relative",
+  //   // top: "0px",
+  // };
 
-  // Define a style object based on the scrollY value
+  // if (scrollY > 450) {
+  //   blabla = {
+  //     position: "relative",
+  //   };
+  // }
 
-  // console.log(scrollY);
+
   return (
     <>
       <div id={shadowOn}></div>
@@ -363,9 +361,9 @@ function Home() {
       </div>
       <Works />
 
-      <div className="" style={{ overflowX: "hidden" }}>
-        <Claim />
-      </div>
+      {/* <div className="" style={{ overflow: "hidden" }}> */}
+      <Claim />
+      {/* </div> */}
 
       <div className="services-cont pt-[20px]">
         <Services />

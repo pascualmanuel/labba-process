@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "./logo.svg";
 import "./Styles/App.css";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import CustomCursor from "./Hooks/CustomCursor";
+// import CustomCursor from "./Hooks/CustomCursor";
 import Contact from "./Pages/Contact";
 import { LanguageProvider } from "./Hooks/LanguageContext";
 import gsap from "gsap";
@@ -24,23 +24,25 @@ function ScrollToTop() {
 }
 
 function App() {
-  useEffect(() => {
-    // Set up GSAP ScrollTrigger for smooth scrolling
+  const [scrollXEnabled, setScrollXEnabled] = useState(true);
 
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   // Set up GSAP ScrollTrigger for smooth scrolling
 
-    gsap.utils.toArray(".scroll-trigger").forEach((section) => {
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top center",
-        end: "bottom center",
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        // markers: true,
-      });
-    });
-  }, []);
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   gsap.utils.toArray(".scroll-trigger").forEach((section) => {
+  //     ScrollTrigger.create({
+  //       trigger: section,
+  //       start: "top center",
+  //       end: "bottom center",
+  //       scrub: 1,
+  //       pin: true,
+  //       anticipatePin: 1,
+  //       // markers: true,
+  //     });
+  //   });
+  // }, []);
   const cursorRef = useRef(null);
 
   useEffect(() => {
@@ -59,7 +61,30 @@ function App() {
       // Cleanup the event listener when the component unmounts
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, []); // Empty dependency
+  }, []); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Add your conditions for enabling/disabling horizontal scroll
+      if (window.innerWidth > 1000 && window.innerHeight < 690) {
+        setScrollXEnabled(false);
+      } else {
+        setScrollXEnabled(true);
+      }
+    };
+
+    // Initial check on component mount
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <LanguageProvider>
       <BrowserRouter>
@@ -70,8 +95,10 @@ function App() {
             path="/"
             element={
               <>
-                <ScrollToTop />
-                <Home />
+                <div style={{ overflowX: scrollXEnabled ? "auto" : "hidden" }}>
+                  <ScrollToTop />
+                  <Home />
+                </div>
               </>
             }
           />
