@@ -16,7 +16,7 @@ function Prueba() {
         pin: true,
         pinSpacing: false,
         scrub: true,
-        markers: true,
+        // markers: true,
         onEnter: () => {
           document.body.classList.add("pinned-scroll");
         },

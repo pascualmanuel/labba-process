@@ -64,7 +64,6 @@ function Home() {
       ellipseShadow.style.top = y + "px";
     });
 
-
     const circleCursor = document.getElementById("circleCursor");
 
     if (!circleCursor) {
@@ -364,12 +363,14 @@ function Home() {
       </div>
       <Works />
 
-      <Claim />
+      <div className="" style={{ overflowX: "hidden" }}>
+        <Claim />
+      </div>
 
       <div className="services-cont pt-[20px]">
         <Services />
       </div>
-      <Process />
+      {/* <Process /> */}
       <div
         className="sm:h-screen sm:pb-0 pb-24	"
         style={{ background: " #ECECEC" }}

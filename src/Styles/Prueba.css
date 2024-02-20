@@ -398,6 +398,26 @@ header {
     border-radius: 20px;
     right: 13px;
   }
+  .third-pro {
+    background-image: url("../Assets/borja.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    border-radius: 20px;
+    right: 13px;
+  }
+  .fourth-pro {
+    background-image: url("../Assets/borja.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    border-radius: 20px;
+    right: 13px;
+  }
   .next-level {
     display: flex;
     justify-content: center;

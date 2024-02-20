@@ -22,7 +22,7 @@ const SmoothScroll = () => {
     gsap.set(scroller.target, {
       rotation: 0.01,
       force3D: true,
-      markers: true,
+      // markers: true,
     });
 
     const updateScroller = () => {
@@ -83,11 +83,7 @@ const SmoothScroll = () => {
     };
   }, []); // empty dependency array to run the effect only once
 
-  return (
-    <div ref={scrollContainerRef} className="">
-    
-    </div>
-  );
+  return <div ref={scrollContainerRef} className=""></div>;
 };
 
 export default SmoothScroll;

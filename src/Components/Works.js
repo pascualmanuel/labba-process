@@ -17,7 +17,7 @@ function Works() {
         pin: true,
         pinSpacing: false,
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -121,7 +121,7 @@ function Works() {
 
   return (
     <>
-      <div className="">
+      <div className="w-[100vw] overflow-x-hidden">
         <div className="scroll-container ">
           <div className="elemento-animado">
             <div
