@@ -99,7 +99,6 @@
   height: 200px;
 }
 
-/* vgruhiejdops[sodfeirudfghjklkjhgwr425783ieme */
 :root {
   --card-height: 870px;
   --card-margin: 4vw;
@@ -135,9 +134,8 @@
 
 .card {
   position: sticky;
-  /* top: 150px; */
-  top: 15px;
-
+  top: 150px;
+  /* top: 15px; */
   padding-top: calc(var(--index) * var(--card-top-offset));
   display: flex;
   justify-content: center;
@@ -164,6 +162,7 @@ header {
 }
 
 .card__content {
+  --start-range: calc(var(--index0) / var(--numcards) * 100%);
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
   background: rgb(255, 255, 255);
   color: rgb(10, 5, 7);
@@ -209,7 +208,8 @@ header {
 /* .card__content > figure {
   grid-area: img;
   overflow: hidden;
-} */
+}
+*/
 
 /* .card__content > figure > img {
   width: 100%;
@@ -312,7 +312,7 @@ header {
 }
 
 .services-cont {
-  margin-top: -260vh;
+  margin-top: -240vh;
   margin-bottom: 400px;
 }
 
@@ -542,7 +542,7 @@ header {
 
 .card__content {
   /* --start-range: calc(var(--index0) / var(--numcards) * 100%); */
-  --end-range: calc((var(--index)) / var(--numcards) * 100%);
+  /* --end-range: calc((var(--index)) / var(--numcards) * 100%); */
 
   animation: linear scale forwards;
   animation-timeline: --cards-element-scrolls-in-body;

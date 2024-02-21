@@ -14,6 +14,7 @@ import SmoothScroll from "./Hooks/SmoothScroll";
 import Pruebas from "./Components/Pruebas";
 import PruebaPage from "./Pages/PruebaPage";
 import Cursor from "./Hooks/Cursor";
+
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -61,12 +62,12 @@ function App() {
       // Cleanup the event listener when the component unmounts
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, []); 
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       // Add your conditions for enabling/disabling horizontal scroll
-      if (window.innerWidth > 1000 && window.innerHeight < 690) {
+      if (window.innerWidth > 1 && window.innerHeight < 10000) {
         setScrollXEnabled(false);
       } else {
         setScrollXEnabled(true);
@@ -95,10 +96,10 @@ function App() {
             path="/"
             element={
               <>
-                <div style={{ overflowX: scrollXEnabled ? "auto" : "hidden" }}>
-                  <ScrollToTop />
-                  <Home />
-                </div>
+                {/* <div style={{ overflowX: scrollXEnabled ? "auto" : "hidden" }}> */}
+                <ScrollToTop />
+                <Home />
+                {/* </div> */}
               </>
             }
           />

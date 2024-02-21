@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 body {
-  /* cursor: none !important; */
   font-family: "Satoshi-Regular";
   overflow-x: hidden;
 }
@@ -361,6 +360,7 @@ a {
   border: solid black 1px;
   pointer-events: none;
   z-index: 10000;
+  backdrop-filter: blur(3px);
 }
 
 #circleCursor:before {

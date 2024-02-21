@@ -71,8 +71,8 @@ function Home() {
       return;
     }
 
-    const cursorWidth = 20; // Replace with the actual width of your ellipse
-    const cursorHeight = 20; // Replace with the actual height of your ellipse
+    const cursorWidth = 20;
+    const cursorHeight = 20;
     const mitiWidth = cursorWidth / 2;
     const mitiHeight = cursorHeight / 2;
 
@@ -101,7 +101,10 @@ function Home() {
         // Modify the cursor style when over a link
         circleCursor.style.width = "100px";
         circleCursor.style.height = "100px";
-        circleCursor.style.setProperty("--before-content", "'CLICK'"); // Use a custom property
+        circleCursor.style.fontSize = "50px";
+        circleCursor.style.fontWeight = "400";
+
+        circleCursor.style.setProperty("--before-content", "'+'"); // Use a custom property
 
         // circleCursor.style.transition = "0.1s";
 
@@ -253,9 +256,9 @@ function Home() {
     cursorPreFooter = "no-cursor";
   }
 
-  const cursorScaleElements = Array.from(
-    document.querySelectorAll(".cursor-scale")
-  );
+  // const cursorScaleElements = Array.from(
+  //   document.querySelectorAll(".cursor-scale")
+  // );
 
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
@@ -320,32 +323,20 @@ function Home() {
   // let mouseX = 0;
   // let mouseY = 0;
 
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
 
   // Add an event listener to track scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY / 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // let blabla = {
-  //   position: "relative",
-  //   // top: "0px",
-  // };
-
-  // if (scrollY > 450) {
-  //   blabla = {
-  //     position: "relative",
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY / 10);
   //   };
-  // }
 
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -368,7 +359,7 @@ function Home() {
       <div className="services-cont pt-[20px]">
         <Services />
       </div>
-      {/* <Process /> */}
+      <Process />
       <div
         className="sm:h-screen sm:pb-0 pb-24	"
         style={{ background: " #ECECEC" }}
