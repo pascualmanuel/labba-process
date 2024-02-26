@@ -250,65 +250,65 @@ function Home() {
 
   const [isMoving, setIsMoving] = useState(false);
 
-  let cursorPreFooter = "prefooter";
+  // let cursorPreFooter = "prefooter";
 
-  if (isMobile) {
-    cursorPreFooter = "no-cursor";
-  }
+  // if (isMobile) {
+  //   cursorPreFooter = "no-cursor";
+  // }
 
   // const cursorScaleElements = Array.from(
   //   document.querySelectorAll(".cursor-scale")
   // );
 
-  useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    const footerCursor = document.querySelectorAll(`.${cursorPreFooter}`);
+  // useEffect(() => {
+  //   const cursor = document.querySelector(".cursor");
+  //   // const footerCursor = document.querySelectorAll(`.${cursorPreFooter}`);
 
-    const handleMouseEnter = () => {
-      // Change cursor behavior when entering the plusCursor
-      // For example, you can change the cursor style or add animations here
+  //   const handleMouseEnter = () => {
+  //     // Change cursor behavior when entering the plusCursor
+  //     // For example, you can change the cursor style or add animations here
 
-      // Set the custom cursor image
-      if (cursor) {
-        cursor.style.backgroundImage = `url(${CursorDrop})`;
-        cursor.style.backgroundSize = "contain";
-        cursor.style.backgroundRepeat = "no-repeat";
-        cursor.style.backgroundPosition = "center";
-        cursor.style.width = "300px";
-        cursor.style.height = "77px";
-        cursor.style.border = "none";
-        cursor.style.backgroundColor = "transparent";
-      }
-    };
+  //     // Set the custom cursor image
+  //     if (cursor) {
+  //       cursor.style.backgroundImage = `url(${CursorDrop})`;
+  //       cursor.style.backgroundSize = "contain";
+  //       cursor.style.backgroundRepeat = "no-repeat";
+  //       cursor.style.backgroundPosition = "center";
+  //       cursor.style.width = "300px";
+  //       cursor.style.height = "77px";
+  //       cursor.style.border = "none";
+  //       cursor.style.backgroundColor = "transparent";
+  //     }
+  //   };
 
-    const handleMouseLeave = () => {
-      // Restore default cursor behavior when leaving the plusCursor
+  //   const handleMouseLeave = () => {
+  //     // Restore default cursor behavior when leaving the plusCursor
 
-      // Reset the cursor's background image to none
-      if (cursor) {
-        cursor.style.backgroundImage = "none";
-        cursor.style.zIndex = 9999;
-        cursor.style.position = "fixed";
-        cursor.style.width = "34px";
-        cursor.style.height = "34px";
-        cursor.style.border = "1px solid #000000";
-        cursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-      }
-    };
+  //     // Reset the cursor's background image to none
+  //     if (cursor) {
+  //       cursor.style.backgroundImage = "none";
+  //       cursor.style.zIndex = 9999;
+  //       cursor.style.position = "fixed";
+  //       cursor.style.width = "34px";
+  //       cursor.style.height = "34px";
+  //       cursor.style.border = "1px solid #000000";
+  //       cursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+  //     }
+  //   };
 
-    footerCursor.forEach((paragraph) => {
-      paragraph.addEventListener("mouseenter", handleMouseEnter);
-      paragraph.addEventListener("mouseleave", handleMouseLeave);
-    });
+  //   footerCursor.forEach((paragraph) => {
+  //     paragraph.addEventListener("mouseenter", handleMouseEnter);
+  //     paragraph.addEventListener("mouseleave", handleMouseLeave);
+  //   });
 
-    // Clean up event listeners when the component unmounts
-    return () => {
-      footerCursor.forEach((paragraph) => {
-        paragraph.removeEventListener("mouseenter", handleMouseEnter);
-        paragraph.removeEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-  }, []);
+  //   // Clean up event listeners when the component unmounts
+  //   return () => {
+  //     footerCursor.forEach((paragraph) => {
+  //       paragraph.removeEventListener("mouseenter", handleMouseEnter);
+  //       paragraph.removeEventListener("mouseleave", handleMouseLeave);
+  //     });
+  //   };
+  // }, []);
 
   // const isCursorOverElement = (element) => {
   //   if (!element) return false;
@@ -376,19 +376,21 @@ function Home() {
       <div style={{ backgroundColor: "#F2F2F2" }}>
         <div
           className={`prefooter ${shouldShrink ? "shrink" : ""}`}
-          ref={prefooterRef}
+          // ref={prefooterRef}
         >
           <Link to={"/contact"} target="_blank">
             <div
-              className={` cursor next-level ${isMoving ? "is-moving" : ""}`}
+              className={` cursor next-level ${
+                isMoving ? "is-moving" : ""
+              } flex flex-row h-[100%] items-center justify-center`}
             >
-              <p className="b1-desk py-0 sm:py-72	pl-0 sm:pl-56 text-white	">
+              <p className="b1-desk py-0 pb-[45px] sm:pb-[0px] 	pl-0 sm:pr-[100px] text-white	">
                 {translateText(
                   "Llevamos tu idea a otro level",
                   " Let’s take your idea to the next level."
                 )}
               </p>
-              <ReactSVG src={CursorDrop} className="pt-10 sm:hidden" />
+              <ReactSVG src={CursorDrop} className="" />
             </div>
           </Link>
         </div>

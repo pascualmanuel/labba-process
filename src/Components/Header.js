@@ -1,6 +1,6 @@
 import { ReactSVG } from "react-svg";
 import LabbaISO from "../Assets/svg-iso-labba.svg";
-import LabbaLogo from "../Assets/svg-labba.svg";
+import LabbaLogo from "../Assets/labba/logo-labba.svg";
 import Burger from "../Assets/Burger.svg";
 import BurgerClose from "../Assets/Burger-close.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -69,11 +69,11 @@ function Header() {
         <div className="flex flex-row justify-between items-center h-24">
           <Link to="/">
             <div className="">
-              <ReactSVG
+              {/* <ReactSVG
                 src={LabbaISO}
                 className="sm:mr-2.5 sm:ml-12 ml-6 fixed "
                 style={{ zIndex: "10000" }}
-              />
+              /> */}
               <ReactSVG
                 src={LabbaLogo}
                 className="ml-12 sm:ml-[80px] ml-[60px]"
