@@ -87,9 +87,8 @@ function App() {
   }, []);
 
   return (
-    <LanguageProvider>
-      <BrowserRouter>
-        {/* <Cursor /> */}
+    <BrowserRouter>
+      <LanguageProvider>
         <Header />
         <Routes>
           <Route
@@ -106,8 +105,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/prueba" element={<Pruebas />} />
         </Routes>
-      </BrowserRouter>
-    </LanguageProvider>
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }
 

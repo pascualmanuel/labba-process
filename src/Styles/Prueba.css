@@ -287,13 +287,36 @@ header {
   transform: translate3d(0px, 0vh, 0px) scale(0.95);
 }
 
+.border-t-gray {
+  border-top: solid #b5b5b5;
+  margin-left: 128px;
+  margin-right: 128px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
 .sayhi {
-  font-size: 16px;
+  font-family: "Satoshi Variable";
+  font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #d42374;
+  /* identical to box height */
+
+  /* BG Gradient */
+  background: linear-gradient(
+    99.94deg,
+    #ff5800 -0.95%,
+    #f62a4b 21.56%,
+    #d42374 42.07%,
+    #a0378b 61.32%,
+    #64428e 78.44%,
+    #2b417a 98.59%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .t-mail {
@@ -305,6 +328,34 @@ header {
   text-align: left;
 }
 
+.privacy-font {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #212121;
+  margin-top: 35px;
+}
+.contacts-home {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 26px;
+  /* identical to box height */
+}
+
+.click-to-copy {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #212121;
+}
 .number-cont {
   display: flex;
   justify-content: center;

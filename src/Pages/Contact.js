@@ -5,16 +5,14 @@ import "../Styles/Prueba.css";
 import { ReactSVG } from "react-svg";
 import Submit from "../Assets/svg-submit.svg";
 import emailjs from "@emailjs/browser";
-
+import { Link } from "react-router-dom";
 function Contact() {
   const [selectedService, setSelectedService] = useState("");
 
   const handleServiceClick = (service) => {
     if (selectedService.includes(service)) {
-      // If the clicked service is already selected, remove it
       setSelectedService(selectedService.filter((s) => s !== service));
     } else {
-      // Otherwise, add the clicked service to the list of selected services
       setSelectedService([...selectedService, service]);
     }
   };
@@ -88,7 +86,9 @@ function Contact() {
         <div className="grain"></div>
         <div>
           <h2 className="b3-desk">We would love to be part of your project</h2>
+          {/* <Link to="/prueba"> */}
           <h2 className="h2-desk mt-1 mb-9">Say hello!</h2>
+          {/* </Link> */}
           <h2 className="b3-desk">I need</h2>
           <div className="contact-b-cont flex flex-row flex-wrap content-center mt-9">
             <div

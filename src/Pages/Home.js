@@ -378,7 +378,7 @@ function Home() {
           className={`prefooter ${shouldShrink ? "shrink" : ""}`}
           // ref={prefooterRef}
         >
-          <Link to={"/contact"} target="_blank">
+          <Link to={"/contact"}>
             <div
               className={` cursor next-level ${
                 isMoving ? "is-moving" : ""
@@ -396,28 +396,33 @@ function Home() {
         </div>
         <div style={{ height: "200px" }}></div>
         <div className="footer" ref={footerRef}>
-          <div className="ml-11 sm:ml-56">
-            <div className="sayhi">Say hi</div>
-            <div className="t-mail mt-3" onClick={handleCopyClick}>
-              {email}
-              <span
-                className="ml-5"
-                style={{ fontSize: "16px", fontWeight: "400" }}
-                ref={textToCopy}
-              >
-                click to copy
-              </span>
+          <div className="flex flex-row justify-between pb-[50px]">
+            <div className="t-mail ml-[128px]" onClick={handleCopyClick}>
+              <p className="sayhi mb-3">Say hi</p>
+              <div className="flex flex-row items-center">
+                <p className="contacts-home">{email}</p>
+                <span
+                  className="ml-5 "
+                  style={{ fontSize: "12px", fontWeight: "400" }}
+                  ref={textToCopy}
+                >
+                  click to copy
+                </span>
+              </div>
+            </div>
+            <div className="mr-[128px] flex flex-row">
+              <div className=" mr-[80px]">
+                <p className="sayhi mb-3">Argentina</p>
+                <p className="contacts-home">+54 9 11-5163-2960</p>
+              </div>
+              <div>
+                <p className="sayhi mb-3">Spain</p>
+                <p className="contacts-home">+54 9 11-5163-2960</p>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center mt-20 labba-bottom ">
-            <ReactSVG src={LabbaBottom} />
-          </div>
-          <div className="labba-footer flex items-end justify-between mt-56 ml-2 mr-2 labba-lg-bottom  sm:flex">
-            <ReactSVG src={LabbaL} />
-            <ReactSVG src={LabbaA} />
-            <ReactSVG src={LabbaB} />
-            <ReactSVG src={LabbaB} />
-            <ReactSVG src={LabbaA} />
+          <div className="border-t-gray  ">
+            <p className="privacy-font">© 2024 LABBA STUDIO</p>
           </div>
         </div>
       </div>

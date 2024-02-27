@@ -9,6 +9,12 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/contact");
+  };
+
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
   const { userLanguage, toggleLanguage } = useLanguage();
@@ -76,12 +82,23 @@ function Header() {
               /> */}
               <ReactSVG
                 src={LabbaLogo}
-                className="ml-12 sm:ml-[80px] ml-[60px]"
+                className=" sm:ml-[80px] ml-[60px]"
                 style={{ zIndex: "10000" }}
               />
             </div>
           </Link>
           <div
+            className="fixed top-6 right-3 sm:right-10"
+            style={{ zIndex: "100" }}
+          >
+            {" "}
+            <button onClick={handleNavigation}>Go to Contact</button>
+            <Link to="/contact">
+              <div className="contact">Book an intro call</div>
+            </Link>
+          </div>
+
+          {/* <div
             className="fixed top-6 right-3 sm:right-10"
             style={{ zIndex: "100" }}
           >
@@ -141,7 +158,7 @@ function Header() {
               <div className="menu-icon">
                 {expanded ? null : (
                   <Link to="/contact">
-                    <p className="b3-desk pl-2.5"> Contact </p>
+                    <p className="b3-desk pl-2.5"> Book an intro call </p>
                   </Link>
                 )}
                 <ReactSVG
@@ -156,7 +173,7 @@ function Header() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </>
     );

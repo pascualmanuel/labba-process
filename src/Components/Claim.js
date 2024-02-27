@@ -22,6 +22,7 @@ function Claim() {
   //     animacion.kill();
   //   };
   // }, []);
+  const claimSectionRef = useRef(null); // Ref to store the DOM element reference
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
@@ -67,53 +68,79 @@ function Claim() {
   //   console.log("+ a 1415");
   // }
   // let xAnimation = "-63%";
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const animacion = gsap.to(".claim-section", {
+    const claimAnimation = gsap.to(".claim-section", {
       x: xAnimation,
       duration: 0.3,
       scrollTrigger: {
         trigger: ".claim-section",
-        start: "top top",
+        start: "top top+=1",
+        // start: () => `top+=${claimSectionRef.current.offsetHeight / 2}`, // Adjust this calculation as needed
+
         end: "+=1800",
         pin: true,
-        // pinSpacing: false,
+        pinSpacing: true,
         scrub: true,
-        // markers: true,
-        onEnter: () => {
-          document.body.classList.add("pinned-scroll");
-        },
-        onLeaveBack: () => {
-          document.body.classList.remove("pinned-scroll");
-        },
+        markers: true,
       },
     });
 
     return () => {
-      animacion.kill();
+      // Limpia las animaciones cuando el componente se desmonta
+      claimAnimation.kill();
+      // firstProAnimation.kill();
+      // secondProAnimation.kill();
+      // thirdProAnimation.kill();
+      // fourthProAnimation.kill();
     };
   }, []);
 
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   const animacion = gsap.to(claimSectionRef.current, {
+  //     x: xAnimation,
+  //     duration: 0.3,
+  //     scrollTrigger: {
+  //       trigger: claimSectionRef.current,
+  //       start: "top top",
+  //       end: "+=1800",
+  //       pin: true,
+  //       pinSpacing: true,
+  //       scrub: true,
+  //       markers: true,
+  //     },
+  //   });
+
+  //   return () => {
+  //     animacion.kill();
+  //   };
+  // }, [xAnimation]); //
   return (
     <>
-      <div
-        className="h-[101vh] claim-section w-[300vw] bg-[#121212] flex items-center"
-        style={{ marginBottom: "235vh" }}
-      >
+      <div>
         <div
-          className="claim-inside"
-          style={{ overflowX: "visible", whiteSpace: "nowrap" }}
+          // ref={claimSectionRef}
+          className="h-[101vh] claim-section w-[300vw] bg-[#121212] flex items-center"
+          style={{ marginBottom: "235vh" }}
         >
-          <p
-            className="h2-desk claim"
-            style={{
-              transform: "translateX(10%)", // Initially hides the phrase
-            }}
+          <div
+            className="claim-inside"
+            style={{ overflowX: "visible", whiteSpace: "nowrap" }}
           >
-            At <span style={{ color: "white" }}> Labba,</span> we craft digital
-            products that balance users and business needs.
-          </p>
+            <p
+              className="h2-desk claim"
+              style={{
+                transform: "translateX(10%)", // Initially hides the phrase
+              }}
+            >
+              At <span style={{ color: "white" }}> Labba,</span> we craft
+              digital products that balance users and business needs.
+            </p>
+          </div>
         </div>
       </div>
     </>

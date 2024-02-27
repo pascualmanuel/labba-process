@@ -10,33 +10,33 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Services() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    const processAnimation = gsap.to(".process-section", {
-      // x: "-37%",
-      duration: 0.3,
-      scrollTrigger: {
-        trigger: ".process-section",
-        start: "top top",
-        end: "+=1800",
-        pin: true,
-        pinSpacing: false,
-        scrub: false,
-        markers: true,
-        onEnter: () => {
-          document.body.classList.add("pinned-scroll");
-        },
-        onLeaveBack: () => {
-          document.body.classList.remove("pinned-scroll");
-        },
-      },
-    });
+  //   const processAnimation = gsap.to(".process-section", {
+  //     // x: "-37%",
+  //     duration: 0.3,
+  //     scrollTrigger: {
+  //       trigger: ".process-section",
+  //       start: "top top",
+  //       end: "+=1800",
+  //       pin: true,
+  //       pinSpacing: false,
+  //       scrub: false,
+  //       // markers: true,
+  //       onEnter: () => {
+  //         document.body.classList.add("pinned-scroll");
+  //       },
+  //       onLeaveBack: () => {
+  //         document.body.classList.remove("pinned-scroll");
+  //       },
+  //     },
+  //   });
 
-    return () => {
-      processAnimation.kill();
-    };
-  }, []);
+  //   return () => {
+  //     processAnimation.kill();
+  //   };
+  // }, []);
 
   return (
     <div className="process-container sm:pt-0 pt-12 pb-28 ">
