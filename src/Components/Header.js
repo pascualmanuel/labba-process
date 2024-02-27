@@ -91,8 +91,6 @@ function Header() {
             className="fixed top-6 right-3 sm:right-10"
             style={{ zIndex: "100" }}
           >
-            {" "}
-            <button onClick={handleNavigation}>Go to Contact</button>
             <Link to="/contact">
               <div className="contact">Book an intro call</div>
             </Link>
@@ -184,13 +182,8 @@ function Header() {
           <Link to="/">
             <div className="">
               <ReactSVG
-                src={LabbaISO}
-                className="mr-2.5 ml-12 fixed"
-                style={{ zIndex: "10000" }}
-              />
-              <ReactSVG
                 src={LabbaLogo}
-                className="ml-12 ml-[80px]"
+                className=" sm:ml-[80px] ml-[60px]"
                 style={{ zIndex: "10000" }}
               />
             </div>

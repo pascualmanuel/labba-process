@@ -182,24 +182,30 @@ function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  required={true}
                   placeholder="Your name"
-                  style={{ width: "225px", cursor: "none" }}
+                  style={{ width: "225px" }}
+                  className="input-cursor"
                 />
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  required={true}
                   placeholder="Your email"
-                  style={{ width: "225px", cursor: "none" }}
+                  style={{ width: "225px" }}
+                  className="input-cursor"
                 />
               </div>
               <input
                 name="about"
                 value={formData.about}
                 onChange={handleChange}
+                required={true}
                 placeholder="About your project"
-                style={{ width: "500px", marginTop: "60px", cursor: "none" }}
+                style={{ width: "500px", marginTop: "60px" }}
+                className="input-cursor"
               />
               <br />
               <input
@@ -207,8 +213,10 @@ function Contact() {
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
+                required={true}
                 placeholder="Budget"
-                style={{ width: "500px", marginTop: "60px", cursor: "none" }}
+                style={{ width: "500px", marginTop: "60px" }}
+                className="input-cursor"
               />
               <input
                 type="hidden"
@@ -217,8 +225,7 @@ function Contact() {
               />
               <button
                 type="submit"
-                className="w-[32rem] flex justify-center mt-14 mb-24 "
-                style={{ cursor: "none" }}
+                className="w-[32rem] flex justify-center mt-14 mb-24 input-cursor"
               >
                 <ReactSVG src={Submit} />
               </button>

@@ -13,7 +13,12 @@ html {
 }
 
 a {
-  cursor: none !important;
+  /* cursor: none !important; */
+  cursor: url("../Assets/dot-cursor.svg"), auto;
+}
+
+.input-cursor {
+  cursor: url("../Assets/dot-cursor.svg"), auto;
 }
 
 .h1-desk {
@@ -249,7 +254,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-  cursor: none !important;
+
   position: fixed;
   top: 1.5rem;
   right: 2.5rem;
