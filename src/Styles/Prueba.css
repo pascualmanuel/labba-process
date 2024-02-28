@@ -563,8 +563,10 @@ header {
   width: 870px;
   height: 340px;
   display: flex;
+
   animation: linear scale forwards;
-  animation-timeline: --cards-element-scrolls-in-body;
+  animation-timeline: --cards-element-scrolls-in-body !important;
+
   animation-range: exit-crossing var(--start-range) exit-crossing
     var(--end-range);
 }
