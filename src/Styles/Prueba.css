@@ -161,32 +161,6 @@ header {
   gap: var(--card-margin);
 }
 
-.card-1 {
-  width: 840px !important;
-  height: 330px !important;
-}
-.card-2 {
-  width: 840px !important;
-  height: 330px !important;
-}
-.card-3 {
-  width: 840px !important;
-  height: 330px !important;
-}
-.card-4 {
-  width: 840px !important;
-  height: 330px !important;
-}
-.card-5 {
-  width: 840px !important;
-  height: 330px !important;
-}
-
-.card-6 {
-  width: 840px !important;
-  height: 330px !important;
-}
-
 .card-inside {
   display: flex;
   align-items: center;
@@ -579,11 +553,6 @@ header {
 }
 
 .card__content {
-  /* --start-range: calc(var(--index0) / var(--numcards) * 100%); */
-  /* --end-range: calc((var(--index)) / var(--numcards) * 100%); */
-}
-
-.card__content {
   --start-range: calc(var(--index0) / var(--numcards) * 100%);
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
   background: rgb(255, 255, 255);
@@ -594,7 +563,6 @@ header {
   width: 870px;
   height: 340px;
   display: flex;
-
   animation: linear scale forwards;
   animation-timeline: --cards-element-scrolls-in-body;
   animation-range: exit-crossing var(--start-range) exit-crossing
