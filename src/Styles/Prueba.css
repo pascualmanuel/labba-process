@@ -85,7 +85,6 @@
   margin-left: 10px;
 }
 
-
 .services {
   /* cursor: pointer; */
   display: flex;
@@ -160,19 +159,6 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(var(--numcards), var(--card-height));
   gap: var(--card-margin);
-}
-
-.card__content {
-  --start-range: calc(var(--index0) / var(--numcards) * 100%);
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: rgb(255, 255, 255);
-  color: rgb(10, 5, 7);
-  border-radius: 1em;
-  overflow: hidden;
-  outline: var(--outline-width) solid #b5b5b5;
-  width: 870px;
-  height: 340px;
-  display: flex;
 }
 
 .card-1 {
@@ -595,6 +581,19 @@ header {
 .card__content {
   /* --start-range: calc(var(--index0) / var(--numcards) * 100%); */
   /* --end-range: calc((var(--index)) / var(--numcards) * 100%); */
+}
+
+.card__content {
+  --start-range: calc(var(--index0) / var(--numcards) * 100%);
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  color: rgb(10, 5, 7);
+  border-radius: 1em;
+  overflow: hidden;
+  outline: var(--outline-width) solid #b5b5b5;
+  width: 870px;
+  height: 340px;
+  display: flex;
 
   animation: linear scale forwards;
   animation-timeline: --cards-element-scrolls-in-body;
