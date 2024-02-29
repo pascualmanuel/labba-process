@@ -4,12 +4,16 @@ import "swiper/swiper-bundle.css"; // Import the Swiper CSS
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "../Styles/Prueba.css"; // Importa tu archivo CSS personalizado
-import Cliente1 from "../Assets/clientes/client1.png";
-import Cliente2 from "../Assets/clientes/client2.png";
-import Cliente3 from "../Assets/clientes/client3.png";
-import Cliente4 from "../Assets/clientes/client4.png";
-import Cliente5 from "../Assets/clientes/client5.png";
-import Cliente6 from "../Assets/clientes/client6.png";
+import Cliente1 from "../Assets/clientes/client-min-1.png";
+import Cliente2 from "../Assets/clientes/client-min-2.png";
+import Cliente3 from "../Assets/clientes/client-min-3.png";
+import Cliente4 from "../Assets/clientes/client-min-4.png";
+import Cliente5 from "../Assets/clientes/client-min-5.png";
+import Cliente6 from "../Assets/clientes/client-min-6.png";
+import Cliente7 from "../Assets/clientes/client-min-7.png";
+import Cliente8 from "../Assets/clientes/client-min-8.png";
+import Cliente9 from "../Assets/clientes/client-min-9.png";
+import Cliente10 from "../Assets/clientes/client-min-10.png";
 import { FreeMode, Pagination, Autoplay, Navigation } from "swiper/modules";
 // import SwiperCore, { Autoplay, Pagination } from "swiper/core";
 
@@ -28,6 +32,10 @@ const images = [
   Cliente4,
   Cliente5,
   Cliente6,
+  Cliente7,
+  Cliente8,
+  Cliente9,
+  Cliente10,
 
   // Agrega aquí tus rutas de imágenes
 ];
@@ -55,14 +63,15 @@ const Carousel = () => {
         >
           {images.map((image, index) => (
             <SwiperSlide>
-              <div className="caro-inside">
+              <div className="caro-inside ">
                 <img
                   key={index}
                   src={image}
                   alt={`Slide ${index}`}
+                  // width={100}
                   //   width={"auto"}
-                  //   height={30}
-                  //   height={50}
+                  // height={30}
+                  // height={50}
                 />
               </div>
             </SwiperSlide>

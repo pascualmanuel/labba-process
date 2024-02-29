@@ -394,12 +394,15 @@ function Home() {
             </div>
           </Link>
         </div>
-        <div style={{ height: "200px" }}></div>
+        <div className="h-[75px] sm:h-[200px]"></div>
         <div className="footer" ref={footerRef}>
           <div className="flex flex-col sm:flex-row justify-between pb-[50px]">
-            <div className="t-mail ml-[128px]" onClick={handleCopyClick}>
+            <div
+              className="t-mail ml-[18px] sm:ml-[128px] mb-[30px] sm:mb-[0px]"
+              onClick={handleCopyClick}
+            >
               <p className="sayhi mb-3">Say hi</p>
-              <div className="flex flex-row items-center">
+              <div className="flex flex-row sm:items-center">
                 <p className="contacts-home">{email}</p>
                 <span
                   className="ml-5 "
@@ -410,8 +413,8 @@ function Home() {
                 </span>
               </div>
             </div>
-            <div className="mr-[128px] flex flex-row">
-              <div className=" mr-[80px]">
+            <div className=" ml-[18px] sm:ml-[0px] sm:mr-[128px] flex flex-col sm:flex-row">
+              <div className=" mr-[80px] mb-[30px] sm:mb-[0px]">
                 <p className="sayhi mb-3">Argentina</p>
                 <p className="contacts-home">+54 9 11-5163-2960</p>
               </div>

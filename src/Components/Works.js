@@ -132,29 +132,116 @@ function Works() {
           <div className="scroll-content">
             <div className="div-animado">
               <div className="project-container">
-                <a>
+                <a href="https://mannoapp.com/" target="_blank">
                   <div className="project first-pro " id="pasando">
-                    First PRO
+                    <div
+                      className=" project-info  w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] 
+                      rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]"
+                    >
+                      <div className="flex flex-row justify-between">
+                        <div>
+                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                            Borja{" "}
+                            <span className="bullet-work text-[#159bcd]">
+                              •
+                            </span>
+                          </p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="tags p-14 mr-[6px]">Development</p>
+                          <p className="tags p-14 mr-[20px]">Design</p>
+                        </div>
+                      </div>
+                      <div className="mt-[10px]">
+                        <p className="b4-desk">
+                          Redesigning the website to improve the home appliance
+                          shopping experience.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </a>
 
                 <a>
                   <div className="project second-pro" id="pasando">
-                    SECOND PRO
+                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
+                      <div className="flex flex-row justify-between">
+                        <div>
+                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                            Manno{" "}
+                            <span className="bullet-work text-[#DD415F]">
+                              •
+                            </span>
+                          </p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="tags p-14 mr-[6px]">Development</p>
+                          <p className="tags p-14 mr-[20px]">Design</p>
+                        </div>
+                      </div>
+                      <div className="mt-[10px]">
+                        <p className="b4-desk">
+                          Redesigning the website to improve the home appliance
+                          shopping experience.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
             </div>
             <div className="div-animado" style={{ marginTop: "40vh" }}>
               <div className="project-container">
-                <a>
+                <a href="https://mannoapp.com">
                   <div className="project third-pro" id="pasando">
-                    Third PRO
+                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
+                      <div className="flex flex-row justify-between">
+                        <div>
+                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                            Borja
+                            <span className="bullet-work text-[#DF362F]">
+                              •
+                            </span>
+                          </p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="tags p-14 mr-[6px]">Development</p>
+                          <p className="tags p-14 mr-[20px]">Design</p>
+                        </div>
+                      </div>
+                      <div className="mt-[10px]">
+                        <p className="b4-desk">
+                          Redesigning the website to improve the home appliance
+                          shopping experience.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </a>
                 <a>
                   <div className="project fourth-pro" id="pasando">
-                    FOurth PRO
+                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
+                      <div className="flex flex-row justify-between">
+                        <div>
+                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                            Borja{" "}
+                            <span className="bullet-work text-[#159bcd]">
+                              •
+                            </span>
+                          </p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="tags p-14 mr-[6px]">Development</p>
+                          <p className="tags p-14 mr-[20px]">Design</p>
+                        </div>
+                      </div>
+                      <div className="mt-[10px]">
+                        <p className="b4-desk">
+                          Redesigning the website to improve the home appliance
+                          shopping experience.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>

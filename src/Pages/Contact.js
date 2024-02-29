@@ -85,7 +85,7 @@ function Contact() {
       <div className="flex flex-column justify-center">
         <div className="grain"></div>
         <div className="flex items-center">
-          <div className="mr-[170px] mb-[290px]">
+          <div className="mr-[170px] ">
             <h2 className="b3-desk">
               We would love to be part of your project
             </h2>
@@ -100,26 +100,44 @@ function Contact() {
             <div className="contact-b-cont flex flex-row flex-wrap content-center mt-9">
               <div
                 className={`contact-buttons b4-desk ${
-                  selectedService.includes("Web design")
+                  selectedService.includes("UX / UI Design")
                     ? "contact-b-active"
                     : ""
                 }`}
-                onClick={() => handleServiceClick("Web design")}
+                onClick={() => handleServiceClick("UX / UI Design")}
               >
-                <span style={{ userSelect: "none" }}>Web design</span>
+                <span style={{ userSelect: "none" }}>UX / UI Design</span>
               </div>
 
               <div
                 className={`contact-buttons b4-desk ${
-                  selectedService.includes("Site from scratch")
+                  selectedService.includes("Web Development")
                     ? "contact-b-active"
                     : ""
                 }`}
-                onClick={() => handleServiceClick("Site from scratch")}
+                onClick={() => handleServiceClick("Web Development")}
               >
-                <span style={{ userSelect: "none" }}>Site from scratch</span>
+                <span style={{ userSelect: "none" }}>Web Development</span>
               </div>
 
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Branding") ? "contact-b-active" : ""
+                }`}
+                onClick={() => handleServiceClick("Branding")}
+              >
+                <span style={{ userSelect: "none" }}>Branding</span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Website from scratch")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("Website from scratch")}
+              >
+                <span style={{ userSelect: "none" }}>Website from scratch</span>
+              </div>
               <div
                 className={`contact-buttons b4-desk ${
                   selectedService.includes("App design")
@@ -132,54 +150,6 @@ function Contact() {
               </div>
               <div
                 className={`contact-buttons b4-desk ${
-                  selectedService.includes("UI / UX") ? "contact-b-active" : ""
-                }`}
-                onClick={() => handleServiceClick("UI / UX")}
-              >
-                <span style={{ userSelect: "none" }}>UI / UX</span>
-              </div>
-              <div
-                className={`contact-buttons b4-desk ${
-                  selectedService.includes("HTML/CSS Coding")
-                    ? "contact-b-active"
-                    : ""
-                }`}
-                onClick={() => handleServiceClick("HTML/CSS Coding")}
-              >
-                <span style={{ userSelect: "none" }}>HTML/CSS Coding</span>
-              </div>
-              <div
-                className={`contact-buttons b4-desk ${
-                  selectedService.includes("Front-end development")
-                    ? "contact-b-active"
-                    : ""
-                }`}
-                onClick={() => handleServiceClick("Front-end development")}
-              >
-                <span style={{ userSelect: "none" }}>
-                  Front-end development
-                </span>
-              </div>
-              <div
-                className={`contact-buttons b4-desk ${
-                  selectedService.includes("Back-end development")
-                    ? "contact-b-active"
-                    : ""
-                }`}
-                onClick={() => handleServiceClick("Back-end development")}
-              >
-                <span style={{ userSelect: "none" }}>Back-end development</span>
-              </div>
-              <div
-                className={`contact-buttons b4-desk ${
-                  selectedService.includes("Branding") ? "contact-b-active" : ""
-                }`}
-                onClick={() => handleServiceClick("Branding")}
-              >
-                <span style={{ userSelect: "none" }}>Branding</span>
-              </div>
-              <div
-                className={`contact-buttons b4-desk ${
                   selectedService.includes("Other") ? "contact-b-active" : ""
                 }`}
                 onClick={() => handleServiceClick("Other")}
@@ -187,7 +157,7 @@ function Contact() {
                 <span style={{ userSelect: "none" }}>Other</span>
               </div>
             </div>
-            <div className="contact-form mt-[2rem]">
+            <div className="contact-form mt-[1rem]">
               <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="input-group flex justify-between">
                   <input
@@ -211,13 +181,14 @@ function Contact() {
                     className="input-cursor"
                   />
                 </div>
-                <input
+                <textarea
+                  type="textarea"
                   name="about"
                   value={formData.about}
                   onChange={handleChange}
                   required={true}
                   placeholder="About your project"
-                  style={{ width: "500px", marginTop: "60px" }}
+                  style={{ width: "500px", marginTop: "40px" }}
                   className="input-cursor"
                 />
                 <br />
@@ -228,7 +199,7 @@ function Contact() {
                   onChange={handleChange}
                   required={true}
                   placeholder="Budget"
-                  style={{ width: "500px", marginTop: "60px" }}
+                  style={{ width: "500px", marginTop: "40px" }}
                   className="input-cursor"
                 />
                 <input
@@ -236,7 +207,7 @@ function Contact() {
                   name="selectedService"
                   value={selectedService}
                 />
-                <div className="w-[32rem] flex justify-center">
+                <div className="w-[32rem] flex justify-center h-[85px]">
                   <div className="button-contact-submit b2-desk mt-14 mb-24 input-cursor">
                     Send request
                   </div>

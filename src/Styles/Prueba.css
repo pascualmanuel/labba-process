@@ -23,9 +23,46 @@
   justify-content: space-around;
   align-items: flex-end;
 }
+.project {
+  cursor: none !important;
+  transition: opacity 2s;
+}
+.project-info {
+  /* display: none; */
+  opacity: 0;
+  display: block;
+  transition: opacity 0.3s;
+}
 
+.project:hover .project-info {
+  /* display: block; or any other appropriate display property */
+  /* transition: 2s; */
+  opacity: 1;
+}
+.blur-bg {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(17.5px);
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  gap: 10px;
+  background: #e1e1e1;
+  border-radius: 8px;
+}
+.bullet-work {
+  width: 10px;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  margin-left: 11px;
+}
 .first-pro {
-  background-image: url("../Assets/work/work-borja.png");
+  background-image: url("../Assets/work/work-borja2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 552px;
@@ -33,7 +70,7 @@
   margin-bottom: 0px;
 }
 .second-pro {
-  background-image: url("../Assets/work/work-manno.png");
+  background-image: url("../Assets/work/work-manno2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 450px;
@@ -41,7 +78,7 @@
 }
 
 .third-pro {
-  background-image: url("../Assets/work/work-manno.png");
+  background-image: url("../Assets/work/work-manno2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 450px;
@@ -49,7 +86,7 @@
 }
 
 .fourth-pro {
-  background-image: url("../Assets/work/work-borja.png");
+  background-image: url("../Assets/work/work-borja2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 552px;
@@ -183,6 +220,8 @@ header {
   align-items: center;
   justify-content: center;
   height: 100px;
+  /* margin-right: 80px; */
+  /* margin-left: 80px; */
 }
 
 /* card-terimna !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -587,6 +626,16 @@ header {
   .svg-class-name {
     width: 75px !important;
     height: 75px !important;
+  }
+
+  .project-info {
+    opacity: 1;
+  }
+  .left-blur {
+    display: none;
+  }
+  .right-blur {
+    display: none;
   }
 }
 
