@@ -10,7 +10,7 @@ body {
 }
 html {
   cursor: url("../Assets/dot-cursor.svg"), auto;
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important; */
 }
 
 a {

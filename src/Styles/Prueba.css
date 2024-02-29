@@ -533,9 +533,9 @@ header {
 }
 
 .card {
-  --index0: calc(var(--index) - 1); /* 0-based index */
-  --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-  --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+  --index0: calc(var(--index) - 1) !important;
+  --reverse-index: calc(var(--numcards) - var(--index0)) !important;
+  --reverse-index0: calc(var(--reverse-index) - 1) !important;
 }
 
 @keyframes scale {
@@ -545,8 +545,8 @@ header {
 }
 
 #cards {
-  --numcards: 5;
-  view-timeline-name: --cards-element-scrolls-in-body;
+  --numcards: 5 !important;
+  view-timeline-name: --cards-element-scrolls-in-body !important;
 }
 
 .card__content {
@@ -565,7 +565,7 @@ header {
   animation-timeline: --cards-element-scrolls-in-body !important;
 
   animation-range: exit-crossing var(--start-range) exit-crossing
-    var(--end-range);
+    var(--end-range) !important;
 }
 
 @media (max-width: 1024px) {

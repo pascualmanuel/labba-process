@@ -352,9 +352,9 @@ function Home() {
       </div>
       <Works />
 
-      {/* <div className="" style={{ overflow: "hidden" }}> */}
-      <Claim />
-      {/* </div> */}
+      <div className="" style={{ overflowX: "hidden" }}>
+        <Claim />
+      </div>
 
       <div className="services-cont pt-[20px]">
         <Services />

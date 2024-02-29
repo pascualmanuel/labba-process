@@ -146,7 +146,7 @@ function Claim() {
         pin: true,
         pinSpacing: true,
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
 
