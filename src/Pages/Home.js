@@ -344,11 +344,11 @@ function Home() {
       <div id="circleCursor"></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
-      <div className="homecont" style={{ height: "74vh" }}>
+      <div className="homecont h-[64vh] sm:h-[74vh]">
         <HomeHero />
       </div>
       <div className="second-section parallax">
-        <div className="work"></div>
+        <div className="work h-[470px] sm:h-[300px] mb-[-5px] sm:mb-[0px]"></div>
       </div>
       <Works />
 
