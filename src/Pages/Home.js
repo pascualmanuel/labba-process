@@ -396,7 +396,7 @@ function Home() {
         </div>
         <div style={{ height: "200px" }}></div>
         <div className="footer" ref={footerRef}>
-          <div className="flex flex-row justify-between pb-[50px]">
+          <div className="flex flex-col sm:flex-row justify-between pb-[50px]">
             <div className="t-mail ml-[128px]" onClick={handleCopyClick}>
               <p className="sayhi mb-3">Say hi</p>
               <div className="flex flex-row items-center">

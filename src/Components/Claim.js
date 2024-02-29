@@ -45,7 +45,7 @@ function Claim() {
   }, []); // Empty dependency array ensures the effect runs only once during component mount
 
   let xAnimation = "-37%";
-
+  let vwClaim = "300vw";
   if (viewportWidth < 1415) {
     xAnimation = "-40%";
   }
@@ -63,7 +63,70 @@ function Claim() {
   }
   if (viewportWidth < 1090) {
     xAnimation = "-65%";
+    // vwClaim = "380vw";
+    vwClaim = "340vw";
   }
+
+  if (viewportWidth < 1000) {
+    xAnimation = "-70%";
+  }
+
+  if (viewportWidth < 900) {
+    xAnimation = "-75%";
+    vwClaim = "400vw";
+  }
+  if (viewportWidth < 900) {
+    xAnimation = "-70%";
+    vwClaim = "500vw";
+  }
+  if (viewportWidth < 700) {
+    xAnimation = "-75%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 640) {
+    xAnimation = "-35%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 580) {
+    xAnimation = "-40%";
+    vwClaim = "500vw";
+  }
+  if (viewportWidth < 530) {
+    xAnimation = "-45%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 490) {
+    xAnimation = "-52%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 440) {
+    xAnimation = "-57%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 420) {
+    xAnimation = "-62%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 400) {
+    xAnimation = "-65%";
+    vwClaim = "500vw";
+  }
+
+  if (viewportWidth < 380) {
+    xAnimation = "-70%";
+    vwClaim = "500vw";
+  }
+
+  // if (viewportWidth < 400) {
+  //   xAnimation = "-67%";
+  //   vwClaim = "500vw";
+  // }
   // if (viewportWidth > 1415) {
   //   console.log("+ a 1415");
   // }
@@ -78,7 +141,6 @@ function Claim() {
       scrollTrigger: {
         trigger: ".claim-section",
         start: "top top+=1",
-        // start: () => `top+=${claimSectionRef.current.offsetHeight / 2}`, // Adjust this calculation as needed
 
         end: "+=1800",
         pin: true,
@@ -119,13 +181,14 @@ function Claim() {
   //     animacion.kill();
   //   };
   // }, [xAnimation]); //
+  console.log(vwClaim);
   return (
     <>
       <div>
         <div
           // ref={claimSectionRef}
-          className="h-[101vh] claim-section w-[300vw] bg-[#121212] flex items-center"
-          style={{ marginBottom: "235vh" }}
+          className="h-[101vh] claim-section  bg-[#121212] flex items-center"
+          style={{ marginBottom: "235vh", width: vwClaim }}
         >
           <div
             className="claim-inside"

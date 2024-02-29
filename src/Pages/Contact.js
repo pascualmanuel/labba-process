@@ -84,152 +84,171 @@ function Contact() {
     <>
       <div className="flex flex-column justify-center">
         <div className="grain"></div>
-        <div>
-          <h2 className="b3-desk">We would love to be part of your project</h2>
-          {/* <Link to="/prueba"> */}
-          <h2 className="h2-desk mt-1 mb-9">Say hello!</h2>
-          {/* </Link> */}
-          <h2 className="b3-desk">I need</h2>
-          <div className="contact-b-cont flex flex-row flex-wrap content-center mt-9">
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("Web design") ? "contact-b-active" : ""
-              }`}
-              onClick={() => handleServiceClick("Web design")}
-            >
-              <span style={{ userSelect: "none" }}>Web design</span>
-            </div>
-
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("Site from scratch")
-                  ? "contact-b-active"
-                  : ""
-              }`}
-              onClick={() => handleServiceClick("Site from scratch")}
-            >
-              <span style={{ userSelect: "none" }}>Site from scratch</span>
-            </div>
-
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("App design") ? "contact-b-active" : ""
-              }`}
-              onClick={() => handleServiceClick("App design")}
-            >
-              <span style={{ userSelect: "none" }}>App design</span>
-            </div>
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("UI / UX") ? "contact-b-active" : ""
-              }`}
-              onClick={() => handleServiceClick("UI / UX")}
-            >
-              <span style={{ userSelect: "none" }}>UI / UX</span>
-            </div>
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("HTML/CSS Coding")
-                  ? "contact-b-active"
-                  : ""
-              }`}
-              onClick={() => handleServiceClick("HTML/CSS Coding")}
-            >
-              <span style={{ userSelect: "none" }}>HTML/CSS Coding</span>
-            </div>
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("Front-end development")
-                  ? "contact-b-active"
-                  : ""
-              }`}
-              onClick={() => handleServiceClick("Front-end development")}
-            >
-              <span style={{ userSelect: "none" }}>Front-end development</span>
-            </div>
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("Back-end development")
-                  ? "contact-b-active"
-                  : ""
-              }`}
-              onClick={() => handleServiceClick("Back-end development")}
-            >
-              <span style={{ userSelect: "none" }}>Back-end development</span>
-            </div>
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("Branding") ? "contact-b-active" : ""
-              }`}
-              onClick={() => handleServiceClick("Branding")}
-            >
-              <span style={{ userSelect: "none" }}>Branding</span>
-            </div>
-            <div
-              className={`contact-buttons b4-desk ${
-                selectedService.includes("Other") ? "contact-b-active" : ""
-              }`}
-              onClick={() => handleServiceClick("Other")}
-            >
-              <span style={{ userSelect: "none" }}>Other</span>
-            </div>
+        <div className="flex items-center">
+          <div className="mr-[170px] mb-[290px]">
+            <h2 className="b3-desk">
+              We would love to be part of your project
+            </h2>
+            {/* <Link to="/prueba"> */}
+            <h2 className="h2-desk mt-1 mb-9" style={{ fontSize: "65px" }}>
+              Say hello!
+            </h2>
+            {/* </Link> */}
           </div>
-          <div className="contact-form mt-16">
-            <form ref={formRef} onSubmit={handleSubmit}>
-              <div className="input-group flex justify-between">
+          <div>
+            <h2 className="b3-desk">I need</h2>
+            <div className="contact-b-cont flex flex-row flex-wrap content-center mt-9">
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Web design")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("Web design")}
+              >
+                <span style={{ userSelect: "none" }}>Web design</span>
+              </div>
+
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Site from scratch")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("Site from scratch")}
+              >
+                <span style={{ userSelect: "none" }}>Site from scratch</span>
+              </div>
+
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("App design")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("App design")}
+              >
+                <span style={{ userSelect: "none" }}>App design</span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("UI / UX") ? "contact-b-active" : ""
+                }`}
+                onClick={() => handleServiceClick("UI / UX")}
+              >
+                <span style={{ userSelect: "none" }}>UI / UX</span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("HTML/CSS Coding")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("HTML/CSS Coding")}
+              >
+                <span style={{ userSelect: "none" }}>HTML/CSS Coding</span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Front-end development")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("Front-end development")}
+              >
+                <span style={{ userSelect: "none" }}>
+                  Front-end development
+                </span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Back-end development")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("Back-end development")}
+              >
+                <span style={{ userSelect: "none" }}>Back-end development</span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Branding") ? "contact-b-active" : ""
+                }`}
+                onClick={() => handleServiceClick("Branding")}
+              >
+                <span style={{ userSelect: "none" }}>Branding</span>
+              </div>
+              <div
+                className={`contact-buttons b4-desk ${
+                  selectedService.includes("Other") ? "contact-b-active" : ""
+                }`}
+                onClick={() => handleServiceClick("Other")}
+              >
+                <span style={{ userSelect: "none" }}>Other</span>
+              </div>
+            </div>
+            <div className="contact-form mt-[2rem]">
+              <form ref={formRef} onSubmit={handleSubmit}>
+                <div className="input-group flex justify-between">
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required={true}
+                    placeholder="Your name"
+                    style={{ width: "225px" }}
+                    className="input-cursor"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required={true}
+                    placeholder="Your email"
+                    style={{ width: "225px" }}
+                    className="input-cursor"
+                  />
+                </div>
+                <input
+                  name="about"
+                  value={formData.about}
+                  onChange={handleChange}
+                  required={true}
+                  placeholder="About your project"
+                  style={{ width: "500px", marginTop: "60px" }}
+                  className="input-cursor"
+                />
+                <br />
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
+                  name="budget"
+                  value={formData.budget}
                   onChange={handleChange}
                   required={true}
-                  placeholder="Your name"
-                  style={{ width: "225px" }}
+                  placeholder="Budget"
+                  style={{ width: "500px", marginTop: "60px" }}
                   className="input-cursor"
                 />
                 <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required={true}
-                  placeholder="Your email"
-                  style={{ width: "225px" }}
-                  className="input-cursor"
+                  type="hidden"
+                  name="selectedService"
+                  value={selectedService}
                 />
-              </div>
-              <input
-                name="about"
-                value={formData.about}
-                onChange={handleChange}
-                required={true}
-                placeholder="About your project"
-                style={{ width: "500px", marginTop: "60px" }}
-                className="input-cursor"
-              />
-              <br />
-              <input
-                type="text"
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                required={true}
-                placeholder="Budget"
-                style={{ width: "500px", marginTop: "60px" }}
-                className="input-cursor"
-              />
-              <input
-                type="hidden"
-                name="selectedService"
-                value={selectedService}
-              />
-              <button
-                type="submit"
-                className="w-[32rem] flex justify-center mt-14 mb-24 input-cursor"
-              >
-                <ReactSVG src={Submit} />
-              </button>
-            </form>
+                <div className="w-[32rem] flex justify-center">
+                  <div className="button-contact-submit b2-desk mt-14 mb-24 input-cursor">
+                    Send request
+                  </div>
+                </div>
+                {/* <button
+                  type="submit"
+                  className="w-[32rem] flex justify-center mt-14 mb-24 input-cursor"
+                >
+                  <ReactSVG src={Submit} />
+                </button> */}
+              </form>
+            </div>
           </div>
         </div>
       </div>
