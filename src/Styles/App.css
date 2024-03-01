@@ -117,6 +117,23 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+.contact-text-1 {
+  /* Body 3 Desktop */
+  font-family: "Satoshi-Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.contact-text-2 {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 86px;
+}
+
 .grain {
   z-index: 1000;
   width: 100%;
@@ -207,7 +224,7 @@ a {
 
 .contact-b-cont {
   /* height: 170px; */
-  width: 510px;
+  /* width: 510px; */
 }
 
 .contact-form textarea {
@@ -226,10 +243,19 @@ a {
 }
 
 .contact-b-active {
-  background-color: #d3d3d3;
+  background: linear-gradient(
+    115.61deg,
+    #ff5800 -26.64%,
+    #f62a4b 0.76%,
+    #a0378b 92.51%,
+    #2b417a 100.06%
+  );
+  color: white;
+  border: 1px solid #d9d9d9;
+  /* border-radius: 50px; */
 }
 .contact-form {
-  width: 520px;
+  /* width: 520px; */
 }
 
 .contact-form input,
@@ -237,7 +263,7 @@ a {
   border: none;
   border-bottom: 1px solid #b5b5b5;
   margin-bottom: 10px;
-  width: 100%;
+  /* width: 100%; */
   padding: 5px;
 }
 
@@ -263,15 +289,13 @@ a {
   border: solid 1px gray;
   width: 133px;
   height: 43px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-
   position: fixed;
   top: 1.5rem;
-  right: 2.5rem;
+  right: 18px;
 }
 
 .claim-inside {
@@ -292,10 +316,11 @@ a {
 @media (max-width: 640px) {
   .h1-desk {
     font-family: "Satoshi-Variable";
-    font-size: 45px;
+
     font-style: normal;
     font-weight: 300;
-    line-height: 49.28px;
+    font-size: 70px;
+    line-height: 91%;
   }
   .h2-desk {
     font-family: "Satoshi-Variable";
@@ -314,10 +339,10 @@ a {
   }
   .b1-desk {
     font-family: "Satoshi-Variable";
-    font-size: 24px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 300;
-    line-height: 32.4px;
+    line-height: 43px;
   }
   .h3-desk {
     font-family: "Satoshi-Variable";
@@ -378,6 +403,31 @@ a {
   .contact.expanded {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: (10px);
+  }
+  .contact-buttons {
+    font-size: 13px;
+    /* padding: 8px 16px; */
+    /* gap: 10px; */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .contact-text-1 {
+    font-family: "Satoshi-Variable";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* We would love to be part of your project */
+  }
+  .contact-text-2 {
+    font-family: "Satoshi-Variable";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 61px;
   }
 }
 

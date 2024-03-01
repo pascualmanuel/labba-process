@@ -42,8 +42,8 @@ function HomeHero() {
           } w-screen`}
         >
           <div className="flex h-[28rem] sm:h-[35rem]">
-            <div className="max-w-[900px] lg:min-w-[880px] md:min-w-[800px] sm:min-w-[600px]">
-              <p className="h1-desk decoration-slate-100">
+            <div className="max-w-[900px] lg:min-w-[880px] md:min-w-[800px] sm:min-w-[400px]">
+              <p className="h1-desk decoration-slate-100 w-[350px] sm:w-auto">
                 {translateText(
                   "Entre el mágico y el ninja te rompes alto site",
                   "Your bussiness deserves an amazing website."
@@ -51,10 +51,8 @@ function HomeHero() {
               </p>
             </div>
             <div className="home-desc-hero">
-              <p className="b2-desk">
-                <a href="/hola">
-                  We design & build human-centered <br /> digital experiences.
-                </a>
+              <p className="b2-desk w-[200px] sm:w-auto">
+                We design & build human-centered <br /> digital experiences.
               </p>
             </div>
           </div>

@@ -82,22 +82,25 @@ function Contact() {
 
   return (
     <>
-      <div className="flex flex-column justify-center">
+      <div className="flex flex-column sm:justify-center ml-[12px] sm:ml-[0px]">
         <div className="grain"></div>
-        <div className="flex items-center">
-          <div className="mr-[170px] ">
-            <h2 className="b3-desk">
+        <div className="flex sm:flex-row flex-col sm:items-center">
+          <div className="sm:mr-[170px] mr-[0px] w-[340px] sm:w-auto">
+            <h2 className=" contact-text-1 ">
               We would love to be part of your project
             </h2>
             {/* <Link to="/prueba"> */}
-            <h2 className="h2-desk mt-1 mb-9" style={{ fontSize: "65px" }}>
+            <h2 className=" contact-text-2 mt-[10px] sm:mt-1 mb-9 ">
               Say hello!
             </h2>
             {/* </Link> */}
           </div>
           <div>
-            <h2 className="b3-desk">I need</h2>
-            <div className="contact-b-cont flex flex-row flex-wrap content-center mt-9">
+            <h2 className="b3-desk text-[24px] f">I need</h2>
+            <div
+              className="contact-b-cont flex flex-row flex-wrap content-center sm:mt-9 mt-[14px] w-[360px] 
+            sm:w-[510px] "
+            >
               <div
                 className={`contact-buttons b4-desk ${
                   selectedService.includes("UX / UI Design")
@@ -157,9 +160,9 @@ function Contact() {
                 <span style={{ userSelect: "none" }}>Other</span>
               </div>
             </div>
-            <div className="contact-form mt-[1rem]">
+            <div className="contact-form  sm:w-[520px] mt-[1rem]">
               <form ref={formRef} onSubmit={handleSubmit}>
-                <div className="input-group flex justify-between">
+                <div className="input-group flex justify-between sm:flex-row flex-col">
                   <input
                     type="text"
                     name="name"
@@ -167,8 +170,8 @@ function Contact() {
                     onChange={handleChange}
                     required={true}
                     placeholder="Your name"
-                    style={{ width: "225px" }}
-                    className="input-cursor"
+                    // style={{ width: "225px" }}
+                    className="input-cursor  sm:w-[225px] w-[90vw]"
                   />
                   <input
                     type="email"
@@ -177,8 +180,8 @@ function Contact() {
                     onChange={handleChange}
                     required={true}
                     placeholder="Your email"
-                    style={{ width: "225px" }}
-                    className="input-cursor"
+                    // style={{ width: "225px" }}
+                    className="input-cursor sm:w-[225px] w-[90vw]"
                   />
                 </div>
                 <textarea
@@ -188,8 +191,7 @@ function Contact() {
                   onChange={handleChange}
                   required={true}
                   placeholder="About your project"
-                  style={{ width: "500px", marginTop: "40px" }}
-                  className="input-cursor"
+                  className="input-cursor sm:w-[500px] w-[90vw] sm:mt-[40px]"
                 />
                 <br />
                 <input
@@ -199,15 +201,14 @@ function Contact() {
                   onChange={handleChange}
                   required={true}
                   placeholder="Budget"
-                  style={{ width: "500px", marginTop: "40px" }}
-                  className="input-cursor"
+                  className="input-cursor sm:w-[500px] w-[90vw] sm:mt-[40px]"
                 />
                 <input
                   type="hidden"
                   name="selectedService"
                   value={selectedService}
                 />
-                <div className="w-[32rem] flex justify-center h-[85px]">
+                <div className="sm:w-[32rem] w-[auto] flex justify-center h-[85px]">
                   <div className="button-contact-submit b2-desk mt-14 mb-24 input-cursor">
                     Send request
                   </div>

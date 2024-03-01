@@ -82,7 +82,7 @@ function Header() {
               /> */}
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[80px] ml-[60px]"
+                className=" sm:ml-[80px] ml-[18px]"
                 style={{ zIndex: "10000" }}
               />
             </div>
@@ -183,15 +183,15 @@ function Header() {
             <div className="">
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[80px] ml-[60px]"
+                className=" sm:ml-[80px] ml-[18px]"
                 style={{ zIndex: "10000" }}
               />
             </div>
           </Link>
           <Link to="/">
-            <div className="contact-page">
+            <div className="contact-page absolute">
               <ReactSVG src={BackIcon} onClick={toggleContact} />
-              <p className="b3-desk pl-2.5"> Back </p>
+              <p className="b3-des pl-2.5 "> Back </p>
             </div>
           </Link>
         </div>

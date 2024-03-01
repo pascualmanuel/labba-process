@@ -62,7 +62,7 @@
   margin-left: 11px;
 }
 .first-pro {
-  background-image: url("../Assets/work/work-borja2.png");
+  background-image: url("../Assets/work/work-1.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 552px;
@@ -70,7 +70,7 @@
   margin-bottom: 0px;
 }
 .second-pro {
-  background-image: url("../Assets/work/work-manno2.png");
+  background-image: url("../Assets/work/work-2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 450px;
@@ -78,7 +78,7 @@
 }
 
 .third-pro {
-  background-image: url("../Assets/work/work-manno2.png");
+  background-image: url("../Assets/work/work-3.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 450px;
@@ -86,7 +86,7 @@
 }
 
 .fourth-pro {
-  background-image: url("../Assets/work/work-borja2.png");
+  background-image: url("../Assets/work/work-4.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 552px;
@@ -443,7 +443,7 @@ header {
   }
 
   .first-pro {
-    background-image: url("../Assets/manno.png");
+    background-image: url("../Assets/work/work-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 280px;
@@ -454,7 +454,7 @@ header {
   }
 
   .second-pro {
-    background-image: url("../Assets/borja.png");
+    background-image: url("../Assets/work/work-2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 280px;
@@ -464,7 +464,7 @@ header {
     right: 13px;
   }
   .third-pro {
-    background-image: url("../Assets/borja.png");
+    background-image: url("../Assets/work/work-3.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 280px;
@@ -474,7 +474,7 @@ header {
     right: 13px;
   }
   .fourth-pro {
-    background-image: url("../Assets/borja.png");
+    background-image: url("../Assets/work/work-4.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 280px;
@@ -521,6 +521,10 @@ header {
   .services-cont {
     height: auto;
     margin-bottom: 140px;
+  }
+
+  .home-desc-hero {
+    bottom: 0rem;
   }
 }
 

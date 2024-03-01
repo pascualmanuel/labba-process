@@ -341,7 +341,7 @@ function Home() {
   return (
     <>
       <div id={shadowOn}></div>
-      <div id="circleCursor"></div>
+      <div id="circleCursor" className="hidden sm:block"></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
       <div className="homecont h-[64vh] sm:h-[74vh]">
@@ -375,8 +375,8 @@ function Home() {
       {/* <StackedCards /> */}
       <div style={{ backgroundColor: "#F2F2F2" }}>
         <div
-          className={`prefooter ${shouldShrink ? "shrink" : ""}`}
-          // ref={prefooterRef}
+        className={`prefooter ${shouldShrink ? "shrink" : ""}`}
+        // ref={prefooterRef}
         >
           <Link to={"/contact"}>
             <div
@@ -416,11 +416,18 @@ function Home() {
             <div className=" ml-[18px] sm:ml-[0px] sm:mr-[128px] flex flex-col sm:flex-row">
               <div className=" mr-[80px] mb-[30px] sm:mb-[0px]">
                 <p className="sayhi mb-3">Argentina</p>
-                <p className="contacts-home">+54 9 11-5163-2960</p>
+                <a
+                  href="https://wa.me/+5491151632960
+"
+                >
+                  <p className="contacts-home">+54 9 11-5163-2960</p>
+                </a>
               </div>
               <div>
                 <p className="sayhi mb-3">Spain</p>
-                <p className="contacts-home">+54 9 11-5163-2960</p>
+                <a href="https://wa.me/+34634269453">
+                  <p className="contacts-home">+34 634 26 94 53</p>
+                </a>
               </div>
             </div>
           </div>
