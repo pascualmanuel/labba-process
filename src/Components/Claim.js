@@ -141,7 +141,6 @@ function Claim() {
       scrollTrigger: {
         trigger: ".claim-section",
         start: "top top+=1",
-
         end: "+=1800",
         pin: true,
         pinSpacing: true,
@@ -181,13 +180,13 @@ function Claim() {
   //     animacion.kill();
   //   };
   // }, [xAnimation]); //
-  console.log(vwClaim);
+  // console.log(vwClaim);
   return (
     <>
       <div>
         <div
           // ref={claimSectionRef}
-          className="h-[101vh] claim-section  bg-[#121212] flex items-center"
+          className="h-[110vh] claim-section  bg-[#121212] flex items-center"
           style={{ marginBottom: "235vh", width: vwClaim }}
         >
           <div

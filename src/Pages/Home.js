@@ -20,7 +20,7 @@ import { Link } from "react-router-dom"; // Import Link from React Router
 import Pruebas from "../Components/Pruebas";
 import StackedCards from "../Components/StackedCard";
 import PruebaPage from "./PruebaPage";
-
+import WorkMobile from "../Components/WorkMobile";
 function Home() {
   const { userLanguage, translateText } = useLanguage();
   const isMobile = window.innerWidth <= 768; // Adjust the width as needed
@@ -39,7 +39,11 @@ function Home() {
     shadowOn = "no";
     displayClaim = "none";
   }
-
+  const svgCode = `
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23.3137 0.686267L0.686292 23.3137M23.3137 0.686267H0.686292M23.3137 0.686267V23.3137" stroke="#ECECEC"/>
+  </svg>
+`;
   useEffect(() => {
     const ellipseShadow = document.getElementById(shadowOn);
 
@@ -104,8 +108,14 @@ function Home() {
         circleCursor.style.fontSize = "50px";
         circleCursor.style.fontWeight = "400";
 
-        circleCursor.style.setProperty("--before-content", "'+'"); // Use a custom property
+        // circleCursor.style.setProperty("--before-content", "'+'"); // Use a custom property
+        // circleCursor.style.setProperty("--before-content", `'${svgCode}'`);
+        circleCursor.style.setProperty(
+          "--before-content",
+          `url('data:image/svg+xml,${encodeURIComponent(svgCode)}')`
+        );
 
+        console.log(svgCode);
         // circleCursor.style.transition = "0.1s";
 
         // Add other style modifications as needed
@@ -347,12 +357,18 @@ function Home() {
       <div className="homecont h-[64vh] sm:h-[74vh]">
         <HomeHero />
       </div>
-      <div className="second-section parallax">
-        <div className="work h-[470px] sm:h-[300px] mb-[-5px] sm:mb-[0px]"></div>
-      </div>
-      <Works />
+      {/* {isMobile ? (
+        <WorkMobile />
+      ) : ( */}
+      <>
+        <div className="second-section parallax">
+          <div className="work h-[420px] sm:h-[300px] mb-[-5px] sm:mb-[0px]"></div>
+        </div>
+        <Works />
+      </>
+      {/* )} */}
 
-      <div className="" style={{ overflowX: "hidden" }}>
+      <div className="mt-[-140px]" style={{ overflowX: "hidden" }}>
         <Claim />
       </div>
 
@@ -375,8 +391,8 @@ function Home() {
       {/* <StackedCards /> */}
       <div style={{ backgroundColor: "#F2F2F2" }}>
         <div
-        className={`prefooter ${shouldShrink ? "shrink" : ""}`}
-        // ref={prefooterRef}
+          className={`prefooter ${shouldShrink ? "shrink" : ""}`}
+          // ref={prefooterRef}
         >
           <Link to={"/contact"}>
             <div
@@ -390,7 +406,8 @@ function Home() {
                   " Let’s take your idea to the next level."
                 )}
               </p>
-              <ReactSVG src={CursorDrop} className="" />
+              {/* <ReactSVG src={CursorDrop} className="" /> */}
+              <div className="drop-us b2-desk text-white">Drop us a line</div>
             </div>
           </Link>
         </div>

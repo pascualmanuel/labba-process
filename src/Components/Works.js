@@ -4,6 +4,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Styles/Prueba.css";
 
 function Works() {
+  const isMobile = window.innerWidth <= 768; // Adjust the width as needed
+
+  let scrubDesk = 2.5;
+
+  let positions = {
+    firstPro: -100,
+    secondPro: -680,
+    thirdPro: -800,
+    fourthPro: -980,
+  };
+
+  if (isMobile) {
+    scrubDesk = true;
+    positions = {
+      firstPro: -100,
+      secondPro: -200,
+      thirdPro: -400,
+      fourthPro: -600,
+    };
+  }
+
+  console.log(positions.firstPro);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +36,7 @@ function Works() {
       scrollTrigger: {
         trigger: ".elemento-animado",
         start: "top top",
-        end: "+=2100",
+        end: "+=1200",
         pin: true,
         pinSpacing: false,
         scrub: true,
@@ -78,50 +101,50 @@ function Works() {
   useEffect(() => {
     // Set up GSAP animations
     gsap.to(".first-pro", {
-      y: 300, // Adjust the distance of the movement for the first project
+      y: positions.firstPro, // Adjust the distance of the movement for the first project
       scrollTrigger: {
         trigger: ".first-pro",
         start: "top bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: scrubDesk,
       },
     });
 
     gsap.to(".second-pro", {
-      y: -80, // Adjust the distance of the movement for the second project
+      y: positions.secondPro, // Adjust the distance of the movement for the second project
       scrollTrigger: {
-        // ease: "1s",
+        // ease: "3s",
         trigger: ".second-pro",
         start: "top bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: scrubDesk,
       },
     });
 
     gsap.to(".third-pro", {
-      y: -200, // Adjust the distance of the movement for the third project
+      y: positions.thirdPro, // Adjust the distance of the movement for the third project
       scrollTrigger: {
         trigger: ".third-pro",
         start: "top bottom",
-        end: "bottom top",
-        scrub: true,
+        // end: "bottom top",
+        scrub: scrubDesk,
       },
     });
 
     gsap.to(".fourth-pro", {
-      y: -100, // Adjust the distance of the movement for the fourth project
+      y: positions.fourthPro, // Adjust the distance of the movement for the fourth project
       scrollTrigger: {
         trigger: ".fourth-pro",
         start: "top bottom",
-        end: "bottom top",
-        scrub: true,
+        // end: "bottom top",
+        scrub: scrubDesk,
       },
     });
   }, []);
 
   return (
     <>
-      <div className="w-[100vw] overflow-x-hidden">
+      <div className="w-[100vw] overflow-hidden">
         <div className="scroll-container ">
           <div className="elemento-animado">
             <div
@@ -133,14 +156,17 @@ function Works() {
             <div className="div-animado">
               <div className="project-container">
                 <a href="https://mannoapp.com/" target="_blank">
-                  <div className="project first-pro " id="pasando">
+                  <div className="project first-pro mb-[220px] " id="pasando">
                     <div
                       className=" project-info  w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] 
                       rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]"
                     >
                       <div className="flex flex-row justify-between">
                         <div>
-                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                          <p
+                            className="l-desk text-[#ECECEC]"
+                            style={{ fontWeight: 500 }}
+                          >
                             Borja{" "}
                             <span className="bullet-work text-[#159bcd]">
                               •
@@ -153,7 +179,7 @@ function Works() {
                         </div>
                       </div>
                       <div className="mt-[10px]">
-                        <p className="b4-desk">
+                        <p className="b4-desk text-[#ECECEC]">
                           Redesigning the website to improve the home appliance
                           shopping experience.
                         </p>
@@ -167,7 +193,10 @@ function Works() {
                     <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
                         <div>
-                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                          <p
+                            className="l-desk text-[#ECECEC]"
+                            style={{ fontWeight: 500 }}
+                          >
                             Manno{" "}
                             <span className="bullet-work text-[#DD415F]">
                               •
@@ -180,7 +209,7 @@ function Works() {
                         </div>
                       </div>
                       <div className="mt-[10px]">
-                        <p className="b4-desk">
+                        <p className="b4-desk text-[#ECECEC]">
                           Redesigning the website to improve the home appliance
                           shopping experience.
                         </p>
@@ -192,12 +221,15 @@ function Works() {
             </div>
             <div className="div-animado" style={{ marginTop: "40vh" }}>
               <div className="project-container">
-                <a href="https://mannoapp.com">
-                  <div className="project third-pro" id="pasando">
+                <div className="project third-pro" id="pasando">
+                  <a href="https://mannoapp.com">
                     <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
                         <div>
-                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                          <p
+                            className="l-desk text-[#ECECEC]"
+                            style={{ fontWeight: 500 }}
+                          >
                             Borja
                             <span className="bullet-work text-[#DF362F]">
                               •
@@ -210,20 +242,23 @@ function Works() {
                         </div>
                       </div>
                       <div className="mt-[10px]">
-                        <p className="b4-desk">
+                        <p className="b4-desk text-[#ECECEC]">
                           Redesigning the website to improve the home appliance
                           shopping experience.
                         </p>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
                 <a>
                   <div className="project fourth-pro" id="pasando">
                     <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
                         <div>
-                          <p className="l-desk" style={{ fontWeight: 500 }}>
+                          <p
+                            className="l-desk text-[#ECECEC]"
+                            style={{ fontWeight: 500 }}
+                          >
                             Borja{" "}
                             <span className="bullet-work text-[#159bcd]">
                               •
@@ -236,7 +271,7 @@ function Works() {
                         </div>
                       </div>
                       <div className="mt-[10px]">
-                        <p className="b4-desk">
+                        <p className="b4-desk text-[#ECECEC]">
                           Redesigning the website to improve the home appliance
                           shopping experience.
                         </p>
@@ -248,7 +283,7 @@ function Works() {
             </div>
           </div>
         </div>
-        <div className="h-[80vh]"></div>
+        {/* <div className="h-[80vh]"></div> */}
       </div>
     </>
   );

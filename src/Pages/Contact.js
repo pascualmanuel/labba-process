@@ -131,7 +131,7 @@ function Contact() {
               >
                 <span style={{ userSelect: "none" }}>Branding</span>
               </div>
-              <div
+              {/* <div
                 className={`contact-buttons b4-desk ${
                   selectedService.includes("Website from scratch")
                     ? "contact-b-active"
@@ -140,7 +140,7 @@ function Contact() {
                 onClick={() => handleServiceClick("Website from scratch")}
               >
                 <span style={{ userSelect: "none" }}>Website from scratch</span>
-              </div>
+              </div> */}
               <div
                 className={`contact-buttons b4-desk ${
                   selectedService.includes("App design")

@@ -14,7 +14,7 @@ import SmoothScroll from "./Hooks/SmoothScroll";
 import Pruebas from "./Components/Pruebas";
 import PruebaPage from "./Pages/PruebaPage";
 import Cursor from "./Hooks/Cursor";
-
+import Loader from "./Components/Loader";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -27,23 +27,6 @@ function ScrollToTop() {
 function App() {
   const [scrollXEnabled, setScrollXEnabled] = useState(true);
 
-  // useEffect(() => {
-  //   // Set up GSAP ScrollTrigger for smooth scrolling
-
-  //   gsap.registerPlugin(ScrollTrigger);
-
-  //   gsap.utils.toArray(".scroll-trigger").forEach((section) => {
-  //     ScrollTrigger.create({
-  //       trigger: section,
-  //       start: "top center",
-  //       end: "bottom center",
-  //       scrub: 1,
-  //       pin: true,
-  //       anticipatePin: 1,
-  //       // markers: true,
-  //     });
-  //   });
-  // }, []);
   const cursorRef = useRef(null);
 
   useEffect(() => {
@@ -87,26 +70,29 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <LanguageProvider>
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                {/* <div style={{ overflowX: scrollXEnabled ? "auto" : "hidden" }}> */}
-                <ScrollToTop />
-                <Home />
-                {/* </div> */}
-              </>
-            }
-          />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/prueba" element={<Pruebas />} />
-        </Routes>
-      </LanguageProvider>
-    </BrowserRouter>
+    <>
+      {/* <Loader /> */}
+      <BrowserRouter>
+        <LanguageProvider>
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  {/* <div style={{ overflowX: scrollXEnabled ? "auto" : "hidden" }}> */}
+                  <ScrollToTop />
+                  <Home />
+                  {/* </div> */}
+                </>
+              }
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/prueba" element={<Pruebas />} />
+          </Routes>
+        </LanguageProvider>
+      </BrowserRouter>
+    </>
   );
 }
 
