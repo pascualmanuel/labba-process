@@ -1,26 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Styles/App.css";
 import Works from "../Components/Works";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import "../Styles/Prueba.css"; // Asegúrate de tener
 import HomeHero from "../Components/HomeHero";
 import Services from "../Components/Services";
 import Process from "../Components/Process";
 import Carousel from "../Components/Carousel";
-import { ReactSVG } from "react-svg";
-import LabbaL from "../Assets/labba/labba-l.svg";
-import LabbaA from "../Assets/labba/labba-a.svg";
-import LabbaB from "../Assets/labba/labba-b.svg";
-import CursorDrop from "../Assets/labba/drop-line.svg";
+
 import Claim from "../Components/Claim";
 import { useLanguage } from "../Hooks/LanguageContext";
-import LabbaBottom from "../Assets/labba/labba-bottom.svg";
+
 import { Link } from "react-router-dom"; // Import Link from React Router
-import Pruebas from "../Components/Pruebas";
-import StackedCards from "../Components/StackedCard";
-import PruebaPage from "./PruebaPage";
-import WorkMobile from "../Components/WorkMobile";
+
 function Home() {
   const { userLanguage, translateText } = useLanguage();
   const isMobile = window.innerWidth <= 768; // Adjust the width as needed
@@ -115,7 +107,6 @@ function Home() {
           `url('data:image/svg+xml,${encodeURIComponent(svgCode)}')`
         );
 
-        console.log(svgCode);
         // circleCursor.style.transition = "0.1s";
 
         // Add other style modifications as needed
@@ -124,10 +115,8 @@ function Home() {
         circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
         circleCursor.style.width = "35px";
         circleCursor.style.height = "35px";
-        circleCursor.style.transition = "0.1s";
+        // circleCursor.style.transition = "0.1s";
         circleCursor.style.setProperty("--before-content", "''"); // Use a custom property
-
-        // Add other style modifications as needed
       }
     }
 

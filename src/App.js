@@ -29,23 +29,23 @@ function App() {
 
   const cursorRef = useRef(null);
 
-  useEffect(() => {
-    const cursor = cursorRef.current;
+  // useEffect(() => {
+  //   const cursor = cursorRef.current;
 
-    function moveCursor(e) {
-      gsap.to(cursor, 0.3, {
-        x: e.clientX,
-        y: e.clientY + window.scrollY, // Adjust for the scroll position
-      });
-    }
+  //   function moveCursor(e) {
+  //     gsap.to(cursor, 0.3, {
+  //       x: e.clientX,
+  //       y: e.clientY + window.scrollY, // Adjust for the scroll position
+  //     });
+  //   }
 
-    window.addEventListener("mousemove", moveCursor);
+  //   window.addEventListener("mousemove", moveCursor);
 
-    return () => {
-      // Cleanup the event listener when the component unmounts
-      window.removeEventListener("mousemove", moveCursor);
-    };
-  }, []);
+  //   return () => {
+  //     // Cleanup the event listener when the component unmounts
+  //     window.removeEventListener("mousemove", moveCursor);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const handleResize = () => {
