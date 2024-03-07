@@ -92,7 +92,7 @@ function Header() {
             style={{ zIndex: "100" }}
           >
             <Link to="/contact">
-              <div className="contact">Book an intro call</div>
+              <div className="contact">Contact</div>
             </Link>
           </div>
 
@@ -156,7 +156,7 @@ function Header() {
               <div className="menu-icon">
                 {expanded ? null : (
                   <Link to="/contact">
-                    <p className="b3-desk pl-2.5"> Book an intro call </p>
+                    <p className="b3-desk pl-2.5"> Contact </p>
                   </Link>
                 )}
                 <ReactSVG

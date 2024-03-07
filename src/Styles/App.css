@@ -191,13 +191,12 @@ a {
   border-radius: 21.5px;
   background: var(--BG-Blur-Blanco, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(10px);
-  width: 158px;
+  width: 88px;
   height: 38px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   transition: all 0.3s ease;
-
   /* Body 3 Mobile */
   font-family: "Satoshi-Regular";
   font-style: normal;
@@ -231,7 +230,7 @@ a {
   height: 90px;
 }
 .contact-buttons {
-  border: solid 1px;
+  border: solid 1px #d9d9d9;
   border-radius: 50px;
   width: fit-content;
   padding-top: 7px;
@@ -240,6 +239,17 @@ a {
   padding-left: 15px;
   margin-right: 17px;
   margin-bottom: 12px;
+}
+
+.contact-buttons:hover {
+  background: linear-gradient(
+    115.61deg,
+    #ff5800 -26.64%,
+    #f62a4b 0.76%,
+    #a0378b 92.51%,
+    #2b417a 100.06%
+  );
+  color: white;
 }
 
 .contact-b-active {
