@@ -106,9 +106,6 @@ function Header() {
               </div>
             </div>
           </Link>
-          <div className="fixed top-[300px] right-3 sm:right-10">
-            <p className="connn">Contact</p>
-          </div>
 
           {/* <div
             className="fixed top-6 right-3 sm:right-10"
