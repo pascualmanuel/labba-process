@@ -74,7 +74,13 @@ function Header() {
       <>
         <div className="flex flex-row justify-between items-center h-24">
           <Link to="/">
-            <div className="">
+            <div
+              className="fixed"
+              style={{
+                mixBlendMode: "difference",
+                zIndex: "10000",
+              }}
+            >
               {/* <ReactSVG
                 src={LabbaISO}
                 className="sm:mr-2.5 sm:ml-12 ml-6 fixed "
@@ -82,18 +88,26 @@ function Header() {
               /> */}
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[80px] ml-[18px]"
+                className=" sm:ml-[80px] ml-[18px] "
                 style={{ zIndex: "10000" }}
               />
             </div>
           </Link>
-          <div
-            className="fixed top-6 right-3 sm:right-10"
-            style={{ zIndex: "100" }}
-          >
-            <Link to="/contact">
-              <div className="contact">Contact</div>
-            </Link>
+          <Link to={"/contact"}>
+            <div
+              className="fixed top-6 right-3 sm:right-10"
+              style={{
+                mixBlendMode: "difference",
+                zIndex: "10000",
+              }}
+            >
+              <div className="contact">
+                <p className="different text-white">Contact</p>
+              </div>
+            </div>
+          </Link>
+          <div className="fixed top-[300px] right-3 sm:right-10">
+            <p className="connn">Contact</p>
           </div>
 
           {/* <div

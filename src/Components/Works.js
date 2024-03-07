@@ -4,7 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Styles/Prueba.css";
 
 function Works() {
-  const isMobile = window.innerWidth <= 768; // Adjust the width as needed
+
+  
+  const isMobile = window.innerWidth <= 768; //  width as needed
 
   let scrubDesk = 2.5;
 
@@ -101,7 +103,7 @@ function Works() {
   useEffect(() => {
     // Set up GSAP animations
     gsap.to(".first-pro", {
-      y: positions.firstPro, // Adjust the distance of the movement for the first project
+      y: positions.firstPro, //  distance of the movement for the first project
       scrollTrigger: {
         trigger: ".first-pro",
         start: "top bottom",
@@ -111,7 +113,7 @@ function Works() {
     });
 
     gsap.to(".second-pro", {
-      y: positions.secondPro, // Adjust the distance of the movement for the second project
+      y: positions.secondPro, //  distance of the movement for the second project
       scrollTrigger: {
         // ease: "3s",
         trigger: ".second-pro",
@@ -122,7 +124,7 @@ function Works() {
     });
 
     gsap.to(".third-pro", {
-      y: positions.thirdPro, // Adjust the distance of the movement for the third project
+      y: positions.thirdPro, //  distance of the movement for the third project
       scrollTrigger: {
         trigger: ".third-pro",
         start: "top bottom",
@@ -132,7 +134,7 @@ function Works() {
     });
 
     gsap.to(".fourth-pro", {
-      y: positions.fourthPro, // Adjust the distance of the movement for the fourth project
+      y: positions.fourthPro, //  distance of the movement for the fourth project
       scrollTrigger: {
         trigger: ".fourth-pro",
         start: "top bottom",

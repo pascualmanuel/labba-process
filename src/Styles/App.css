@@ -7,6 +7,7 @@
 body {
   font-family: "Satoshi-Regular";
   overflow-x: hidden !important;
+  background-color: white;
 }
 html {
   cursor: url("../Assets/dot-cursor.svg"), auto;
