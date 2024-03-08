@@ -192,7 +192,7 @@ a {
   border-radius: 21.5px;
   background: var(--BG-Blur-Blanco, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(10px);
-  width: 88px;
+  width: 107px;
   height: 38px;
   display: flex;
   justify-content: flex-start;
@@ -460,4 +460,59 @@ a {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+/* .page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6ccc1;
+} */
+
+.button-magnetic {
+  display: inline-block;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+
+.button {
+  /* cursor: pointer; */
+  box-sizing: border-box;
+}
+
+.text {
+  /* display: inline-block; */
+  pointer-events: initial;
+  position: relative;
+}
+
+.button--primary {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  /* width: 100px; */
+  /* height: 40px; */
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button--primary::before {
+  content: "";
+  display: inline-block;
+  background: white;
+  color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+  /* transition: transform 0.3s ease; */
 }

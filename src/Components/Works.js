@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Styles/Prueba.css";
 
 function Works() {
-
-  
   const isMobile = window.innerWidth <= 768; //  width as needed
 
   let scrubDesk = 2.5;
@@ -157,7 +155,7 @@ function Works() {
           <div className="scroll-content">
             <div className="div-animado">
               <div className="project-container">
-                <a href="https://mannoapp.com/" target="_blank">
+                <a href="https://demo-daewoocl.onrender.com/" target="_blank">
                   <div className="project first-pro mb-[220px] " id="pasando">
                     <div
                       className=" project-info  w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] 
@@ -169,28 +167,27 @@ function Works() {
                             className="l-desk text-[#ECECEC]"
                             style={{ fontWeight: 500 }}
                           >
-                            Borja{" "}
+                            Daewoo
                             <span className="bullet-work text-[#159bcd]">
                               •
                             </span>
                           </p>
                         </div>
                         <div className="flex flex-row">
-                          <p className="tags p-14 mr-[6px]">Development</p>
-                          <p className="tags p-14 mr-[20px]">Design</p>
+                          <p className="tags p-14 mr-[6px]">Design</p>
+                          <p className="tags p-14 mr-[20px]">Development</p>
                         </div>
                       </div>
                       <div className="mt-[10px]">
                         <p className="b4-desk text-[#ECECEC]">
-                          Redesigning the website to improve the home appliance
-                          shopping experience.
+                          Pendiente descripción
                         </p>
                       </div>
                     </div>
                   </div>
                 </a>
 
-                <a>
+                <a href="https://cokrea.inmobiliare.com" target="_blank">
                   <div className="project second-pro" id="pasando">
                     <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
@@ -199,21 +196,21 @@ function Works() {
                             className="l-desk text-[#ECECEC]"
                             style={{ fontWeight: 500 }}
                           >
-                            Manno{" "}
+                            Inmobiliare
                             <span className="bullet-work text-[#DD415F]">
                               •
                             </span>
                           </p>
                         </div>
                         <div className="flex flex-row">
-                          <p className="tags p-14 mr-[6px]">Development</p>
-                          <p className="tags p-14 mr-[20px]">Design</p>
+                          <p className="tags p-14 mr-[6px]">Design</p>
+                          <p className="tags p-14 mr-[20px]">Development</p>
                         </div>
                       </div>
                       <div className="mt-[10px]">
                         <p className="b4-desk text-[#ECECEC]">
-                          Redesigning the website to improve the home appliance
-                          shopping experience.
+                          Redesigning the experience of the largest real estate
+                          news portal in Mexico
                         </p>
                       </div>
                     </div>
@@ -223,8 +220,8 @@ function Works() {
             </div>
             <div className="div-animado" style={{ marginTop: "40vh" }}>
               <div className="project-container">
-                <div className="project third-pro" id="pasando">
-                  <a href="https://mannoapp.com">
+                <a href="https://holamorgenstern.com" target="_blank">
+                  <div className="project third-pro" id="pasando">
                     <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
                         <div>
@@ -232,7 +229,7 @@ function Works() {
                             className="l-desk text-[#ECECEC]"
                             style={{ fontWeight: 500 }}
                           >
-                            Borja
+                            Morgenstern
                             <span className="bullet-work text-[#DF362F]">
                               •
                             </span>
@@ -245,13 +242,13 @@ function Works() {
                       </div>
                       <div className="mt-[10px]">
                         <p className="b4-desk text-[#ECECEC]">
-                          Redesigning the website to improve the home appliance
-                          shopping experience.
+                          A creative and playful website for a creative and
+                          playful illustrated project.
                         </p>
                       </div>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
                 <a>
                   <div className="project fourth-pro" id="pasando">
                     <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
@@ -261,7 +258,7 @@ function Works() {
                             className="l-desk text-[#ECECEC]"
                             style={{ fontWeight: 500 }}
                           >
-                            Borja{" "}
+                            redbee
                             <span className="bullet-work text-[#159bcd]">
                               •
                             </span>
@@ -269,14 +266,11 @@ function Works() {
                         </div>
                         <div className="flex flex-row">
                           <p className="tags p-14 mr-[6px]">Development</p>
-                          <p className="tags p-14 mr-[20px]">Design</p>
+                          {/* <p className="tags p-14 mr-[20px]">Design</p> */}
                         </div>
                       </div>
                       <div className="mt-[10px]">
-                        <p className="b4-desk text-[#ECECEC]">
-                          Redesigning the website to improve the home appliance
-                          shopping experience.
-                        </p>
+                        <p className="b4-desk text-[#ECECEC]">Soon...</p>
                       </div>
                     </div>
                   </div>

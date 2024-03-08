@@ -7,7 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import BackIcon from "../Assets/Back.svg";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
-
+import Pruebas from "../Components/Pruebas";
 function Header() {
   const navigate = useNavigate();
 
@@ -72,20 +72,15 @@ function Header() {
   if (location.pathname === "/") {
     return (
       <>
-        <div className="flex flex-row justify-between items-center h-24">
+        <div className="flex flex-row justify-between items-center h-24 ">
           <Link to="/">
             <div
-              className="fixed"
+              className="fixed "
               style={{
                 mixBlendMode: "difference",
                 zIndex: "10000",
               }}
             >
-              {/* <ReactSVG
-                src={LabbaISO}
-                className="sm:mr-2.5 sm:ml-12 ml-6 fixed "
-                style={{ zIndex: "10000" }}
-              /> */}
               <ReactSVG
                 src={LabbaLogo}
                 className=" sm:ml-[80px] ml-[18px] "
@@ -93,9 +88,9 @@ function Header() {
               />
             </div>
           </Link>
-          <Link to={"/contact"}>
+          <Link to={"/contact"} className="">
             <div
-              className="fixed top-6 right-3 sm:right-10"
+              className="fixed right-0 mt-[-10px] mr-[80px]"
               style={{
                 mixBlendMode: "difference",
                 zIndex: "10000",
@@ -189,12 +184,18 @@ function Header() {
   } else {
     return (
       <>
-        <div className="flex flex-row justify-between items-center h-24">
+        {/* <div className="flex flex-row justify-between items-center h-24">
           <Link to="/">
-            <div className="">
+            <div
+              className=" mt-[28px]"
+              style={{
+                mixBlendMode: "difference",
+                zIndex: "10000",
+              }}
+            >
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[80px] ml-[18px]"
+                className=" sm:ml-[80px] ml-[18px] "
                 style={{ zIndex: "10000" }}
               />
             </div>
@@ -205,6 +206,45 @@ function Header() {
               <p className="b3-des pl-2.5 "> Back </p>
             </div>
           </Link>
+        </div> */}
+
+        <div className="flex flex-row justify-between items-center h-24 ">
+          <Link to="/">
+            <div
+              className="fixed "
+              style={{
+                mixBlendMode: "difference",
+                zIndex: "10000",
+              }}
+            >
+              <ReactSVG
+                src={LabbaLogo}
+                className=" sm:ml-[80px] ml-[18px] "
+                style={{ zIndex: "10000" }}
+              />
+            </div>
+          </Link>
+          {/* <Link to={"/"} className="">
+            <div
+              className="fixed right-0 mt-[-10px] mr-[80px]"
+              style={{
+                mixBlendMode: "difference",
+                zIndex: "10000",
+              }}
+            >
+              <div
+                className="contact"
+                style={{
+                  backgroundColor: "black",
+                  border: "1px solid white",
+                }}
+              >
+                <ReactSVG src={BackIcon} onClick={toggleContact} />
+                <p className="b3-des pl-2.5 text-white"> Back </p>
+              </div>
+            </div>
+          </Link> */}
+          <Pruebas />
         </div>
       </>
     );

@@ -1,61 +1,94 @@
-// import React, { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { Link } from "react-router-dom";
+import { ReactSVG } from "react-svg";
+import BackIcon from "../Assets/Back.svg";
+const MagneticButton = () => {
+  const buttonRef = useRef(null);
 
-// function Prueba() {
-//   useEffect(() => {
-//     gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const callParallax = (e) => {
+      parallaxIt(e, buttonRef.current, 60);
+      parallaxIt(e, buttonRef.current.querySelector(".text"), 40);
+    };
 
-//     const animacion = gsap.to(".claim-section", {
-//       x: "-37%",
-//       duration: 0.3,
-//       scrollTrigger: {
-//         trigger: ".claim-section",
-//         start: "top top",
-//         end: "+=1800",
-//         pin: true,
-//         pinSpacing: false,
-//         scrub: true,
-//         // markers: true,
-//         onEnter: () => {
-//           document.body.classList.add("pinned-scroll");
-//         },
-//         onLeaveBack: () => {
-//           document.body.classList.remove("pinned-scroll");
-//         },
-//       },
-//     });
+    const parallaxIt = (e, target, movement) => {
+      const boundingRect = target.getBoundingClientRect();
+      const relX = e.pageX - boundingRect.left;
+      const relY = e.pageY - boundingRect.top;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
 
-//     return () => {
-//       animacion.kill();
-//     };
-//   }, []);
+      gsap.to(target, 0.3, {
+        x: ((relX - boundingRect.width / 2) / boundingRect.width) * movement,
+        y:
+          ((relY - boundingRect.height / 2 - scrollTop) / boundingRect.width) *
+          movement,
+        ease: "power2.out",
+      });
+    };
 
-//   return (
-//     <>
-//       <div className="h-[120vh] bg-slate-400">Blabla</div>
-//       <div
-//         className="h-[100vh] claim-section w-[300vw] bg-[#121212] flex items-center"
-//         style={{ marginBottom: "235vh" }}
-//       >
-//         <div
-//           className="claim-inside"
-//           style={{ overflowX: "visible", whiteSpace: "nowrap" }}
-//         >
-//           <p
-//             className="h2-desk claim"
-//             style={{
-//               transform: "translateX(10%)", // Initially hides the phrase
-//             }}
-//           >
-//             At <span style={{ color: "white" }}> Labba,</span> we craft digital
-//             products that balance users and business needs.
-//           </p>
-//         </div>
-//       </div>
-//       <div className="h-[100vh] bg-red-300">Blabla</div>
-//     </>
-//   );
-// }
+    const handleMouseEnter = (e) => {
+      gsap.to(buttonRef.current, 0.3, { transformOrigin: "0 0", scale: 1 });
+      gsap.to(buttonRef.current.querySelector(".button"), 0.3, { scale: 1.1 });
+    };
 
-// export default Prueba;
+    // const handleMouseLeave = (e) => {
+    //   gsap.to(buttonRef.current, 0.3, { scale: 1 });
+    //   gsap.to(
+    //     [
+    //       buttonRef.current.querySelector(".button"),
+    //       buttonRef.current.querySelector(".text"),
+    //     ],
+    //     0.3,
+    //     { scale: 1, x: 0, y: 0 }
+    //   );
+    // };
+
+    const handleMouseLeave = (e) => {
+      gsap.to(buttonRef.current, 0.3, { scale: 1, x: 0, y: 0 });
+      gsap.to(
+        [
+          buttonRef.current.querySelector(".button"),
+          buttonRef.current.querySelector(".text"),
+        ],
+        0.3,
+        { scale: 1, x: 0, y: 0 }
+      );
+    };
+
+    const handleMouseMove = (e) => {
+      callParallax(e);
+    };
+
+    const buttonElement = buttonRef.current;
+
+    buttonElement.addEventListener("mouseenter", handleMouseEnter);
+    buttonElement.addEventListener("mouseleave", handleMouseLeave);
+    buttonElement.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      buttonElement.removeEventListener("mouseenter", handleMouseEnter);
+      buttonElement.removeEventListener("mouseleave", handleMouseLeave);
+      buttonElement.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
+  return (
+    <Link to="/">
+      <div className="button-magnetic" ref={buttonRef}>
+        <div className="button button--primary">
+          <span
+            className="text b3-desk flex flex-row items-center"
+            style={{ fontSize: "16px" }}
+          >
+            <ReactSVG src={BackIcon} className="pr-2.5 " />
+            Back
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export default MagneticButton;
