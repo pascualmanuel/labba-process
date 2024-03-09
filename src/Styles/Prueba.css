@@ -692,6 +692,36 @@ header {
   justify-content: center;
 }
 
+.button-contact-submit {
+  /* Your existing button styles */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-contact-submit.submitting {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.button-contact-submit.thank-you {
+  background-color: #4caf50; /* Change to your desired color for the "Thank you" state */
+  color: #fff; /* Change to your desired text color for the "Thank you" state */
+}
+
+/* Optional: Add a fade-in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .loader {
   position: fixed;
   top: 0;

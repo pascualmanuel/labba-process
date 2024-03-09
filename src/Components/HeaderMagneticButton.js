@@ -3,8 +3,7 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ReactSVG } from "react-svg";
 import BackIcon from "../Assets/Back.svg";
-import { useLocation } from "react-router-dom";
-const MagneticButton = ({ text, link }) => {
+const HeaderMagneticButton = () => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -74,41 +73,21 @@ const MagneticButton = ({ text, link }) => {
       buttonElement.removeEventListener("mousemove", handleMouseMove);
     };
   }, []); // Empty dependency array ensures the effect runs only once on mount
-  const location = useLocation();
-  console.log(location);
-
-  let isHome = true;
-
-  if (location.pathname != "/") {
-    isHome = false;
-  }
 
   return (
-    <div
-      className="fixed right-0 mt-[-10px] "
-      style={{
-        mixBlendMode: "difference",
-        zIndex: "10000",
-      }}
-    >
-      <Link to={link}>
-        <div
-          className="button-magnetic mr-[18px] mt-[28px] sm:mt-[20px] sm:mr-[80px]"
-          ref={buttonRef}
-        >
-          <div className="button button--primary">
-            <span
-              className="text b3-desk flex flex-row items-center"
-              style={{ fontSize: "16px" }}
-            >
-              {!isHome && <ReactSVG src={BackIcon} className="pr-2.5 " />}
-              {text}
-            </span>
-          </div>
+    <Link to="/">
+      <div className="button-magnetic" ref={buttonRef}>
+        <div className="button button--primary">
+          <span
+            className="text b3-desk flex flex-row items-center"
+            style={{ fontSize: "16px" }}
+          >
+            Contact
+          </span>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 
-export default MagneticButton;
+export default HeaderMagneticButton;

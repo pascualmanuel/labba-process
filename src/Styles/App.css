@@ -190,8 +190,9 @@ a {
 
 .contact {
   border-radius: 21.5px;
-  background: var(--BG-Blur-Blanco, rgba(255, 255, 255, 0.2));
-  backdrop-filter: blur(10px);
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: rgb(87 87 87 / 15%);
+  backdrop-filter: blur(2px);
   width: 107px;
   height: 38px;
   display: flex;
@@ -211,6 +212,27 @@ a {
   justify-content: center;
   /* Inside auto layout */
 }
+
+/* 
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+margin: 0 auto;
+width: 104px;
+height: 38px;
+
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(2px);
+
+border-radius: 100px;
+
+flex: none;
+order: 1;
+flex-grow: 0; */
 
 .contact.expanded {
   width: 249px;
@@ -460,6 +482,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-top: -7px;
 }
 /* .page {
   height: 100vh;
@@ -473,11 +496,9 @@ a {
 .button-magnetic {
   display: inline-block;
   display: flex;
-
   align-items: center;
   justify-content: center;
-  margin-right: 80px;
-  margin-top: 20px;
+  /* margin-right: 80px; */
 }
 
 .button {
@@ -497,17 +518,19 @@ a {
   padding: 10px 20px;
   /* width: 100px; */
   /* height: 40px; */
+  color: white;
   border-radius: 25px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0 3px 10px rgb(255 255 255 / 15%);
 }
 
 .button--primary::before {
   content: "";
   display: inline-block;
-  background: white;
-  color: black;
+  /* background: black; */
+  /* color: black; */
   position: absolute;
   width: 100%;
   height: 100%;

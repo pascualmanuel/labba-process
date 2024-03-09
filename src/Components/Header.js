@@ -8,6 +8,7 @@ import BackIcon from "../Assets/Back.svg";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
 import Pruebas from "../Components/Pruebas";
+import HeaderMagneticButton from "./HeaderMagneticButton";
 function Header() {
   const navigate = useNavigate();
 
@@ -88,7 +89,7 @@ function Header() {
               />
             </div>
           </Link>
-          <Link to={"/contact"} className="">
+          {/* <Link to={"/contact"} className="">
             <div
               className="fixed right-0 mt-[-10px] mr-[80px]"
               style={{
@@ -100,8 +101,9 @@ function Header() {
                 <p className="different text-white">Contact</p>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
+          <Pruebas text={"Contact"} link={"/contact"} />
           {/* <div
             className="fixed top-6 right-3 sm:right-10"
             style={{ zIndex: "100" }}
@@ -244,7 +246,8 @@ function Header() {
               </div>
             </div>
           </Link> */}
-          <Pruebas />
+          {/* <Pruebas /> */}
+          <Pruebas text={"Back"} link={"/"} />
         </div>
       </>
     );

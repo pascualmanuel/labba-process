@@ -8,6 +8,8 @@ import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
 function Contact() {
   const [selectedService, setSelectedService] = useState("");
+  const [buttonText, setButtonText] = useState("Send request");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleServiceClick = (service) => {
     if (selectedService.includes(service)) {
@@ -45,8 +47,17 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    //
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setButtonText("Thank you!");
+      // Optionally, add the "thank-you" and "fade-in" classes for the "Thank you" state
+      document
+        .querySelector(".button-contact-submit")
+        .classList.add("thank-you", "fade-in");
+    }, 2000);
 
-    // Combine selected services with other form data
     const dataToSend = {
       name: formData.name,
       email: formData.email,
@@ -208,17 +219,16 @@ function Contact() {
                   name="selectedService"
                   value={selectedService}
                 />
-                <div className="sm:w-[32rem] w-[auto] flex justify-center h-[85px]">
-                  <div className="button-contact-submit b2-desk mt-14 mb-24 input-cursor">
-                    Send request
-                  </div>
-                </div>
-                {/* <button
+
+                <button
                   type="submit"
-                  className="w-[32rem] flex justify-center mt-14 mb-24 input-cursor"
+                  className={`button-contact-submit b2-desk mt-14 mb-24 input-cursor ${
+                    isSubmitting ? "submitting" : ""
+                  }`}
+                  disabled={isSubmitting}
                 >
-                  <ReactSVG src={Submit} />
-                </button> */}
+                  {buttonText}
+                </button>
               </form>
             </div>
           </div>

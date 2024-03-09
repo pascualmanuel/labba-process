@@ -108,22 +108,42 @@ function App() {
     }
 
     // Update the cursor style based on whether it's over a link or not
+    // function updateCursorStyle(isOverLink) {
+    //   if (isOverLink) {
+    //     // Modify the cursor style when over a link
+    //     circleCursor.style.width = "100px";
+    //     circleCursor.style.height = "100px";
+    //     circleCursor.style.fontSize = "50px";
+    //     circleCursor.style.fontWeight = "400";
+    //     circleCursor.style.setProperty(
+    //       "--before-content",
+    //       `url('data:image/svg+xml,${encodeURIComponent(svgCode)}')`
+    //     );
+
+    //     // Add other style modifications as needed
+    //   } else {
+    //     // Reset the cursor style when not over a link
+    //     circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+    //     circleCursor.style.width = "35px";
+    //     circleCursor.style.height = "35px";
+    //     circleCursor.style.setProperty("--before-content", "''"); // Use a custom property
+    //   }
+    // }
+
     function updateCursorStyle(isOverLink) {
+      const transitionDuration = "0.5s"; // You can adjust the duration as needed
+
       if (isOverLink) {
         // Modify the cursor style when over a link
         circleCursor.style.width = "100px";
         circleCursor.style.height = "100px";
         circleCursor.style.fontSize = "50px";
         circleCursor.style.fontWeight = "400";
-
-        // circleCursor.style.setProperty("--before-content", "'+'"); // Use a custom property
-        // circleCursor.style.setProperty("--before-content", `'${svgCode}'`);
+        circleCursor.style.transition = `width ${transitionDuration}, height ${transitionDuration}`;
         circleCursor.style.setProperty(
           "--before-content",
           `url('data:image/svg+xml,${encodeURIComponent(svgCode)}')`
         );
-
-        // circleCursor.style.transition = "0.1s";
 
         // Add other style modifications as needed
       } else {
@@ -131,7 +151,7 @@ function App() {
         circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
         circleCursor.style.width = "35px";
         circleCursor.style.height = "35px";
-        // circleCursor.style.transition = "0.1s";
+        circleCursor.style.transition = `width ${transitionDuration}, height ${transitionDuration}`;
         circleCursor.style.setProperty("--before-content", "''"); // Use a custom property
       }
     }
