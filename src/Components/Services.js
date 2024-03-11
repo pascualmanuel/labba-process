@@ -158,7 +158,7 @@ function Services() {
           >
             <p
               className="sp1-desk flex mt-12 sm:mt-0 mb-2 sm:mb-2  plusCursor"
-              id="pasando"
+              id="pasando2"
             >
               DESIGN <span className="small-numb">5</span>
             </p>
@@ -181,7 +181,7 @@ function Services() {
             }`}
             onClick={toggleBuild}
           >
-            <p className="sp1-desk flex mb-2 plusCursorDos" id="pasando">
+            <p className="sp1-desk flex mb-2 plusCursorDos" id="pasando2">
               BUILD <span className="small-numb">4</span>
             </p>
             {expBuild ? (

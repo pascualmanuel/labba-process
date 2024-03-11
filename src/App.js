@@ -29,24 +29,6 @@ function App() {
 
   const cursorRef = useRef(null);
 
-  // useEffect(() => {
-  //   const cursor = cursorRef.current;
-
-  //   function moveCursor(e) {
-  //     gsap.to(cursor, 0.3, {
-  //       x: e.clientX,
-  //       y: e.clientY + window.scrollY, // Adjust for the scroll position
-  //     });
-  //   }
-
-  //   window.addEventListener("mousemove", moveCursor);
-
-  //   return () => {
-  //     // Cleanup the event listener when the component unmounts
-  //     window.removeEventListener("mousemove", moveCursor);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const handleResize = () => {
       // Add your conditions for enabling/disabling horizontal scroll
@@ -73,6 +55,12 @@ function App() {
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M23.3137 0.686267L0.686292 23.3137M23.3137 0.686267H0.686292M23.3137 0.686267V23.3137" stroke="#ECECEC"/>
   </svg>
+`;
+
+  const svgPlus = `<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 0.5L6.5 13.5" stroke="white"/>
+<line x1="13" y1="6.5" x2="-4.37114e-08" y2="6.5" stroke="white"/>
+</svg>
 `;
 
   useEffect(() => {
@@ -107,34 +95,16 @@ function App() {
       return element.id === "pasando";
     }
 
-    // Update the cursor style based on whether it's over a link or not
-    // function updateCursorStyle(isOverLink) {
-    //   if (isOverLink) {
-    //     // Modify the cursor style when over a link
-    //     circleCursor.style.width = "100px";
-    //     circleCursor.style.height = "100px";
-    //     circleCursor.style.fontSize = "50px";
-    //     circleCursor.style.fontWeight = "400";
-    //     circleCursor.style.setProperty(
-    //       "--before-content",
-    //       `url('data:image/svg+xml,${encodeURIComponent(svgCode)}')`
-    //     );
-
-    //     // Add other style modifications as needed
-    //   } else {
-    //     // Reset the cursor style when not over a link
-    //     circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-    //     circleCursor.style.width = "35px";
-    //     circleCursor.style.height = "35px";
-    //     circleCursor.style.setProperty("--before-content", "''"); // Use a custom property
-    //   }
-    // }
-
-    function updateCursorStyle(isOverLink) {
+    function isCursorOverLinkTwo(element) {
+      return element.id === "pasando2";
+    }
+    function updateCursorStyle(isOverLink, isOverLinkTwo) {
+      console.log(isOverLink);
+      console.log(isOverLinkTwo);
       const transitionDuration = "0.5s"; // You can adjust the duration as needed
 
       if (isOverLink) {
-        // Modify the cursor style when over a link
+        // Modify the cursor style when over "pasando" element
         circleCursor.style.width = "100px";
         circleCursor.style.height = "100px";
         circleCursor.style.fontSize = "50px";
@@ -144,8 +114,25 @@ function App() {
           "--before-content",
           `url('data:image/svg+xml,${encodeURIComponent(svgCode)}')`
         );
+        circleCursor.style.setProperty("--before-margin-top", "-7px");
 
         // Add other style modifications as needed
+      } else if (isOverLinkTwo) {
+        // Modify the cursor style when over "pasando2" element
+        circleCursor.style.width = "35px";
+        circleCursor.style.height = "35px";
+        circleCursor.style.fontSize = "16px";
+        circleCursor.style.fontWeight = "400";
+        circleCursor.style.transition = `width ${transitionDuration}, height ${transitionDuration}`;
+        circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+        // circleCursor.style.setProperty("--before-content", "'+'");
+        circleCursor.style.setProperty(
+          "--before-content",
+          `url('data:image/svg+xml,${encodeURIComponent(svgPlus)}')`
+        );
+        circleCursor.style.setProperty("--before-margin-top", "0px");
+
+        // Add other style modifications as needed for "pasando2"
       } else {
         // Reset the cursor style when not over a link
         circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
@@ -173,8 +160,12 @@ function App() {
         document.elementFromPoint(currentX + mitiWidth, currentY + mitiHeight)
       );
 
+      const isOverLinkTwo = isCursorOverLinkTwo(
+        document.elementFromPoint(currentX + mitiWidth, currentY + mitiHeight)
+      );
+
       // Update the cursor style
-      updateCursorStyle(isOverLink);
+      updateCursorStyle(isOverLink, isOverLinkTwo);
       // Check if the cursor has reached the target
       if (
         Math.abs(targetX - currentX) > 0.1 ||
@@ -186,10 +177,7 @@ function App() {
         isMoving = false;
       }
     }
-
-    // er3eerjek932857483wkedskn
-    // dsadjds
-  }, []); // Empty dependency array to ensure useEffect runs only once
+  }, []); //
 
   return (
     <>

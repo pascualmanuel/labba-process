@@ -219,16 +219,17 @@ function Contact() {
                   name="selectedService"
                   value={selectedService}
                 />
-
-                <button
-                  type="submit"
-                  className={`button-contact-submit b2-desk mt-14 mb-24 input-cursor ${
-                    isSubmitting ? "submitting" : ""
-                  }`}
-                  disabled={isSubmitting}
-                >
-                  {buttonText}
-                </button>
+                <div className="flex justify-center">
+                  <button
+                    type="submit"
+                    className={`button-contact-submit b2-desk mt-14 mb-24 input-cursor ${
+                      isSubmitting ? "submitting" : ""
+                    }`}
+                    disabled={isSubmitting}
+                  >
+                    {buttonText}
+                  </button>
+                </div>
               </form>
             </div>
           </div>

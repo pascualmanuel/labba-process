@@ -11,7 +11,9 @@ import Cliente4 from "../Assets/clientes/carousel-4.png";
 import Cliente5 from "../Assets/clientes/carousel-5.png";
 import Cliente6 from "../Assets/clientes/carousel-6.png";
 import Cliente7 from "../Assets/clientes/carousel-7.png";
-import Cliente8 from "../Assets/clientes/carousel-8.png";
+
+import Cliente9 from "../Assets/clientes/carousel-88.png";
+
 // import Cliente9 from "../Assets/clientes/carousel-9.png";
 // import Cliente10 from "../Assets/clientes/client-min-10.png";
 import { FreeMode, Pagination, Autoplay, Navigation } from "swiper/modules";
@@ -33,8 +35,7 @@ const images = [
   Cliente5,
   Cliente6,
   Cliente7,
-  Cliente8,
-  // Cliente9,
+  Cliente9,
   // Cliente10,
 
   // Agrega aquí tus rutas de imágenes

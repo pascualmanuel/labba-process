@@ -75,11 +75,10 @@ const MagneticButton = ({ text, link }) => {
     };
   }, []); // Empty dependency array ensures the effect runs only once on mount
   const location = useLocation();
-  console.log(location);
 
   let isHome = true;
 
-  if (location.pathname != "/") {
+  if (location.pathname != -"/") {
     isHome = false;
   }
 

@@ -25,8 +25,6 @@ function Works() {
     };
   }
 
-  console.log(positions.firstPro);
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -168,9 +166,6 @@ function Works() {
                             style={{ fontWeight: 500 }}
                           >
                             Daewoo
-                            <span className="bullet-work text-[#159bcd]">
-                              •
-                            </span>
                           </p>
                         </div>
                         <div className="flex flex-row">
@@ -197,9 +192,6 @@ function Works() {
                             style={{ fontWeight: 500 }}
                           >
                             Inmobiliare
-                            <span className="bullet-work text-[#DD415F]">
-                              •
-                            </span>
                           </p>
                         </div>
                         <div className="flex flex-row">
@@ -230,9 +222,6 @@ function Works() {
                             style={{ fontWeight: 500 }}
                           >
                             Morgenstern
-                            <span className="bullet-work text-[#DF362F]">
-                              •
-                            </span>
                           </p>
                         </div>
                         <div className="flex flex-row">
@@ -259,9 +248,6 @@ function Works() {
                             style={{ fontWeight: 500 }}
                           >
                             redbee
-                            <span className="bullet-work text-[#159bcd]">
-                              •
-                            </span>
                           </p>
                         </div>
                         <div className="flex flex-row">

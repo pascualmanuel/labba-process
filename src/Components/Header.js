@@ -12,6 +12,8 @@ import HeaderMagneticButton from "./HeaderMagneticButton";
 function Header() {
   const navigate = useNavigate();
 
+  const isMobile = window.innerWidth <= 768; // Adjust the width as needed
+
   const handleNavigation = () => {
     navigate("/contact");
   };
@@ -89,21 +91,25 @@ function Header() {
               />
             </div>
           </Link>
-          {/* <Link to={"/contact"} className="">
-            <div
-              className="fixed right-0 mt-[-10px] mr-[80px]"
-              style={{
-                mixBlendMode: "difference",
-                zIndex: "10000",
-              }}
-            >
-              <div className="contact">
-                <p className="different text-white">Contact</p>
-              </div>
-            </div>
-          </Link> */}
 
-          <Pruebas text={"Contact"} link={"/contact"} />
+          {isMobile ? (
+            <Link to={"/contact"} className="">
+              <div
+                className="fixed right-0 mt-[-7px]  mr-[18px]"
+                style={{
+                  mixBlendMode: "difference",
+                  zIndex: "10000",
+                }}
+              >
+                <div className="contact">
+                  <p className="different text-white">Contact</p>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <Pruebas text={"Contact"} link={"/contact"} />
+          )}
+
           {/* <div
             className="fixed top-6 right-3 sm:right-10"
             style={{ zIndex: "100" }}
@@ -247,7 +253,27 @@ function Header() {
             </div>
           </Link> */}
           {/* <Pruebas /> */}
-          <Pruebas text={"Back"} link={"/"} />
+
+          {isMobile ? (
+            <Link to={"/"} className="">
+              <div
+                className="fixed right-0 mt-[-7px]  mr-[18px]"
+                style={{
+                  mixBlendMode: "difference",
+                  zIndex: "10000",
+                }}
+              >
+                <div className="contact">
+                  <p className="different text-white flex items-center">
+                    <ReactSVG src={BackIcon} onClick={toggleContact} />
+                    <p className="b3-des pl-2.5 text-white ">Back</p>
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <Pruebas text={"Back"} link={"/"} />
+          )}
         </div>
       </>
     );
