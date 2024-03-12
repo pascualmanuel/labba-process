@@ -78,7 +78,7 @@ const MagneticButton = ({ text, link }) => {
 
   let isHome = true;
 
-  if (location.pathname != -"/") {
+  if (location.pathname !== "/") {
     isHome = false;
   }
 

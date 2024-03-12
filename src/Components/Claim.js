@@ -3,25 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Claim() {
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   const animacion = gsap.to(".claim-section", {
-  //     y: 0,
-  //     duration: 0.3,
-  //     scrollTrigger: {
-  //       trigger: ".claim-section",
-  //       start: "top top",
-  //       end: "+=1800",
-  //       pin: true,
-  //       pinSpacing: false,
-  //       scrub: true,
-  //       markers: true,
-  //     },
-  //   });
-  //   return () => {
-  //     animacion.kill();
-  //   };
-  // }, []);
   const claimSectionRef = useRef(null); // Ref to store the DOM element reference
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -29,20 +10,14 @@ function Claim() {
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
-      // You can add additional logic here based on the viewport size
-      // if (window.innerWidth < 1415) {
-      //   console.log("- a 1415");
-      // }
     };
 
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Empty dependency array ensures the effect runs only once during component mount
+  }, []);
 
   let xAnimation = "-37%";
   let vwClaim = "300vw";
@@ -63,14 +38,12 @@ function Claim() {
   }
   if (viewportWidth < 1090) {
     xAnimation = "-65%";
-    // vwClaim = "380vw";
     vwClaim = "340vw";
   }
 
   if (viewportWidth < 1000) {
     xAnimation = "-70%";
   }
-
   if (viewportWidth < 900) {
     xAnimation = "-75%";
     vwClaim = "400vw";
@@ -123,15 +96,6 @@ function Claim() {
     vwClaim = "500vw";
   }
 
-  // if (viewportWidth < 400) {
-  //   xAnimation = "-67%";
-  //   vwClaim = "500vw";
-  // }
-  // if (viewportWidth > 1415) {
-  //   console.log("+ a 1415");
-  // }
-  // let xAnimation = "-63%";
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -150,7 +114,6 @@ function Claim() {
     });
 
     return () => {
-      // Limpia las animaciones cuando el componente se desmonta
       claimAnimation.kill();
       // firstProAnimation.kill();
       // secondProAnimation.kill();
