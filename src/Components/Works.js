@@ -194,7 +194,7 @@ function Works() {
                             Inmobiliare
                           </p>
                         </div>
-                        <div className="flex flex-row">
+                        <div className="flex flex-row absolute right-0">
                           <p className="tags p-14 mr-[6px]">Design</p>
                           <p className="tags p-14 mr-[20px]">Development</p>
                         </div>
@@ -224,7 +224,7 @@ function Works() {
                             Morgenstern
                           </p>
                         </div>
-                        <div className="flex flex-row">
+                        <div className="flex flex-row absolute right-0">
                           <p className="tags p-14 mr-[6px]">Development</p>
                           <p className="tags p-14 mr-[20px]">Design</p>
                         </div>
@@ -250,8 +250,9 @@ function Works() {
                             redbee
                           </p>
                         </div>
-                        <div className="flex flex-row">
-                          <p className="tags p-14 mr-[6px]">Development</p>
+                        {/* <div className="flex flex-row"> */}
+                        <div className="flex flex-row absolute right-0">
+                          <p className="tags p-14 mr-[20px]">Development</p>
                           {/* <p className="tags p-14 mr-[20px]">Design</p> */}
                         </div>
                       </div>

@@ -72,6 +72,11 @@ function Header() {
     };
   }, []);
 
+  let logoPosition = "fixed";
+  if (isMobile) {
+    logoPosition = "absolute";
+  }
+
   if (location.pathname === "/") {
     return (
       <>
@@ -219,7 +224,7 @@ function Header() {
         <div className="flex flex-row justify-between items-center h-24 ">
           <Link to="/">
             <div
-              className="fixed "
+              className={logoPosition}
               style={{
                 mixBlendMode: "difference",
                 zIndex: "10000",
@@ -257,7 +262,7 @@ function Header() {
           {isMobile ? (
             <Link to={"/"} className="">
               <div
-                className="fixed right-0 mt-[-7px]  mr-[18px]"
+                className="absolute right-0 mt-[-7px]  mr-[18px]"
                 style={{
                   mixBlendMode: "difference",
                   zIndex: "10000",

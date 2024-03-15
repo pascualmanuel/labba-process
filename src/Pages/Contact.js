@@ -12,11 +12,22 @@ function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleServiceClick = (service) => {
+    const buttons = document.querySelectorAll(".contact-buttons");
+
+    // Update styles for all buttons
+    buttons.forEach((button) => {
+      button.style.border = "1px solid #d9d9d9";
+    });
+
+    // Toggle the selected service
     if (selectedService.includes(service)) {
       setSelectedService(selectedService.filter((s) => s !== service));
     } else {
       setSelectedService([...selectedService, service]);
     }
+
+    // Reset the error message and button styles
+    setError("");
   };
 
   const [formData, setFormData] = useState({
@@ -44,10 +55,24 @@ function Contact() {
   };
 
   const formRef = useRef();
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     //
+
+    if (selectedService.length === 0) {
+      // Set an error message and update button styles
+      setError("Please select at least one service.");
+      updateButtonStyles(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Reset the error message and button styles
+    setError("");
+    updateButtonStyles(false);
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
@@ -89,6 +114,17 @@ function Contact() {
           console.log(error.text);
         }
       );
+  };
+
+  const updateButtonStyles = (error) => {
+    const buttons = document.querySelectorAll(".contact-buttons");
+    buttons.forEach((button) => {
+      if (error) {
+        button.style.border = "1px solid red";
+      } else {
+        button.style.border = "1px solid #ddd"; // Adjust the default border color
+      }
+    });
   };
 
   return (
@@ -169,6 +205,9 @@ function Contact() {
                 onClick={() => handleServiceClick("Other")}
               >
                 <span style={{ userSelect: "none" }}>Other</span>
+              </div>
+              <div className="error-message flex items-center mb-[10px]">
+                {error}
               </div>
             </div>
             <div className="contact-form  sm:w-[520px] mt-[1rem]">
