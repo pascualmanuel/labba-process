@@ -211,6 +211,8 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(var(--numcards), var(--card-height));
   gap: var(--card-margin);
+  --numcards: 5 !important;
+  view-timeline-name: --cards-element-scrolls-in-body !important;
 }
 
 .card-inside {
@@ -586,11 +588,6 @@ header {
   to {
     transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
   }
-}
-
-#cards {
-  --numcards: 5 !important;
-  view-timeline-name: --cards-element-scrolls-in-body !important;
 }
 
 .card__content {
