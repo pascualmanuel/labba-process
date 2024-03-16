@@ -205,14 +205,20 @@ header {
 }
 
 #cards {
-  list-style: none;
-  outline: none;
   display: grid;
+  gap: var(--card-margin);
   grid-template-columns: 1fr;
   grid-template-rows: repeat(var(--numcards), var(--card-height));
-  gap: var(--card-margin);
+  list-style: none;
   --numcards: 5 !important;
+  outline: none;
   view-timeline-name: --cards-element-scrolls-in-body !important;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+  }
 }
 
 .card-inside {
@@ -241,7 +247,32 @@ header {
   /* margin-left: 80px; */
 }
 
-/* card-terimna !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.card {
+  --index0: calc(var(--index) - 1) !important;
+  --reverse-index: calc(var(--numcards) - var(--index0)) !important;
+  --reverse-index0: calc(var(--reverse-index) - 1) !important;
+}
+
+.card__content {
+  --start-range: calc(var(--index0) / var(--numcards) * 100%) !important;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  color: rgb(10, 5, 7);
+  border-radius: 1em;
+  overflow: hidden;
+  outline: var(--outline-width) solid #b5b5b5;
+  width: 870px;
+  height: 340px;
+  display: flex;
+
+  animation: linear scale forwards !important;
+  animation-timeline: --cards-element-scrolls-in-body!important !important;
+
+  animation-range: exit-crossing var(--start-range) exit-crossing
+    var(--end-range) !important;
+}
+
+/* card terimna !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .swiper.swiper-initialized.swiper-horizontal.mySwiper {
   background: rgb(236, 236, 236);
@@ -576,37 +607,6 @@ header {
 
 .mySwiper .swiper-wrapper {
   transition-timing-function: linear;
-}
-
-.card {
-  --index0: calc(var(--index) - 1) !important;
-  --reverse-index: calc(var(--numcards) - var(--index0)) !important;
-  --reverse-index0: calc(var(--reverse-index) - 1) !important;
-}
-
-@keyframes scale {
-  to {
-    transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
-  }
-}
-
-.card__content {
-  --start-range: calc(var(--index0) / var(--numcards) * 100%) !important;
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: rgb(255, 255, 255);
-  color: rgb(10, 5, 7);
-  border-radius: 1em;
-  overflow: hidden;
-  outline: var(--outline-width) solid #b5b5b5;
-  width: 870px;
-  height: 340px;
-  display: flex;
-
-  animation: linear scale forwards !important;
-  animation-timeline: --cards-element-scrolls-in-body !important;
-
-  animation-range: exit-crossing var(--start-range) exit-crossing
-    var(--end-range) !important;
 }
 
 @media (max-width: 1024px) {
