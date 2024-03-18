@@ -63,7 +63,7 @@ function Services() {
               <p className="l-desk ">PROCESS</p>
               <h3 className="b1-desk ">This is how we roll</h3>
             </div>
-            <div className=" card-2 card__content">
+            <div className=" card-2 card__content card__animation ">
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG
@@ -88,7 +88,7 @@ function Services() {
             </div>
           </li>
           <li className="card" id="card_3">
-            <div className=" card-3 card__content">
+            <div className=" card-3 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG
@@ -114,7 +114,7 @@ function Services() {
           </li>
 
           <li className="card" id="card_4">
-            <div className=" card-4 card__content">
+            <div className=" card-4 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG
@@ -141,7 +141,7 @@ function Services() {
           </li>
 
           <li className="card" id="card_5">
-            <div className=" card-5 card__content">
+            <div className=" card-5 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG
@@ -167,7 +167,7 @@ function Services() {
           </li>
 
           <li className="card" id="card_6">
-            <div className=" card-6 card__content">
+            <div className=" card-6 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG

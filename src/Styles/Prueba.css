@@ -265,11 +265,10 @@ header {
   height: 340px;
   display: flex;
   animation: linear scale forwards !important;
-
   animation-range: exit-crossing var(--start-range) exit-crossing
     var(--end-range) !important;
 }
-.card__content {
+.card__animation {
   animation-timeline: --cards-element-scrolls-in-body !important;
 }
 
