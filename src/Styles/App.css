@@ -4,8 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.number-loader {
+  /* font-family: "Segoe UI", Tahoma, "Geneva", Verdana, sans-serif sans-serif; */
   font-family: "Satoshi-Regular";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 120px;
+  line-height: 87%;
+  color: #ffffff;
+  position: absolute;
+  bottom: 100px;
+  right: 80px;
+}
+
+body {
+  font-family: "Satoshi-Regular", Arial, Helvetica, sans-serif;
   overflow-x: hidden !important;
   background-color: white;
 }
@@ -136,7 +149,29 @@ a {
 }
 
 .grain {
-  z-index: 1000;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    url("https://uploads-ssl.webflow.com/63bb1f67f1d82961dd42f3d4/643ceae4fba6fac6078bbf16_grain-effect.gif");
+  background-position: 0 0, 50%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-attachment: scroll, fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.grain-2 {
+  z-index: 200000;
   width: 100%;
   height: 100%;
   opacity: 0.05;

@@ -63,7 +63,7 @@ function Services() {
               <p className="l-desk ">PROCESS</p>
               <h3 className="b1-desk ">This is how we roll</h3>
             </div>
-            <div className=" card-2 card__content card__animation ">
+            <div className=" card-2 card__content card__animation "> 
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG
