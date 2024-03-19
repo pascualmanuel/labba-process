@@ -99,8 +99,6 @@ function App() {
       return element.id === "pasando2";
     }
     function updateCursorStyle(isOverLink, isOverLinkTwo) {
-      console.log(isOverLink);
-      console.log(isOverLinkTwo);
       const transitionDuration = "0.5s"; // You can adjust the duration as needed
 
       if (isOverLink) {

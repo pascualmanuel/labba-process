@@ -1,10 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
-import Asset from "../Assets/plus.svg";
-import AssetTwo from "../Assets/mnius.svg";
-import SmoothScroll from "../Hooks/SmoothScroll";
-import SmootHook from "../Hooks/SmootHook";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import Icon1 from "../Assets/icons/design-icon.svg";
+import Icon2 from "../Assets/icons/code-icon.svg";
+import Icon3 from "../Assets/icons/headset-icon.svg";
+import { ReactSVG } from "react-svg";
 function Services() {
   const [expDesign, setExpanded] = useState(false);
 
@@ -18,130 +16,19 @@ function Services() {
     setExpBuild(!expBuild);
   };
 
-  // useEffect(() => {
-  //   const plusCursorParagraphs = document.querySelectorAll(".plusCursorDos");
+  const [expTeach, setExpTeach] = useState(false);
 
-  //   const handleMouseEnter = () => {
-  //     // Change cursor behavior when entering the plusCursor
-  //     // For example, you can change the cursor style or add animations here
+  const toggleTeach = () => {
+    setExpTeach(!expTeach);
+  };
 
-  //     // Change the cursor's background based on the state
-  //     const cursor = document.querySelector(".cursor");
-  //     if (cursor) {
-  //       cursor.style.backgroundImage = `url(${expBuild ? AssetTwo : Asset})`;
-  //       cursor.style.backgroundSize = "70%";
-  //       cursor.style.backgroundRepeat = "no-repeat";
-  //       cursor.style.backgroundPosition = "center";
-  //     }
-  //   };
+  // gsap.registerPlugin(ScrollTrigger);
 
-  //   const handleMouseLeave = () => {
-  //     // Restore default cursor behavior when leaving the plusCursor
-
-  //     // Reset the cursor's background image to none
-  //     const cursor = document.querySelector(".cursor");
-  //     if (cursor) {
-  //       cursor.style.backgroundImage = "none";
-  //     }
-  //   };
-
-  //   plusCursorParagraphs.forEach((paragraph) => {
-  //     paragraph.addEventListener("mouseenter", handleMouseEnter);
-  //     paragraph.addEventListener("mouseleave", handleMouseLeave);
-  //   });
-
-  //   // Clean up event listeners when the component unmounts
-  //   return () => {
-  //     plusCursorParagraphs.forEach((paragraph) => {
-  //       paragraph.removeEventListener("mouseenter", handleMouseEnter);
-  //       paragraph.removeEventListener("mouseleave", handleMouseLeave);
-  //     });
-  //   };
-  // }, [expBuild]);
-  // useEffect(() => {
-  //   const plusCursorParagraphs = document.querySelectorAll(".plusCursor");
-
-  //   const handleMouseEnter = () => {
-  //     const cursor = document.querySelector(".cursor");
-  //     if (cursor) {
-  //       cursor.style.backgroundImage = `url(${expDesign ? AssetTwo : Asset})`;
-  //       cursor.style.backgroundSize = "70%";
-  //       cursor.style.backgroundRepeat = "no-repeat";
-  //       cursor.style.backgroundPosition = "center";
-  //     }
-  //   };
-
-  //   const handleMouseLeave = () => {
-  //     const cursor = document.querySelector(".cursor");
-  //     if (cursor) {
-  //       cursor.style.backgroundImage = "none";
-  //     }
-  //   };
-
-  //   plusCursorParagraphs.forEach((paragraph) => {
-  //     paragraph.addEventListener("mouseenter", handleMouseEnter);
-  //     paragraph.addEventListener("mouseleave", handleMouseLeave);
-  //   });
-
-  //   return () => {
-  //     plusCursorParagraphs.forEach((paragraph) => {
-  //       paragraph.removeEventListener("mouseenter", handleMouseEnter);
-  //       paragraph.removeEventListener("mouseleave", handleMouseLeave);
-  //     });
-  //   };
-  // }, [expDesign, expBuild]);
-  gsap.registerPlugin(ScrollTrigger);
-
-  const containerRef = useRef(null);
-
-  // useEffect(() => {
-  //   // GSAP animation for your elements
-  //   gsap.from(".l-desk, .b1-desk", {
-  //     opacity: 0,
-  //     y: 50,
-  //     duration: 1,
-  //     stagger: 0.5,
-  //     scrollTrigger: {
-  //       trigger: containerRef.current,
-  //       start: "top 80%", // Adjust this value to trigger the animation at a different scroll position
-  //       end: "bottom 20%",
-  //       scrub: 0.5,
-  //     },
-  //   });
-
-  //   gsap.from(".plusCursor, .plusCursorDos", {
-  //     opacity: 0,
-  //     x: -50,
-  //     duration: 1,
-  //     stagger: 0.5,
-  //     scrollTrigger: {
-  //       trigger: containerRef.current,
-  //       start: "top 80%",
-  //       end: "bottom 20%",
-  //       scrub: 0.5,
-  //     },
-  //   });
-
-  //   gsap.from(".list-disc li", {
-  //     opacity: 0,
-  //     y: 20,
-  //     duration: 1,
-  //     stagger: 0.2,
-  //     scrollTrigger: {
-  //       trigger: containerRef.current,
-  //       start: "top 80%",
-  //       end: "bottom 20%",
-  //       scrub: 0.5,
-  //     },
-  //   });
-  // }, []); // Run this effect only once when the component mounts
+  // const containerRef = useRef(null);
 
   return (
     <>
-      <div
-        className="flex sm:flex-row mx-11 flex-col mt-24 sm:mt-72 sm:ml-36 "
-        ref={containerRef} // Use the containerRef for the trigger element
-      >
+      <div className="flex sm:flex-row mx-11 flex-col mt-24 sm:mt-72 sm:ml-36 ">
         <div className="sm:w-1/2 md:w-[580px]  w-full ">
           <p className="l-desk">SERVICES</p>
           <h3 className="b1-desk">
@@ -151,47 +38,74 @@ function Services() {
         </div>
         <div className="sm:w-1/2 w-full flex flex-col sm:pl-72 md:pl-24 xl:pl-72  ">
           <div
-            className={`sm:w-1/2 w-full  flex flex-col sm:pl-72 justify-center plusCursor services  ${
+            className={`sm:w-1/2 w-full flex flex-col sm:pl-72 justify-center plusCursor services service-box ${
               expDesign ? "expDesign" : ""
             }`}
             onClick={toggleDesign}
           >
             <p
-              className="sp1-desk flex mt-12 sm:mt-0 mb-2 sm:mb-2  plusCursor"
+              className="sp1-desk mix-diff flex flex-col mt-[20px] mx-[24px]  plusCursor relative"
               id="pasando2"
             >
-              DESIGN <span className="small-numb">5</span>
+              <span className="small-numb mb-[15px]">01</span>DESIGN
+              <span class="absolute right-[0px]">
+                <ReactSVG src={Icon1} />
+              </span>
             </p>
             {expDesign ? (
               <>
-                <ul className="list-disc ml-5 plusCursor sm:pb-0 pb-2">
-                  <li>UX Research</li>
-                  <li>UX Design</li>
-                  <li>UI Design</li>
-                  <li>Brand Design</li>
-                  <li>Graphic Design</li>
-                </ul>
+                <p className="small-numb ml-[24px] mr-[24px] mt-[16px]">
+                  Creating visually stunning web layouts, apps and brands.
+                </p>
               </>
             ) : null}
           </div>
 
           <div
-            className={`sm:w-1/2 flex flex-col pl-72 justify-center plusCursorDos services  ${
+            className={`sm:w-1/2 flex flex-col pl-72 justify-center plusCursorDos services service-box ${
               expBuild ? "expBuild" : ""
             }`}
             onClick={toggleBuild}
           >
-            <p className="sp1-desk flex mb-2 plusCursorDos" id="pasando2">
-              BUILD <span className="small-numb">4</span>
+            <p
+              className="sp1-desk mix-diff flex flex-col mt-[20px] mx-[24px] plusCursorDos relative"
+              id="pasando2"
+            >
+              <span className="small-numb mb-[15px]">02</span>CODE
+              <span class="absolute right-[0px]">
+                <ReactSVG src={Icon2} />
+              </span>
             </p>
             {expBuild ? (
               <>
-                <ul className="list-disc ml-5 plusCursorDos ">
-                  <li className="">Full-stack development</li>
-                  <li>Responsive web development</li>
-                  <li>No-code development</li>
-                  <li>App development</li>
-                </ul>
+                <p className="small-numb ml-[24px] mr-[24px] mt-[16px]">
+                  Developing reliable, maintainable, and scalable tech solutions
+                  with clean code.
+                </p>
+              </>
+            ) : null}
+          </div>
+          <div
+            className={`sm:w-1/2 flex flex-col pl-72 justify-center plusCursorDos services service-box ${
+              expTeach ? "expTeach" : ""
+            }`}
+            onClick={toggleTeach}
+          >
+            <p
+              className="sp1-desk mix-diff flex flex-col mt-[20px] mx-[24px]  plusCursorDos relative"
+              id="pasando2"
+            >
+              <span className="small-numb mb-[15px]">03</span>SUPPORT
+              <span class="absolute right-[0px]">
+                <ReactSVG src={Icon3} />
+              </span>
+            </p>
+            {expTeach ? (
+              <>
+                <p className="small-numb ml-[24px] mr-[24px] mt-[16px]">
+                  We’ll join your journey and solve your requirements for
+                  maintainance, and design and code iterations.
+                </p>
               </>
             ) : null}
           </div>

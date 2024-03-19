@@ -42,10 +42,12 @@
   border-radius: 10px;
 }
 .project-info {
-  /* display: none; */
   opacity: 0;
   display: block;
   transition: opacity 0.3s;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 .project:hover .project-info {
@@ -92,7 +94,7 @@
 }
 
 .third-pro {
-  background-image: url("../Assets/work/work_3.png");
+  background-image: url("../Assets/work/work_4.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 450px;
@@ -100,7 +102,7 @@
 }
 
 .fourth-pro {
-  background-image: url("../Assets/work/work_4.png");
+  background-image: url("../Assets/work/work_3.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 552px;
@@ -128,26 +130,46 @@
 }
 
 .small-numb {
-  color: var(--Negro-Textos, #212121);
-  font-size: 20px;
+  color: white;
+  font-family: "Satoshi-Variable";
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  margin-left: 10px;
+  font-size: 14px;
+  line-height: 19px;
+}
+.mix-diff {
+  mix-blend-mode: difference;
 }
 
 .services {
-  /* cursor: pointer; */
   display: flex;
+  width: 311px;
+  height: 120px; /* Default height */
   justify-content: flex-start;
   padding: 0;
-  transition: all 0.3s ease;
+  transition: height 0.3s ease; /* Only transition height */
   cursor: none !important;
   margin-bottom: 12px;
+  background: #f2f2f2;
+  border: 1px solid #b5b5b5;
+  border-radius: 20px;
+  user-select: none;
 }
 
-.services.expanded {
-  height: 200px;
+.expDesign {
+  height: 203px !important;
+  background: #121212;
+  color: white;
+}
+.expBuild {
+  height: 203px !important;
+  background: #121212;
+  color: white;
+}
+.expTeach {
+  height: 203px !important;
+  background: #121212;
+  color: white;
 }
 
 :root {
@@ -341,7 +363,7 @@ header {
   margin-right: 128px;
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 .sayhi {
   font-family: "Satoshi-Regular";
@@ -495,7 +517,7 @@ header {
     top: 1700px;
   }
   .third-pro {
-    background-image: url("../Assets/work/work_3.png");
+    background-image: url("../Assets/work/work_4.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 320px;
@@ -506,7 +528,7 @@ header {
     top: 2200px;
   }
   .fourth-pro {
-    background-image: url("../Assets/work/work_4.png");
+    background-image: url("../Assets/work/work_3.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 320px;

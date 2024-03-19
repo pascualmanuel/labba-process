@@ -156,7 +156,7 @@ function Works() {
                 <a href="https://demo-daewoocl.onrender.com/" target="_blank">
                   <div className="project first-pro mb-[220px] " id="pasando">
                     <div
-                      className=" project-info  w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] 
+                      className=" project-info  w-[250px] sm:w-[325px] bg-[#FFFFFF33]  
                       rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]"
                     >
                       <div className="flex flex-row justify-between">
@@ -170,7 +170,7 @@ function Works() {
                         </div>
                         <div className="flex flex-row">
                           <p className="tags p-14 mr-[6px]">Design</p>
-                          <p className="tags p-14 mr-[20px]">Development</p>
+                          <p className="tags p-14">Development</p>
                         </div>
                       </div>
                       <div className="mt-[10px]">
@@ -184,7 +184,7 @@ function Works() {
 
                 <a href="https://cokrea.inmobiliare.com" target="_blank">
                   <div className="project second-pro" id="pasando">
-                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
+                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33]  rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
                         <div>
                           <p
@@ -194,9 +194,9 @@ function Works() {
                             Inmobiliare
                           </p>
                         </div>
-                        <div className="flex flex-row absolute right-0">
+                        <div className="flex flex-row">
                           <p className="tags p-14 mr-[6px]">Design</p>
-                          <p className="tags p-14 mr-[20px]">Development</p>
+                          <p className="tags p-14">Development</p>
                         </div>
                       </div>
                       <div className="mt-[10px]">
@@ -214,33 +214,7 @@ function Works() {
               <div className="project-container">
                 <a href="https://holamorgenstern.com" target="_blank">
                   <div className="project third-pro" id="pasando">
-                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
-                      <div className="flex flex-row justify-between">
-                        <div>
-                          <p
-                            className="l-desk text-[#ECECEC]"
-                            style={{ fontWeight: 500 }}
-                          >
-                            Morgenstern
-                          </p>
-                        </div>
-                        <div className="flex flex-row absolute right-0">
-                          <p className="tags p-14 mr-[6px]">Development</p>
-                          <p className="tags p-14 mr-[20px]">Design</p>
-                        </div>
-                      </div>
-                      <div className="mt-[10px]">
-                        <p className="b4-desk text-[#ECECEC]">
-                          A creative and playful website for a creative and
-                          playful illustrated project.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a>
-                  <div className="project fourth-pro" id="pasando">
-                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33] px-[20px] pt-[20px] rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
+                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33]  rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
                       <div className="flex flex-row justify-between">
                         <div>
                           <p
@@ -250,14 +224,39 @@ function Works() {
                             redbee
                           </p>
                         </div>
-                        {/* <div className="flex flex-row"> */}
-                        <div className="flex flex-row absolute right-0">
-                          <p className="tags p-14 mr-[20px]">Development</p>
-                          {/* <p className="tags p-14 mr-[20px]">Design</p> */}
+                        <div className="flex flex-row">
+                          {/* <p className="tags p-14 mr-[6px]">Design</p> */}
+                          <p className="tags p-14">Development</p>
                         </div>
                       </div>
                       <div className="mt-[10px]">
                         <p className="b4-desk text-[#ECECEC]">Soon...</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a>
+                  <div className="project fourth-pro" id="pasando">
+                    <div className=" project-info w-[250px] sm:w-[325px] bg-[#FFFFFF33]  rounded-[12px] absolute top-[30px] left-[30px] blur-bg h-[120px]">
+                      <div className="flex flex-row justify-between">
+                        <div>
+                          <p
+                            className="l-desk text-[#ECECEC]"
+                            style={{ fontWeight: 500 }}
+                          >
+                            Morgenstern
+                          </p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="tags p-14 mr-[6px]">Design</p>
+                          <p className="tags p-14">Development</p>
+                        </div>
+                      </div>
+                      <div className="mt-[10px]">
+                        <p className="b4-desk text-[#ECECEC]">
+                          A creative and playful website for a creative and
+                          playful illustrated project.
+                        </p>
                       </div>
                     </div>
                   </div>

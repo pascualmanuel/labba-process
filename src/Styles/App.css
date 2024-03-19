@@ -18,7 +18,9 @@
 }
 
 body {
-  font-family: "Satoshi-Regular", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   overflow-x: hidden !important;
   background-color: white;
 }
@@ -37,7 +39,9 @@ a {
 }
 
 .h1-desk {
-  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 120px;
   font-style: normal;
   font-weight: 300;
@@ -52,11 +56,12 @@ a {
 }
 .sp1-desk {
   font-family: "Satoshi-Variable";
-  font-size: 45px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  font-size: 32px;
+  line-height: 43px;
   text-transform: uppercase;
+  color: white;
 }
 .b1-desk {
   font-family: "Satoshi-Variable";
@@ -81,7 +86,9 @@ a {
   line-height: 20px;
 }
 .b2-desk {
-  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -89,14 +96,18 @@ a {
 }
 
 .l-desk {
-  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 .b3-desk {
-  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -104,7 +115,9 @@ a {
 }
 
 .b4-desk {
-  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -112,7 +125,9 @@ a {
   letter-spacing: 0em;
 }
 .sp2-desk {
-  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 100px;
   font-style: normal;
   font-weight: 500;
@@ -301,14 +316,8 @@ flex-grow: 0; */
 }
 
 .contact-buttons:hover {
-  background: linear-gradient(
-    115.61deg,
-    #ff5800 -26.64%,
-    #f62a4b 0.76%,
-    #a0378b 92.51%,
-    #2b417a 100.06%
-  );
-  color: white;
+  background-color: #ececec;
+  color: black;
 }
 
 .contact-b-active {
@@ -319,12 +328,8 @@ flex-grow: 0; */
     #a0378b 92.51%,
     #2b417a 100.06%
   );
-  color: white;
+  color: white !important;
   border: 1px solid #d9d9d9;
-  /* border-radius: 50px; */
-}
-.contact-form {
-  /* width: 520px; */
 }
 
 .contact-form input,
@@ -332,7 +337,7 @@ flex-grow: 0; */
   border: none;
   border-bottom: 1px solid #b5b5b5;
   margin-bottom: 10px;
-  /* width: 100%; */
+
   padding: 5px;
 }
 
@@ -405,6 +410,7 @@ flex-grow: 0; */
     font-weight: 700;
     line-height: 43.2px;
     text-transform: uppercase;
+    color: white;
   }
   .b1-desk {
     font-family: "Satoshi-Variable";
@@ -508,7 +514,7 @@ flex-grow: 0; */
   background: rgba(255, 255, 255, 0.2);
   border: solid black 1px;
   pointer-events: none;
-  z-index: 10000;
+  z-index: 10010;
   backdrop-filter: blur(3px);
 }
 

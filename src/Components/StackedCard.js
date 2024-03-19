@@ -71,7 +71,7 @@ const StackedCards = () => {
   };
 
   return (
-    <div ref={stackCardsRef} className="container-card-stacked">
+    <div ref={stackCardsRef} className="container-card-stacked z-[1000000]">
       <div className="jumbotron text-center mt-3">
         <h1>Gerardo</h1>
       </div>

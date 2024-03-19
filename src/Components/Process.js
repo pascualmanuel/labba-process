@@ -58,12 +58,12 @@ function Services() {
             </div>
           </li> */}
 
-          <li className="card w-[100vw] " id="card_2">
+          <li className="card w-[100vw] z-[10000] " id="card_2">
             <div className="absolute left-[0px] ml-11 sm:ml-36 top-[-72px] sm:top-[-120px]">
               <p className="l-desk ">PROCESS</p>
               <h3 className="b1-desk ">This is how we roll</h3>
             </div>
-            <div className=" card-2 card__content card__animation "> 
+            <div className=" card-2 card__content card__animation ">
               <div className="card-inside">
                 <div className="number-cont">
                   <ReactSVG
@@ -87,7 +87,7 @@ function Services() {
               </div>
             </div>
           </li>
-          <li className="card" id="card_3">
+          <li className="card z-[10001]" id="card_3">
             <div className=" card-3 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
@@ -113,7 +113,7 @@ function Services() {
             </div>
           </li>
 
-          <li className="card" id="card_4">
+          <li className="card z-[10003]" id="card_4">
             <div className=" card-4 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
@@ -140,7 +140,7 @@ function Services() {
             </div>
           </li>
 
-          <li className="card" id="card_5">
+          <li className="card z-[10004]" id="card_5">
             <div className=" card-5 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">
@@ -166,7 +166,7 @@ function Services() {
             </div>
           </li>
 
-          <li className="card" id="card_6">
+          <li className="card z-[10005]" id="card_6">
             <div className=" card-6 card__content card__animation">
               <div className="card-inside">
                 <div className="number-cont">

@@ -199,9 +199,9 @@ function Home() {
     if (!prefooter || !footer) {
       return;
     }
-
+    console.log(shouldShrink);
     const triggerHeight =
-      footer.getBoundingClientRect().top - window.innerHeight;
+      footer.getBoundingClientRect().top - window.innerHeight + 170;
     const minOpacity = 1; // Opacidad mínima cuando el prefooter está achicado
 
     const updatePrefooterStyles = () => {
@@ -249,94 +249,6 @@ function Home() {
 
   const [isMoving, setIsMoving] = useState(false);
 
-  // let cursorPreFooter = "prefooter";
-
-  // if (isMobile) {
-  //   cursorPreFooter = "no-cursor";
-  // }
-
-  // const cursorScaleElements = Array.from(
-  //   document.querySelectorAll(".cursor-scale")
-  // );
-
-  // useEffect(() => {
-  //   const cursor = document.querySelector(".cursor");
-  //   // const footerCursor = document.querySelectorAll(`.${cursorPreFooter}`);
-
-  //   const handleMouseEnter = () => {
-  //     // Change cursor behavior when entering the plusCursor
-  //     // For example, you can change the cursor style or add animations here
-
-  //     // Set the custom cursor image
-  //     if (cursor) {
-  //       cursor.style.backgroundImage = `url(${CursorDrop})`;
-  //       cursor.style.backgroundSize = "contain";
-  //       cursor.style.backgroundRepeat = "no-repeat";
-  //       cursor.style.backgroundPosition = "center";
-  //       cursor.style.width = "300px";
-  //       cursor.style.height = "77px";
-  //       cursor.style.border = "none";
-  //       cursor.style.backgroundColor = "transparent";
-  //     }
-  //   };
-
-  //   const handleMouseLeave = () => {
-  //     // Restore default cursor behavior when leaving the plusCursor
-
-  //     // Reset the cursor's background image to none
-  //     if (cursor) {
-  //       cursor.style.backgroundImage = "none";
-  //       cursor.style.zIndex = 9999;
-  //       cursor.style.position = "fixed";
-  //       cursor.style.width = "34px";
-  //       cursor.style.height = "34px";
-  //       cursor.style.border = "1px solid #000000";
-  //       cursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-  //     }
-  //   };
-
-  //   footerCursor.forEach((paragraph) => {
-  //     paragraph.addEventListener("mouseenter", handleMouseEnter);
-  //     paragraph.addEventListener("mouseleave", handleMouseLeave);
-  //   });
-
-  //   // Clean up event listeners when the component unmounts
-  //   return () => {
-  //     footerCursor.forEach((paragraph) => {
-  //       paragraph.removeEventListener("mouseenter", handleMouseEnter);
-  //       paragraph.removeEventListener("mouseleave", handleMouseLeave);
-  //     });
-  //   };
-  // }, []);
-
-  // const isCursorOverElement = (element) => {
-  //   if (!element) return false;
-  //   const rect = element.getBoundingClientRect();
-  //   return (
-  //     mouseX >= rect.left &&
-  //     mouseX <= rect.right &&
-  //     mouseY >= rect.top &&
-  //     mouseY <= rect.bottom
-  //   );
-  // };
-  // let mouseX = 0;
-  // let mouseY = 0;
-
-  // const [scrollY, setScrollY] = useState(0);
-
-  // Add an event listener to track scroll position
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY / 10);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <>
       <div id={shadowOn}></div>
@@ -346,16 +258,13 @@ function Home() {
       <div className="homecont h-[64vh] sm:h-[74vh]">
         <HomeHero />
       </div>
-      {/* {isMobile ? (
-        <WorkMobile />
-      ) : ( */}
+
       <>
         <div className="second-section parallax">
           <div className="work h-[420px] sm:h-[300px] mb-[-5px] sm:mb-[0px]"></div>
         </div>
         <Works />
       </>
-      {/* )} */}
 
       <div className="mt-[-140px]" style={{ overflowX: "hidden" }}>
         <Claim />
@@ -400,7 +309,7 @@ function Home() {
             </div>
           </Link>
         </div>
-        <div className="h-[75px] sm:h-[200px]"></div>
+        <div className="h-[75px] sm:h-[65px]"></div>
         <div className="footer" ref={footerRef}>
           <div className="flex flex-col sm:flex-row justify-between pb-[50px]">
             <div
