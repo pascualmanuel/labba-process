@@ -328,10 +328,7 @@ function Home() {
             <div className=" ml-[18px] sm:ml-[0px] sm:mr-[128px] flex flex-col sm:flex-row">
               <div className=" mr-[80px] mb-[30px] sm:mb-[0px]">
                 <p className="sayhi mb-3">Argentina</p>
-                <a
-                  href="https://wa.me/+5491151632960
-"
-                >
+                <a href="https://wa.me/+5491151632960">
                   <p className="contacts-home">+54 9 11-5163-2960</p>
                 </a>
               </div>
