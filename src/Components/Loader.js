@@ -16,7 +16,7 @@ const Loader = () => {
         clearInterval(interval);
         setTimeout(() => setLoading(false), 1000);
       }
-    }, 16);
+    }, 12);
 
     return () => clearInterval(interval);
   }, [progress]);

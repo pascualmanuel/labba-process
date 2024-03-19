@@ -87,7 +87,7 @@ const MagneticButton = ({ text, link }) => {
       className="fixed right-0 mt-[-10px] "
       style={{
         mixBlendMode: "difference",
-        zIndex: "10000",
+        zIndex: "100000",
       }}
     >
       <Link to={link}>

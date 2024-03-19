@@ -80,19 +80,19 @@ function Header() {
   if (location.pathname === "/") {
     return (
       <>
-        <div className="flex flex-row justify-between items-center h-24 ">
+        <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 ">
           <Link to="/">
             <div
               className="fixed "
               style={{
                 mixBlendMode: "difference",
-                zIndex: "10000",
+                zIndex: "100000",
               }}
             >
               <ReactSVG
                 src={LabbaLogo}
                 className=" sm:ml-[80px] ml-[18px] "
-                style={{ zIndex: "10000" }}
+                style={{ zIndex: "100000" }}
               />
             </div>
           </Link>
@@ -103,7 +103,7 @@ function Header() {
                 className="fixed right-0 mt-[-7px]  mr-[18px]"
                 style={{
                   mixBlendMode: "difference",
-                  zIndex: "10000",
+                  zIndex: "100000",
                 }}
               >
                 <div className="contact">
@@ -197,19 +197,19 @@ function Header() {
   } else {
     return (
       <>
-        {/* <div className="flex flex-row justify-between items-center h-24">
+        {/* <div className="flex flex-row justify-between items-center h-[77px] sm:h-24">
           <Link to="/">
             <div
               className=" mt-[28px]"
               style={{
                 mixBlendMode: "difference",
-                zIndex: "10000",
+                zIndex: "100000",
               }}
             >
               <ReactSVG
                 src={LabbaLogo}
                 className=" sm:ml-[80px] ml-[18px] "
-                style={{ zIndex: "10000" }}
+                style={{ zIndex: "100000" }}
               />
             </div>
           </Link>
@@ -221,19 +221,19 @@ function Header() {
           </Link>
         </div> */}
 
-        <div className="flex flex-row justify-between items-center h-24 ">
+        <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 ">
           <Link to="/">
             <div
               className={logoPosition}
               style={{
                 mixBlendMode: "difference",
-                zIndex: "10000",
+                zIndex: "100000",
               }}
             >
               <ReactSVG
                 src={LabbaLogo}
                 className=" sm:ml-[80px] ml-[18px] "
-                style={{ zIndex: "10000" }}
+                style={{ zIndex: "100000" }}
               />
             </div>
           </Link>
@@ -242,7 +242,7 @@ function Header() {
               className="fixed right-0 mt-[-10px] mr-[80px]"
               style={{
                 mixBlendMode: "difference",
-                zIndex: "10000",
+                zIndex: "100000",
               }}
             >
               <div
@@ -265,7 +265,7 @@ function Header() {
                 className="absolute right-0 mt-[-7px]  mr-[18px]"
                 style={{
                   mixBlendMode: "difference",
-                  zIndex: "10000",
+                  zIndex: "100000",
                 }}
               >
                 <div className="contact">

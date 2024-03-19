@@ -129,7 +129,7 @@ function Contact() {
 
   return (
     <>
-      <div className="flex flex-column sm:justify-center ml-[12px] sm:ml-[0px]">
+      <div className="flex flex-column sm:justify-center ml-[18px] sm:ml-[0px]">
         <div className="grain"></div>
         <div className="flex sm:flex-row flex-col sm:items-center">
           <div className="sm:mr-[170px] mr-[0px] w-[340px] sm:w-auto">
@@ -261,7 +261,7 @@ function Contact() {
                 <div className="flex justify-center">
                   <button
                     type="submit"
-                    className={`button-contact-submit b2-desk mt-14 mb-24 input-cursor ${
+                    className={`button-contact-submit b2-desk mt-14 sm:mb-24 input-cursor ${
                       isSubmitting ? "submitting" : ""
                     }`}
                     disabled={isSubmitting}

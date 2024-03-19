@@ -39,7 +39,7 @@ function Services() {
   // }, []);
 
   return (
-    <div className="process-container sm:pt-0 pt-12 pb-28 ">
+    <div className="process-container sm:pt-0 pt-12 pb-0 sm:pb-28 ">
       {/* <div className="process" id="process">
         <div className=" w-full " style={{ marginBottom: "70px" }}>
           <p className="l-desk ml-11 sm:ml-36">PROCESS</p>
@@ -47,7 +47,7 @@ function Services() {
         </div>
       </div> */}
 
-      <main className="flex justify-center ">
+      <main className="flex justify-center  sm:mb-0 mb-[-260px]">
         <ul id="cards">
           {/* <li className="card" id="card_1">
             <div className=" card-1 ">

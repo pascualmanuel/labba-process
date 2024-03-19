@@ -57,10 +57,28 @@ function App() {
   </svg>
 `;
 
-  const svgPlus = `<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 0.5L6.5 13.5" stroke="white"/>
-<line x1="13" y1="6.5" x2="-4.37114e-08" y2="6.5" stroke="white"/>
-</svg>
+  const svgPlus = `<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#filter0_b_2501_3)">
+  <path d="M19 10L3.57628e-07 10" stroke="#212121"/>
+  </g>
+  <g filter="url(#filter1_b_2501_3)">
+  <path d="M9.5 19.5L9.5 0.5" stroke="#212121"/>
+  </g>
+  <defs>
+  <filter id="filter0_b_2501_3" x="-4" y="5.5" width="27" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+  <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2501_3"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2501_3" result="shape"/>
+  </filter>
+  <filter id="filter1_b_2501_3" x="5" y="-3.5" width="9" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+  <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2501_3"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2501_3" result="shape"/>
+  </filter>
+  </defs>
+  </svg>  
 `;
 
   useEffect(() => {
@@ -100,6 +118,7 @@ function App() {
     }
     function updateCursorStyle(isOverLink, isOverLinkTwo) {
       const transitionDuration = "0.5s"; // You can adjust the duration as needed
+      const transitionDuration2 = "0.2s"; // You can adjust the duration as needed
 
       if (isOverLink) {
         // Modify the cursor style when over "pasando" element
@@ -117,20 +136,17 @@ function App() {
         // Add other style modifications as needed
       } else if (isOverLinkTwo) {
         // Modify the cursor style when over "pasando2" element
-        circleCursor.style.width = "35px";
-        circleCursor.style.height = "35px";
-        circleCursor.style.fontSize = "16px";
+        // Modify the cursor style when over "pasando" element
+        circleCursor.style.width = "56px";
+        circleCursor.style.height = "56px";
+        circleCursor.style.fontSize = "50px";
         circleCursor.style.fontWeight = "400";
-        circleCursor.style.transition = `width ${transitionDuration}, height ${transitionDuration}`;
-        circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-        // circleCursor.style.setProperty("--before-content", "'+'");
+        circleCursor.style.transition = `width ${transitionDuration2}, height ${transitionDuration2}`;
         circleCursor.style.setProperty(
           "--before-content",
           `url('data:image/svg+xml,${encodeURIComponent(svgPlus)}')`
         );
-        circleCursor.style.setProperty("--before-margin-top", "0px");
-
-        // Add other style modifications as needed for "pasando2"
+        circleCursor.style.setProperty("--before-margin-top", "-7px");
       } else {
         // Reset the cursor style when not over a link
         circleCursor.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
@@ -179,7 +195,7 @@ function App() {
 
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <BrowserRouter>
         <LanguageProvider>
           <div id="circleCursor" className="hidden sm:block"></div>
