@@ -526,7 +526,7 @@ flex-grow: 0; */
   background: rgba(255, 255, 255, 0.2);
   border: solid black 1px;
   pointer-events: none;
-  z-index: 10010;
+  z-index: 10000;
   backdrop-filter: blur(3px);
 }
 
