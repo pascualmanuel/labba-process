@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./Styles/App.css";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Lenis from "lenis";
+
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Contact from "./Pages/Contact";
-import { LanguageProvider } from "./Hooks/LanguageContext";
 import Pruebas from "./Components/Pruebas";
 import PruebaPage from "./Pages/PruebaPage";
 import GoogleAnalytics from "./Components/GoogleAnalytics";
-import Lenis from "lenis";
-
 import Loader from "./Components/Loader";
+import { LanguageProvider } from "./Hooks/LanguageContext";
+
+import "./Styles/App.css";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -21,38 +22,49 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [scrollXEnabled, setScrollXEnabled] = useState(true);
+  // const [scrollXEnabled, setScrollXEnabled] = useState(true);
+
+  const [loading, setLoading] = useState(true);
+  const [lenis, setLenis] = useState(null);
 
   useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
+    // Simulate loader duration for testing
+    setTimeout(() => setLoading(false), 3800); // Simulated 3 second loading time
   }, []);
 
-  const cursorRef = useRef(null);
-
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1 && window.innerHeight < 10000) {
-        setScrollXEnabled(false);
-      } else {
-        setScrollXEnabled(true);
+    if (!loading) {
+      // Initialize Lenis only after the loading is done
+      const lenisInstance = new Lenis();
+
+      function raf(time) {
+        lenisInstance.raf(time);
+        requestAnimationFrame(raf);
       }
-    };
 
-    handleResize();
+      requestAnimationFrame(raf);
+      setLenis(lenisInstance);
+    }
+  }, [loading]);
+  // const cursorRef = useRef(null);
 
-    window.addEventListener("resize", handleResize);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth > 1 && window.innerHeight < 10000) {
+  //       setScrollXEnabled(false);
+  //     } else {
+  //       setScrollXEnabled(true);
+  //     }
+  //   };
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   handleResize();
+
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   const svgCode = `
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -229,7 +241,7 @@ function App() {
     <>
       <GoogleAnalytics />
 
-      <Loader />
+      {/* <Loader /> */}
       <BrowserRouter>
         <LanguageProvider>
           <div id="circleCursor" className="hidden sm:block"></div>
@@ -239,10 +251,8 @@ function App() {
               path="/"
               element={
                 <>
-                  {/* <div style={{ overflowX: scrollXEnabled ? "auto" : "hidden" }}> */}
                   <ScrollToTop />
                   <Home />
-                  {/* </div> */}
                 </>
               }
             />

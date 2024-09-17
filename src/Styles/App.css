@@ -44,14 +44,35 @@ a {
   cursor: url("../Assets/dot-cursor.svg"), auto;
 }
 
-.h1-desk {
+.myH1 {
   font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  font-size: 120px;
+  font-size: 90px;
   font-style: normal;
   font-weight: 300;
-  line-height: 87%;
+  line-height: 103%;
+  letter-spacing: -0.02em;
+}
+.hero-title {
+  font-size: 90px;
+  line-height: 103%;
+  /* or 93px */
+  font-weight: 500;
+  letter-spacing: -0.02em;
+
+  /* HOVER BOTON */
+  background: linear-gradient(
+    115.61deg,
+    #ff5800 -26.64%,
+    #f62a4b 0.76%,
+    #a0378b 92.51%,
+    #2b417a 104.01%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .h2-desk {
   font-family: "Satoshi-Variable";
@@ -60,6 +81,7 @@ a {
   font-weight: 300;
   line-height: normal;
 }
+
 .sp1-desk {
   font-family: "Satoshi-Variable";
   font-style: normal;
@@ -96,9 +118,9 @@ a {
     sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
+
 .button-font {
   font-family: "Satoshi-Variable", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -256,8 +278,8 @@ a {
 .contact {
   border-radius: 21.5px;
   /* background: rgba(255, 255, 255, 0.2); */
-  background: black;
-  border: solid white 1px;
+
+  border: solid black 1px;
   backdrop-filter: blur(2px);
   width: 107px;
   height: 38px;
@@ -276,30 +298,7 @@ a {
   text-align: center;
   display: flex;
   justify-content: center;
-  /* Inside auto layout */
 }
-
-/* 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 8px 24px;
-gap: 8px;
-
-margin: 0 auto;
-width: 104px;
-height: 38px;
-
-background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur(2px);
-
-border-radius: 100px;
-
-flex: none;
-order: 1;
-flex-grow: 0; */
-
 .contact.expanded {
   width: 249px;
   height: 267px;
@@ -308,11 +307,6 @@ flex-grow: 0; */
   border: 1px solid var(--Gris-1, #b5b5b5);
   background: var(--BG-Blur-Blanco, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(5px);
-}
-
-.contact-b-cont {
-  /* height: 170px; */
-  /* width: 510px; */
 }
 
 .contact-form textarea {
@@ -397,7 +391,7 @@ flex-grow: 0; */
 }
 
 @media (max-width: 1040px) {
-  .h1-desk {
+  .myH1 {
     font-size: 90px;
   }
 
@@ -411,7 +405,7 @@ flex-grow: 0; */
 }
 
 @media (max-width: 640px) {
-  .h1-desk {
+  .myH1 {
     font-family: "Satoshi-Variable";
     font-style: normal;
     font-weight: 300;
@@ -540,7 +534,7 @@ flex-grow: 0; */
   }
 }
 @media (max-width: 640px) and (max-height: 600px) {
-  .h1-desk {
+  .myH1 {
     font-size: 60px;
   }
   .home-desc-hero {
@@ -549,7 +543,7 @@ flex-grow: 0; */
 }
 
 @media (max-width: 365px) {
-  .h1-desk {
+  .myH1 {
     font-size: 60px;
   }
 }
@@ -579,7 +573,6 @@ flex-grow: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-right: 80px; */
 }
 
 .button {
@@ -587,7 +580,6 @@ flex-grow: 0; */
 }
 
 .text {
-  /* display: inline-block; */
   pointer-events: initial;
   position: relative;
 }
@@ -598,7 +590,7 @@ flex-grow: 0; */
   padding: 10px 20px;
   /* width: 100px; */
   /* height: 40px; */
-  color: white;
+  color: black;
   border-radius: 25px;
   font-weight: 600;
   transition: all 0.3s ease;

@@ -65,24 +65,25 @@ function HomeHero() {
         >
           <div className="flex h-[28rem] sm:h-[35rem]">
             <div className="max-w-[900px] lg:min-w-[880px] md:min-w-[800px] sm:min-w-[400px]">
-              {showDelayedElement && (
+              {/* {showDelayedElement && (
                 <>
-                  <p
-                    className={`h1-desk decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
-                  >
-                    <span className="hidden sm:block"> Your business </span>
+                  <p className={`myH1  w-[360px] sm:w-auto ${revealText}`}>
+                    <span className="hidden sm:block">
+                      {" "}
+                      Empowering startups through{" "}
+                    </span>
                     <span className="block sm:hidden">
-                      Your <br /> business{" "}
+                      design & technology.
                     </span>
                   </p>
                   <p
-                    className={`h1-desk decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
+                    className={`myH1 decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
                   >
                     <span className="hidden sm:block"> deserves an </span>
                     <span className="block sm:hidden"> deserves </span>
                   </p>
                   <p
-                    className={`h1-desk decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
+                    className={`myH1 decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
                   >
                     <span className="pb-[30px] hidden sm:block">
                       amazing website.
@@ -92,10 +93,19 @@ function HomeHero() {
                     </span>
                   </p>
                 </>
-              )}
+              )} */}
+
+              <h2 className="myH1">
+                Empowering startups through{" "}
+                <span className="hero-title">design & technology</span>
+              </h2>
+              <h3 className="mt-10 font-light b2-desk 	">
+                Full stack digital studio focused on generate impactful online
+                presence.
+              </h3>
             </div>
             <div className="home-desc-hero">
-              {showDelayedElement && (
+              {/* {showDelayedElement && (
                 <p className="b2-desk w-[200px] sm:w-auto ">
                   <p className={`${revealText}  `}>
                     <span className="block">
@@ -106,7 +116,7 @@ function HomeHero() {
                     <span className="block">digital experiences.</span>
                   </p>
                 </p>
-              )}
+              )} */}
             </div>
           </div>
         </div>

@@ -155,7 +155,7 @@
   line-height: 19px;
 }
 .mix-diff {
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 .services {

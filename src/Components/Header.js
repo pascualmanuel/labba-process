@@ -142,14 +142,13 @@ function Header() {
               <div
                 className="absolute right-0 mt-[-7px]  mr-[18px]"
                 style={{
-                  mixBlendMode: "difference",
                   zIndex: "10006",
                 }}
               >
                 <div className="contact">
-                  <p className="different text-white flex items-center">
+                  <p className=" text-black flex items-center">
                     <ReactSVG src={BackIcon} onClick={toggleContact} />
-                    <p className="b3-des pl-2.5 text-white ">Back</p>
+                    <p className="b3-des pl-2.5 text-black ">Back</p>
                   </p>
                 </div>
               </div>

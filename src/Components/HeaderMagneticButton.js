@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ReactSVG } from "react-svg";
-import BackIcon from "../Assets/Back.svg";
+// import BackIcon from "../Assets/Back.svg";
 const HeaderMagneticButton = () => {
   const buttonRef = useRef(null);
 

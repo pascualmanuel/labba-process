@@ -86,13 +86,15 @@ const MagneticButton = ({ text, link }) => {
     <div
       className="fixed right-0 mt-[-10px] "
       style={{
-        mixBlendMode: "difference",
+        mixBlendMode: "",
         zIndex: "10006",
       }}
     >
       <Link to={link}>
         <div
-          className="button-magnetic mr-[18px] mt-[28px] sm:mt-[20px] sm:mr-[80px]"
+          className={`button-magnetic mr-[18px] mt-[28px] sm:mt-[20px] sm:mr-[80px] rounded-3xl ${
+            !isHome ? "border border-[#B5B5B5]" : ""
+          }`}
           ref={buttonRef}
         >
           <div className="button button--primary">

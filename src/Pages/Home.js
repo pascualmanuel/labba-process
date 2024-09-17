@@ -187,12 +187,7 @@ function Home() {
       </div>
 
       <>
-        {/* <div className="second-section parallax">
-          <div className="work h-[420px] sm:h-[300px] mb-[-5px] sm:mb-[0px]"></div>
-        </div> */}
-        {/* <div className="parallax"> */}
         <Works />
-        {/* </div> */}
       </>
 
       <div
