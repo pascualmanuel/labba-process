@@ -1,32 +1,37 @@
 import React, { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Styles/Prueba.css";
-import { ReactSVG } from "react-svg";
-import Submit from "../Assets/svg-submit.svg";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-router-dom";
+import Rounded from "../Hooks/Rounded";
+
 function Contact() {
+  useEffect(() => {
+    document.title = "Labba - Contact";
+  }, []);
+
   const [selectedService, setSelectedService] = useState("");
   const [buttonText, setButtonText] = useState("Send request");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const isMobile = window.innerWidth <= 768;
+
+  let buttonContactWidth = 284;
+
+  if (isMobile) {
+    buttonContactWidth = 170;
+  }
 
   const handleServiceClick = (service) => {
     const buttons = document.querySelectorAll(".contact-buttons");
 
-    // Update styles for all buttons
     buttons.forEach((button) => {
       button.style.border = "1px solid #d9d9d9";
     });
 
-    // Toggle the selected service
     if (selectedService.includes(service)) {
       setSelectedService(selectedService.filter((s) => s !== service));
     } else {
       setSelectedService([...selectedService, service]);
     }
 
-    // Reset the error message and button styles
     setError("");
   };
 
@@ -35,7 +40,7 @@ function Contact() {
     email: "",
     about: "",
     budget: "",
-    selectedService: "", // New state for selected service
+    selectedService: "",
   });
 
   const handleChange = (e) => {
@@ -51,7 +56,6 @@ function Contact() {
       ...formData,
       selectedService,
     });
-    // console.log(selectedService, ";s;s");
   };
 
   const formRef = useRef();
@@ -62,7 +66,6 @@ function Contact() {
     //
 
     if (selectedService.length === 0) {
-      // Set an error message and update button styles
       setError("Please select at least one service.");
       updateButtonStyles(true);
       return;
@@ -70,14 +73,12 @@ function Contact() {
 
     setIsSubmitting(true);
 
-    // Reset the error message and button styles
     setError("");
     updateButtonStyles(false);
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
       setButtonText("Thank you!");
-      // Optionally, add the "thank-you" and "fade-in" classes for the "Thank you" state
       document
         .querySelector(".button-contact-submit")
         .classList.add("thank-you", "fade-in");
@@ -91,7 +92,6 @@ function Contact() {
       selectedService: selectedService.join(", "), // Convert array to comma-separated string
     };
 
-    // Send the form data using emailjs
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -101,7 +101,7 @@ function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
           setFormData({
             name: "",
             email: "",
@@ -111,7 +111,7 @@ function Contact() {
           setSelectedService([]);
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
         }
       );
   };
@@ -131,8 +131,8 @@ function Contact() {
     <>
       <div className="flex flex-column sm:justify-center ml-[18px] sm:ml-[0px]">
         <div className="grain"></div>
-        <div className="flex sm:flex-row flex-col sm:items-center">
-          <div className="sm:mr-[170px] mr-[0px] w-[340px] sm:w-auto">
+        <div className="flex sm:flex-row flex-col sm:items-center mt-[40px] sm:mt-0">
+          <div className="sm:mr-[170px] mr-[0px] w-[340px] sm:w-auto sm:mt-[-170px]">
             <h2 className=" contact-text-1 ">
               We would love to be part of your project
             </h2>
@@ -148,6 +148,7 @@ function Contact() {
               className="contact-b-cont flex flex-row flex-wrap content-center sm:mt-9 mt-[14px] w-[360px] 
             sm:w-[510px] "
             >
+              {/* <Rounded> */}
               <div
                 className={`contact-buttons b4-desk ${
                   selectedService.includes("UX / UI Design")
@@ -158,7 +159,7 @@ function Contact() {
               >
                 <span style={{ userSelect: "none" }}>UX / UI Design</span>
               </div>
-
+              {/* </Rounded> */}
               <div
                 className={`contact-buttons b4-desk ${
                   selectedService.includes("Web Development")
@@ -206,7 +207,7 @@ function Contact() {
               >
                 <span style={{ userSelect: "none" }}>Other</span>
               </div>
-              <div className="error-message flex items-center mb-[10px]">
+              <div className="text-[red]  flex items-center mb-[10px]">
                 {error}
               </div>
             </div>
@@ -259,7 +260,7 @@ function Contact() {
                   value={selectedService}
                 />
                 <div className="flex justify-center">
-                  <button
+                  {/* <button
                     type="submit"
                     className={`button-contact-submit b2-desk mt-14 sm:mb-24 input-cursor ${
                       isSubmitting ? "submitting" : ""
@@ -267,6 +268,25 @@ function Contact() {
                     disabled={isSubmitting}
                   >
                     {buttonText}
+                  </button> */}
+
+                  {/* <button
+                    type="submit"
+                    className={`button-contact-submit button-font mt-14 sm:mb-24 input-cursor coolBeans    ${
+                      isSubmitting ? "submitting" : ""
+                    }`}
+                    disabled={isSubmitting}
+                  >
+                    {buttonText}
+                  </button> */}
+                  <button className=" mt-14 sm:mb-24 ">
+                    <Rounded
+                      widthButton={buttonContactWidth}
+                      heightButton={77}
+                      buttonBorderColor={"gray"}
+                    >
+                      <p className="contact-text-1">{buttonText}</p>
+                    </Rounded>
                   </button>
                 </div>
               </form>

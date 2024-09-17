@@ -14,9 +14,9 @@ const Loader = () => {
         });
       } else {
         clearInterval(interval);
-        setTimeout(() => setLoading(false), 1000);
+        setTimeout(() => setLoading(false), 350);
       }
-    }, 12);
+    }, 22);
 
     return () => clearInterval(interval);
   }, [progress]);
@@ -26,14 +26,18 @@ const Loader = () => {
       const loader = document.querySelector(".loader-wrapper");
       loader.addEventListener("animationend", () => {
         loader.remove();
+
+        document.body.style.overflow = "auto";
       });
+    } else {
+      document.body.style.overflow = "hidden";
     }
   }, [loading]);
-  // Tamo
+
   return (
     <>
       <div
-        className={`loader-wrapper ${loading ? "" : "fade-out"} cursor-none`}
+        className={`loader-wrapper ${loading ? "" : "fade-out"} cursor-none `}
       >
         <div className="grain-2"></div>
         <div className={`loader ${loading ? "loading" : ""}`}>

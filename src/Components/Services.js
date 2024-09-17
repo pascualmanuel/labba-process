@@ -28,7 +28,7 @@ function Services() {
 
   return (
     <>
-      <div className="flex sm:flex-row mx-11 flex-col mt-24 sm:mt-72 sm:ml-36 ">
+      <div className="flex sm:flex-row mx-[23px] flex-col mt-24 sm:mt-72 sm:ml-36 ">
         <div className="sm:w-1/2 md:w-[580px]  w-full ">
           <p className="l-desk">SERVICES</p>
           <h3 className="b1-desk">
@@ -38,20 +38,23 @@ function Services() {
         </div>
         <div className="sm:w-1/2 w-full flex flex-col sm:pl-72 md:pl-24 xl:pl-[15rem] items-center mt-[60px] sm:mt-0 ">
           <div
-            className={`sm:w-1/2 w-full flex flex-col sm:pl-72 justify-center plusCursor services service-box ${
+            className={`sm:w-1/2 w-full flex flex-col sm:pl-72 justify-center  services service-box ${
               expDesign ? "expDesign" : ""
             }`}
             onClick={toggleDesign}
           >
             <p
-              className="sp1-desk  flex flex-col pt-[20px] px-[24px]  plusCursor relative"
-              id="pasando2"
+              className="sp1-desk  flex flex-col pt-[20px] px-[24px]   relative"
+              id={expDesign ? "pasando3" : "pasando2"}
             >
-              <span id="pasando2" className="small-numb  mb-[15px]">
+              <span
+                id={expDesign ? "pasando3" : "pasando2"}
+                className="small-numb  mb-[15px]"
+              >
                 01
               </span>
               DESIGN
-              <span class="absolute right-[24px]">
+              <span className="absolute right-[24px]">
                 <svg
                   width="18"
                   height="18"
@@ -69,7 +72,7 @@ function Services() {
             {expDesign ? (
               <>
                 <p
-                  id="pasando2"
+                  id={expDesign ? "pasando3" : "pasando2"}
                   className="small-numb  pl-[24px] pr-[24px] pt-[16px] h-[100%] "
                 >
                   Creating visually stunning web layouts, apps and brands.
@@ -79,20 +82,23 @@ function Services() {
           </div>
 
           <div
-            className={`sm:w-1/2 flex flex-col pl-72 justify-center plusCursorDos services service-box ${
+            className={`sm:w-1/2 flex flex-col pl-72 justify-center  services service-box ${
               expCode ? "expCode" : ""
             }`}
             onClick={toggleCode}
           >
             <p
-              className="sp1-desk  flex flex-col pt-[20px] px-[24px] plusCursorDos relative"
-              id="pasando2"
+              className="sp1-desk  flex flex-col pt-[20px] px-[24px]  relative"
+              id={expCode ? "pasando3" : "pasando2"}
             >
-              <span id="pasando2" className="small-numb  mb-[15px]">
+              <span
+                id={expCode ? "pasando3" : "pasando2"}
+                className="small-numb  mb-[15px]"
+              >
                 02
               </span>
               CODE
-              <span class="absolute right-[24px]">
+              <span className="absolute right-[24px]">
                 <svg
                   width="18"
                   height="18"
@@ -100,7 +106,7 @@ function Services() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clip-path="url(#clip0_710_18)">
+                  <g clipPath="url(#clip0_710_18)">
                     <path
                       d="M0.197703 9.57285L4.02271 5.74782C4.28631 5.48421 4.7137 5.48421 4.9773 5.74782C5.21694 5.98745 5.23872 6.36245 5.04266 6.6267L4.9773 6.70241L1.6296 10.0501L4.9773 13.3979C5.2409 13.6614 5.2409 14.0888 4.9773 14.3524C4.73766 14.5921 4.36266 14.6138 4.09841 14.4177L4.02271 14.3524L0.197703 10.5274C-0.0419397 10.2877 -0.0637198 9.91279 0.132345 9.64854L0.197703 9.57285ZM13.0227 5.74782C13.2623 5.50817 13.6373 5.48639 13.9016 5.68246L13.9773 5.74782L17.8023 9.57285C18.042 9.81244 18.0637 10.1875 17.8676 10.4517L17.8023 10.5274L13.9773 14.3524C13.7137 14.616 13.2863 14.616 13.0227 14.3524C12.7831 14.1128 12.7613 13.7378 12.9574 13.4735L13.0227 13.3979L16.3704 10.0501L13.0227 6.70241C12.7591 6.4388 12.7591 6.01142 13.0227 5.74782Z"
                       fill={strokeCode}
@@ -117,7 +123,7 @@ function Services() {
             {expCode ? (
               <>
                 <p
-                  id="pasando2"
+                  id={expCode ? "pasando3" : "pasando2"}
                   className="small-numb  pl-[24px] pr-[24px] pt-[16px] h-[100%]"
                 >
                   Developing reliable, maintainable, and scalable tech solutions
@@ -127,20 +133,23 @@ function Services() {
             ) : null}
           </div>
           <div
-            className={`sm:w-1/2 flex flex-col pl-72 justify-center plusCursorDos services service-box ${
+            className={`sm:w-1/2 flex flex-col pl-72 justify-center  services service-box ${
               expSupport ? "expSupport" : ""
             }`}
             onClick={toggleSupport}
           >
             <p
-              className="sp1-desk  flex flex-col pt-[20px] px-[24px]  plusCursorDos relative"
-              id="pasando2"
+              className="sp1-desk  flex flex-col pt-[20px] px-[24px]   relative"
+              id={expSupport ? "pasando3" : "pasando2"}
             >
-              <span id="pasando2" className="small-numb  mb-[15px]">
+              <span
+                id={expSupport ? "pasando3" : "pasando2"}
+                className="small-numb  mb-[15px]"
+              >
                 03
               </span>
               SUPPORT
-              <span class="absolute right-[24px]">
+              <span className="absolute right-[24px]">
                 <svg
                   width="18"
                   height="18"
@@ -158,7 +167,7 @@ function Services() {
             {expSupport ? (
               <>
                 <p
-                  id="pasando2"
+                  id={expSupport ? "pasando3" : "pasando2"}
                   className="small-numb  pl-[24px] pr-[24px] pt-[16px] h-[100%]"
                 >
                   We’ll join your journey and assist you on maintenance, and
