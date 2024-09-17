@@ -1,6 +1,6 @@
 import { ReactSVG } from "react-svg";
 import LabbaISO from "../Assets/svg-iso-labba.svg";
-import LabbaLogo from "../Assets/labba/logo-labba.svg";
+import LabbaLogo from "../Assets/labba/labba-iso.svg";
 import Burger from "../Assets/Burger.svg";
 import BurgerClose from "../Assets/Burger-close.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -85,7 +85,6 @@ function Header() {
             <div
               className="fixed "
               style={{
-                mixBlendMode: "difference",
                 zIndex: "10006",
               }}
             >
@@ -125,7 +124,6 @@ function Header() {
             <div
               className={logoPosition}
               style={{
-                mixBlendMode: "difference",
                 zIndex: "10006",
               }}
             >
