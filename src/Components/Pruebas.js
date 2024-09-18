@@ -84,7 +84,7 @@ const MagneticButton = ({ text, link }) => {
 
   return (
     <div
-      className="fixed right-0 mt-[-10px] "
+      className="fixed right-[-30px] mt-[-10px] "
       style={{
         mixBlendMode: "",
         zIndex: "10006",

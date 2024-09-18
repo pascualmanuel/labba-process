@@ -90,7 +90,7 @@ function Header() {
             >
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[80px] ml-[18px] "
+                className=" sm:ml-[50px] ml-[18px] "
                 style={{ zIndex: "10006" }}
               />
             </div>
@@ -129,7 +129,7 @@ function Header() {
             >
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[80px] ml-[18px] "
+                className=" sm:ml-[50px] ml-[18px] "
                 style={{ zIndex: "10006" }}
               />
             </div>

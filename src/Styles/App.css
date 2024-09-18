@@ -610,20 +610,26 @@ a {
 .elemento-animado {
   transform-origin: top center;
 }
-.reveal-text {
-  display: block;
+
+.hero-container {
+  width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
-.reveal-text span {
-  /* display: block; */
-  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+.swift-up-text span {
+  display: inline-block;
+  overflow: hidden;
+  animation: 0.3s swift-up ease-in-out forwards;
 }
-@keyframes reveal {
-  0% {
-    transform: translate(0, 150%);
-  }
-  100% {
-    transform: translate(0, 0);
+
+.swift-up-text i {
+  top: 55px; /* Ajusta según tu necesidad */
+  animation: 0.5s swift-up ease-in-out forwards;
+}
+
+@keyframes swift-up {
+  to {
+    top: 0;
   }
 }

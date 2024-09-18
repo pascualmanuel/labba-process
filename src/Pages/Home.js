@@ -10,6 +10,7 @@ import Claim from "../Components/Claim";
 import { useLanguage } from "../Hooks/LanguageContext";
 import { Link } from "react-router-dom";
 import Rounded from "../Hooks/Rounded";
+import NewWorks from "../Components/NewWork";
 
 function Home() {
   const { userLanguage, translateText } = useLanguage();
@@ -182,11 +183,11 @@ function Home() {
       <div id={shadowOn}></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
-      <div className="h-[64vh] sm:h-[74vh]" style={{ minHeight: "510px" }}>
+      <div className="h-[100vh] sm:h-[100vh]" style={{ minHeight: "510px" }}>
         <HomeHero />
       </div>
 
-      <>
+      {/* <>
         <Works />
       </>
 
@@ -195,7 +196,9 @@ function Home() {
         style={{ overflow: "hidden" }}
       >
         <Claim />
-      </div>
+      </div> */}
+
+      <NewWorks />
 
       <div className="services-cont pt-[20px]" style={{ overflow: "hidden" }}>
         <Services />

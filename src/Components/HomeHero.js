@@ -1,30 +1,14 @@
-import { useEffect, useState } from "react";
-import gsap from "gsap";
-import { useLanguage } from "../Hooks/LanguageContext";
-import { useLocation } from "react-router-dom";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // Importa ScrollTrigger
-
-gsap.registerPlugin(ScrollTrigger); // Registra el plugin ScrollTrigger
-
-function HomeHero() {
-  const { userLanguage, translateText } = useLanguage();
-  const location = useLocation();
-
+import React, { useState, useEffect } from "react"; // Asegúrate de importar el CSS
+//
+const HomeHero = () => {
   const [isSticky, setIsSticky] = useState(true);
-  const [isKeyFrame, setIsKeyFrame] = useState(true);
-  const [revealText, setRevealText] = useState("reveal-text");
+  const [showDelayedElement, setShowDelayedElement] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = 1200;
+      const threshold = 800;
       const scrollY = window.scrollY || window.pageYOffset;
-      setRevealText("no-reveal");
-      if (scrollY > threshold) {
-        setIsSticky(false);
-      } else {
-        setIsSticky(true);
-      }
+      setIsSticky(scrollY <= threshold);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,95 +18,32 @@ function HomeHero() {
     };
   }, []);
 
-  // console.log(revealText);
-
-  const [showDelayedElement, setShowDelayedElement] = useState(false);
-
-  let yesOrNo = 3400;
-
-  useEffect(() => {
-    if (window.location.hash === "#home") {
-      yesOrNo = 0;
-      setRevealText("no-reveal");
-    }
-  }, []);
-
   useEffect(() => {
     const delay = setTimeout(() => {
       setShowDelayedElement(true);
-    }, yesOrNo);
+    }, 3400);
 
     return () => clearTimeout(delay);
   }, []);
 
   return (
-    <>
-      <div>
-        <div
-          className={`mx-6 sm:mx-[10%] mt-8 ${
-            isSticky ? "fixed home-hero-1" : "hidden "
-          } w-screen`}
-        >
-          <div className="flex h-[28rem] sm:h-[35rem]">
-            <div className="max-w-[900px] lg:min-w-[880px] md:min-w-[800px] sm:min-w-[400px]">
-              {/* {showDelayedElement && (
-                <>
-                  <p className={`myH1  w-[360px] sm:w-auto ${revealText}`}>
-                    <span className="hidden sm:block">
-                      {" "}
-                      Empowering startups through{" "}
-                    </span>
-                    <span className="block sm:hidden">
-                      design & technology.
-                    </span>
-                  </p>
-                  <p
-                    className={`myH1 decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
-                  >
-                    <span className="hidden sm:block"> deserves an </span>
-                    <span className="block sm:hidden"> deserves </span>
-                  </p>
-                  <p
-                    className={`myH1 decoration-slate-100 w-[360px] sm:w-auto ${revealText}`}
-                  >
-                    <span className="pb-[30px] hidden sm:block">
-                      amazing website.
-                    </span>
-                    <span className="pb-[30px] block sm:hidden">
-                      an amazing website.
-                    </span>
-                  </p>
-                </>
-              )} */}
-
-              <h2 className="myH1">
-                Empowering startups through{" "}
-                <span className="hero-title">design & technology</span>
-              </h2>
-              <h3 className="mt-10 font-light b2-desk 	">
-                Full stack digital studio focused on generate impactful online
-                presence.
-              </h3>
-            </div>
-            <div className="home-desc-hero">
-              {/* {showDelayedElement && (
-                <p className="b2-desk w-[200px] sm:w-auto ">
-                  <p className={`${revealText}  `}>
-                    <span className="block">
-                      We design & build human-centered{" "}
-                    </span>
-                  </p>
-                  <p className={`${revealText} `}>
-                    <span className="block">digital experiences.</span>
-                  </p>
-                </p>
-              )} */}
-            </div>
-          </div>
+    <div className={`z-[-1] mt-20 ${isSticky ? "fixed" : "hidden"} `}>
+      {/* {showDelayedElement && ( */}
+      <div className="mx-auto px-6 lg:px-[150px]">
+        <div className="reveal-text">
+          <h2 className="myH1 w-[790px]">
+            Empowering startups through
+            <span className="hero-title">&nbsp;design & technology</span>
+          </h2>
+          <h3 className="mt-10 font-light b2-desk">
+            Full stack digital studio focused on generate impactful online
+            presence.
+          </h3>
         </div>
       </div>
-    </>
+      {/* )} */}
+    </div>
   );
-}
+};
 
 export default HomeHero;
