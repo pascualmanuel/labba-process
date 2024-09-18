@@ -27,7 +27,6 @@ body {
 }
 html {
   cursor: url("../Assets/dot-cursor.svg"), auto;
-  /* overflow-x: hidden !important; */
 }
 
 [role="button"],
@@ -36,10 +35,16 @@ button {
 }
 
 a {
-  /* cursor: none !important; */
   cursor: url("../Assets/dot-cursor.svg"), auto;
 }
 
+.center {
+  margin: 0 auto;
+}
+
+.max-w {
+  max-width: 1200px;
+}
 .input-cursor {
   cursor: url("../Assets/dot-cursor.svg"), auto;
 }

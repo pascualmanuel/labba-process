@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Styles/App.css";
-import Works from "../Components/Works";
+// import Works from "../Components/Works";
 import "../Styles/Prueba.css";
 import HomeHero from "../Components/HomeHero";
 import Services from "../Components/Services";
@@ -183,24 +183,27 @@ function Home() {
       <div id={shadowOn}></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
-      <div className="h-[100vh] sm:h-[100vh]" style={{ minHeight: "510px" }}>
+      <div
+        className="h-[100vh] sm:h-[100vh] max-w center"
+        style={{ minHeight: "510px" }}
+      >
         <HomeHero />
       </div>
 
       {/* <>
         <Works />
-      </>
-
-      <div
-        className="mt-[-200px] sm:mt-[-140px] bg-[#121212]"
-        style={{ overflow: "hidden" }}
-      >
-        <Claim />
-      </div> */}
+      </> */}
 
       <NewWorks />
 
-      <div className="services-cont pt-[20px]" style={{ overflow: "hidden" }}>
+      <div className="" style={{ overflow: "hidden" }}>
+        <Claim />
+      </div>
+
+      <div
+        className="services-cont pt-[20px] mt-[-300px]"
+        style={{ overflow: "hidden" }}
+      >
         <Services />
       </div>
       <Process />

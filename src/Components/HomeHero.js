@@ -27,9 +27,9 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <div className={`z-[-1] mt-20 ${isSticky ? "fixed" : "hidden"} `}>
+    <div className={`z-[-1] mt-36 ${isSticky ? "fixed" : "hidden"} `}>
       {/* {showDelayedElement && ( */}
-      <div className="mx-auto px-6 lg:px-[150px]">
+      <div className="mx-auto">
         <div className="reveal-text">
           <h2 className="myH1 w-[790px]">
             Empowering startups through

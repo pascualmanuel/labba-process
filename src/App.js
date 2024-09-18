@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import Contact from "./Pages/Contact";
-import Pruebas from "./Components/Pruebas";
+import Pruebas from "./Components/MagenticButton";
 import PruebaPage from "./Pages/PruebaPage";
 import GoogleAnalytics from "./Components/GoogleAnalytics";
 import Loader from "./Components/Loader";
@@ -244,7 +244,7 @@ function App() {
       {/* <Loader /> */}
       <BrowserRouter>
         <LanguageProvider>
-          <div id="circleCursor" className="hidden sm:block"></div>
+          {/* <div id="circleC  ursor" className="hidden sm:block"></div> */}
           <Header />
           <Routes>
             <Route

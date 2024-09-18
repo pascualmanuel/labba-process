@@ -7,8 +7,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import BackIcon from "../Assets/Back.svg";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
-import Pruebas from "../Components/Pruebas";
-import HeaderMagneticButton from "./HeaderMagneticButton";
+import Pruebas from "./MagenticButton";
+
 function Header() {
   const navigate = useNavigate();
 
@@ -80,39 +80,35 @@ function Header() {
   if (location.pathname === "/") {
     return (
       <>
-        <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 ">
+        <div className="fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-24 pl-[50px] pr-[50px] ">
           <Link to="/">
             <div
-              className="fixed "
+              className=""
               style={{
                 zIndex: "10006",
               }}
             >
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[50px] ml-[18px] "
+                className=" "
                 style={{ zIndex: "10006" }}
               />
             </div>
           </Link>
 
-          {isMobile ? (
-            <Link to={"/contact"} className="">
-              <div
-                className="fixed right-0 mt-[-7px]  mr-[18px]"
-                style={{
-                  mixBlendMode: "difference",
-                  zIndex: "10006",
-                }}
-              >
-                <div className="contact">
-                  <p className="different text-white">Contact</p>
+          <div>
+            {isMobile ? (
+              <Link to={"/contact"} className="">
+                <div className="fixed right-0 mt-[-7px]  mr-[18px]">
+                  <div className="contact">
+                    <p className="text-black">Contact</p>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ) : (
-            <Pruebas text={"Contact"} link={"/contact"} />
-          )}
+              </Link>
+            ) : (
+              <Pruebas text={"Contact"} link={"/contact"} />
+            )}
+          </div>
         </div>
       </>
     );
@@ -122,7 +118,7 @@ function Header() {
         <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 ">
           <Link to="/#home">
             <div
-              className={logoPosition}
+              // className={logoPosition}
               style={{
                 zIndex: "10006",
               }}
