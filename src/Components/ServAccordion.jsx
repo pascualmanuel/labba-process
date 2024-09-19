@@ -71,7 +71,7 @@ const FAQPage = () => {
   const faqData = [
     {
       id: 1,
-      title: "ux/ui design",
+      title: ".",
       answer:
         "We offer professiona and personalized UX/UI design services for products, websites and mobile apps. Our human- centered design philosophy make the user experience perfect from the first click!",
     },

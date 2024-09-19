@@ -3,7 +3,7 @@ import ServAccordion from "./ServAccordion";
 import MButton from "./MagenticButton";
 import Rounded from "../Hooks/Rounded";
 import Magnetic from "../Hooks/Magnetic";
-
+import TextAnimated from "../Hooks/AnimatedWord";
 const NewServices = () => {
   return (
     <>
@@ -22,6 +22,8 @@ const NewServices = () => {
             </Magnetic>
           </div>
           <div className="lg:w-[50%]">
+            <TextAnimated hola="ux/ui design" text2="ux/ui design" />
+
             <ServAccordion />
           </div>
         </div>

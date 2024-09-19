@@ -4,12 +4,13 @@ import React, { useEffect, useRef } from "react";
 
 // import "../Styles/App.css";
 // import "../Styles/Prueba.css";
-import PruebitaHover from "../Components/OldComps/pruebitaHover";
+import TextAnimated from "../Hooks/AnimatedWord";
+
 function PruebaPage() {
   return (
     <>
       <div className="flex justify-center w-[100vw] pt-[100px]">
-        <PruebitaHover />
+        <TextAnimated hola="DEVELOPMENT" text2="DEVELOPMENT" />
       </div>
     </>
   );
