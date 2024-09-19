@@ -83,7 +83,7 @@ function Claim() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Set the initial position of the claim section to be off-screen on the right
+    // Set the initial position of the claim section to be off-screen on the rightpookokokok ok ok ok
     gsap.set(claimSectionRef.current, {
       x: "20vw", // Start from the right side of the screen
     });

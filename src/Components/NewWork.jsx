@@ -6,11 +6,10 @@ import Work4 from "../Assets/work/work-4.webp";
 import Work5 from "../Assets/work/work-5.webp";
 import Work6 from "../Assets/work/work-6.webp";
 
-
 const Works = () => {
   return (
     <>
-      <section className="works-section mx-auto px-6 lg:px-[150px] max-w-[1500px] max-w-[1500px]">
+      <section className="works-section mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px]">
         {/* Primer trabajo - Full width */}
         <div
           className="work-item mb-2 sm:mb-6  rounded-lg bg-cover bg-center h-[260px] md:h-[580px]  "
@@ -35,7 +34,7 @@ const Works = () => {
           </div>
         </div>
       </section>
-      <section className="works-section mx-auto px-6 lg:px-[150px] lg:pt-5 max-w-[1500px]">
+      <section className="works-section mx-auto px-6 sm:px-[53px] lg:px-[150px] lg:pt-5 max-w-[1500px]">
         {/* Primer trabajo - Full width */}
         <div
           className="work-item mb-2 sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]  "

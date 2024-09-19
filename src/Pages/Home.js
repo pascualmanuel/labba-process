@@ -3,14 +3,15 @@ import "../Styles/App.css";
 // import Works from "../Components/Works";
 import "../Styles/Prueba.css";
 import HomeHero from "../Components/HomeHero";
-import Services from "../Components/Services";
+import Services from "../Components/OldComps/Services";
 import Process from "../Components/Process";
 import Carousel from "../Components/Carousel";
-import Claim from "../Components/Claim";
+import Claim from "../Components/OldComps/Claim";
 import { useLanguage } from "../Hooks/LanguageContext";
 import { Link } from "react-router-dom";
 import Rounded from "../Hooks/Rounded";
 import NewWorks from "../Components/NewWork";
+import NewServices from "../Components/NewServices";
 
 function Home() {
   const { userLanguage, translateText } = useLanguage();
@@ -184,7 +185,7 @@ function Home() {
       <div className="background-mobile"></div>
       <div className="grain"></div>
       <div
-        className="h-[100vh] sm:h-[100vh] max-w center"
+        className="h-[100vh] sm:h-[100vh] max-w-[1500px] px-[150px] center"
         style={{ minHeight: "510px" }}
       >
         <HomeHero />
@@ -200,11 +201,14 @@ function Home() {
         <Claim />
       </div>
 
-      <div
+      {/* <div
         className="services-cont pt-[20px] mt-[-300px]"
         style={{ overflow: "hidden" }}
       >
         <Services />
+      </div> */}
+      <div className=" mb-[350px] sm:mt-[-100px]">
+        <NewServices />
       </div>
       <Process />
       <div className="sm:h-screen sm:pb-0  	" style={{ background: " #ECECEC" }}>

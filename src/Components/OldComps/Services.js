@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import Icon1 from "../Assets/icons/design-icon.svg";
+// import Icon1 from "../Assets/../icons/design-icon.svg";
 // import Icon2 from "../Assets/icons/code-icon.svg";
-import Icon3 from "../Assets/icons/headset-icon.svg";
+// import Icon3 from "../Assets/../icons/headset-icon.svg";
 import { ReactSVG } from "react-svg";
 function Services() {
   const [strokeDesign, setStrokeDesign] = useState("black");

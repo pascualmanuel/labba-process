@@ -490,10 +490,9 @@ main {
   display: block;
 }
 
-.services-cont {
-  /* margin-top: -24lvh; */
-  margin-bottom: 400px;
-}
+/* .services-cont { */
+/* margin-bottom: 400px;
+} */
 
 .labba-lg-bottom {
   display: flex;
@@ -673,7 +672,7 @@ main {
     z-index: -1;
   }
   .services-cont {
-    height: auto;
+    /* height: auto; */
     margin-bottom: 140px;
   }
 
