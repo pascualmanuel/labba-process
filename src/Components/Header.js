@@ -101,7 +101,7 @@ function Header() {
               <Link to={"/contact"} className="">
                 <div className="fixed right-0 mt-[-7px]  mr-[18px]">
                   <div className="contact">
-                    <p className="text-black">Contact</p>
+                    <p className="text-LaBlack">Contact</p>
                   </div>
                 </div>
               </Link>
@@ -140,9 +140,9 @@ function Header() {
                 }}
               >
                 <div className="contact">
-                  <p className=" text-black flex items-center">
+                  <p className=" text-LaBlack flex items-center">
                     <ReactSVG src={BackIcon} onClick={toggleContact} />
-                    <p className="b3-des pl-2.5 text-black ">Back</p>
+                    <p className="b3-des pl-2.5 text-LaBlack ">Back</p>
                   </p>
                 </div>
               </div>

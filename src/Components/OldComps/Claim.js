@@ -95,7 +95,7 @@ function Claim() {
       ease: "none",
       scrollTrigger: {
         trigger: claimSectionRef.current,
-        start: "top top", // Start as soon as it reaches the top of the viewport
+        start: "top top+=100", // Start as soon as it reaches the top of the viewport
         end: "+=1000", // Control the scroll length for smoothness
         scrub: true,
         pin: true, // Pin the section during the animation
@@ -110,13 +110,13 @@ function Claim() {
   }, []);
 
   return (
-    <div className="claim-wrapper">
+    <div className="claim-wrapper mt-[-100px]">
       <div
         ref={claimSectionRef}
         className="claim-section h-[100vh] flex items-center"
       >
         <div className="claim-content w-[300vw] whitespace-nowrap">
-          <p className="h2-desk text-black">
+          <p className="h2-desk text-LaBlack">
             We craft memorable digital experiences that resonate, inspire and
             endure.
           </p>

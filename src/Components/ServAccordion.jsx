@@ -25,7 +25,7 @@ const FAQItem = ({ id, title, answer }) => {
             >
               <path
                 d="M15 1L0.999999 1"
-                stroke="black"
+                stroke="#2b2b2b"
                 strokeWidth="1"
                 strokeLinecap="round"
               />
@@ -40,13 +40,13 @@ const FAQItem = ({ id, title, answer }) => {
             >
               <path
                 d="M8 1V15"
-                stroke="black"
+                stroke="#2b2b2b"
                 strokeWidth="1"
                 strokeLinecap="round"
               />
               <path
                 d="M15 8H0.999999"
-                stroke="black"
+                stroke="#2b2b2b"
                 strokeWidth="1"
                 strokeLinecap="round"
               />

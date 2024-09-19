@@ -6,7 +6,7 @@ const HomeHero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = 800;
+      const threshold = 600;
       const scrollY = window.scrollY || window.pageYOffset;
       setIsSticky(scrollY <= threshold);
     };
@@ -31,9 +31,11 @@ const HomeHero = () => {
       {/* {showDelayedElement && ( */}
       <div className="mx-auto">
         <div className="reveal-text">
-          <h2 className="myH1 w-[790px]">
+          <h2 className="myH1  w-[790px] ">
             Empowering startups through
-            <span className="hero-title">&nbsp;design & technology</span>
+            <span className="text-[90px] text-LaBlack font-medium tracking-tight	">
+              &nbsp;design & technology
+            </span>
           </h2>
           <h3 className="mt-10 font-light b2-desk">
             Full stack digital studio focused on generate impactful online
