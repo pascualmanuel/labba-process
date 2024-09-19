@@ -12,6 +12,7 @@ import Loader from "./Components/Loader";
 import { LanguageProvider } from "./Hooks/LanguageContext";
 import useCursorEffect from "./Hooks/useCursorEffect";
 import "./Styles/App.css";
+import AnimatedWords from "./Components/OldComps/AnimatedWord";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -89,7 +90,7 @@ function App() {
               }
             />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/pruebas" element={<PruebaPage />} />
+            <Route path="/pruebas" element={<AnimatedWords />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>
