@@ -1,17 +1,45 @@
 import React, { useState, useRef } from "react";
 // import "./FAQ.css"; // Add your styles here
-
+import TextAnimated from "../Hooks/AnimatedWord";
 const FAQItem = ({ id, title, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   const answerRef = useRef(null); // Reference to the answer div
 
+  const textAnimatedRefs = useRef([]);
+
+  const handleMouseEnter = (index) => {
+    console.log(`Mouse entered the area ${index + 1}`);
+    // Llama a la animación del texto animado correspondiente
+    if (textAnimatedRefs.current[index]) {
+      textAnimatedRefs.current[index].playAnimation();
+    }
+  };
+
+  const handleMouseLeave = (index) => {
+    console.log(`Mouse left the area ${index + 1}`);
+    // Reversa la animación del texto animado correspondiente
+    if (textAnimatedRefs.current[index]) {
+      textAnimatedRefs.current[index].reverseAnimation();
+    }
+  };
+
   return (
-    <div className="faq-item select-none" onClick={() => setIsOpen(!isOpen)}>
+    <div
+      className="faq-item select-none"
+      onClick={() => setIsOpen(!isOpen)}
+      onMouseEnter={() => handleMouseEnter(1)}
+      onMouseLeave={() => handleMouseLeave(1)}
+    >
       <div className="faq-header">
         <div className="faq-left">
           {/* <div className="faq-id ">{id}</div> */}
-          <div className="uppercase weight font-medium text-[18px] lg:text-[24px] w-[220px] sm:w-auto">
-            {title}
+          <div className="uppercase weight font-medium text-[18px] lg:text-[24px] w-[220px] sm:w-auto ">
+            <TextAnimated
+              firstWord={title}
+              secondWord={title}
+              ref={(el) => (textAnimatedRefs.current[1] = el)}
+            />
+            {/* {title} */}
           </div>
         </div>
         <div className="faq-right">
@@ -71,7 +99,7 @@ const FAQPage = () => {
   const faqData = [
     {
       id: 1,
-      title: ".",
+      title: "UX/UI DESIGN",
       answer:
         "We offer professiona and personalized UX/UI design services for products, websites and mobile apps. Our human- centered design philosophy make the user experience perfect from the first click!",
     },

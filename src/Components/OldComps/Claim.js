@@ -43,7 +43,7 @@
 //       // pin: true,
 //       pinSpacing: true,
 //       scrub: true,
-//       markers: true,
+
 //     });
 
 //     return () => {
@@ -85,22 +85,24 @@ function Claim() {
 
     // Set the initial position of the claim section to be off-screen on the rightpookokokok ok ok ok
     gsap.set(claimSectionRef.current, {
-      x: "20vw", // Start from the right side of the screen
+      x: "50vw", // Start from the right side of the screen
+      y: "150px",
     });
 
     // Animate the section from the right to the left
     const claimAnimation = gsap.to(claimSectionRef.current, {
       x: "-80%", // Move it to the left as the user scrolls
+      y: "-50px",
       duration: 1,
       ease: "none",
       scrollTrigger: {
         trigger: claimSectionRef.current,
-        start: "top top+=100", // Start as soon as it reaches the top of the viewport
-        end: "+=1000", // Control the scroll length for smoothness
+        start: "top-=500", // Start as soon as it reaches the top of the viewport
+        end: "+=700", // Control the scroll length for smoothness
         scrub: true,
         pin: true, // Pin the section during the animation
         pinSpacing: true, // Prevent vertical space while pinning
-        markers: true, // Remove for production
+        // markers: true, // Remove for production
       },
     });
 
@@ -110,12 +112,12 @@ function Claim() {
   }, []);
 
   return (
-    <div className="claim-wrapper mt-[-100px]">
+    <div className="claim-wrapper mt-[]  mb-[400PX]">
       <div
         ref={claimSectionRef}
-        className="claim-section h-[100vh] flex items-center"
+        className="claim-section h-[] flex items-center "
       >
-        <div className="claim-content w-[300vw] whitespace-nowrap">
+        <div className="claim-content w-[] whitespace-nowrap ">
           <p className="h2-desk text-LaBlack">
             We craft memorable digital experiences that resonate, inspire and
             endure.

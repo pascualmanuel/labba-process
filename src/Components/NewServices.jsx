@@ -22,8 +22,6 @@ const NewServices = () => {
             </Magnetic>
           </div>
           <div className="lg:w-[50%]">
-            <TextAnimated hola="ux/ui design" text2="ux/ui design" />
-
             <ServAccordion />
           </div>
         </div>

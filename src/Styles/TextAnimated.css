@@ -14,14 +14,14 @@
 
 .first-word {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   z-index: 10;
 }
 
 .second-word {
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
   z-index: 5;
 }
