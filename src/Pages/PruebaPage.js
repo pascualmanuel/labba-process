@@ -9,8 +9,11 @@ import TextAnimated from "../Hooks/AnimatedWord";
 function PruebaPage() {
   return (
     <>
-      <div className="flex justify-center w-[100vw] pt-[100px]">
-        <TextAnimated hola="DEVELOPMENT" text2="DEVELOPMENT" />
+      <div className="flex justify-center pt-[100px]">
+        <div className="w-[50vw] ">
+          <TextAnimated hola="DEVELOPMENT" text2="DEVELOPMENT" />
+        </div>
+        <div className="w-[50vw]">bla bla</div>
       </div>
     </>
   );

@@ -12,9 +12,6 @@ const TextAnimated = ({ hola = "", text2 = "" }) => {
       const singleChart1Elements = items.querySelectorAll(".single-chart1");
       const singleChart2Elements = items.querySelectorAll(".single-chart2");
 
-      console.log(singleChart1Elements);
-      console.log(singleChart2Elements);
-
       const timeline = gsap.timeline({ paused: true });
 
       timeline
