@@ -31,13 +31,13 @@ const HomeHero = () => {
       {/* {showDelayedElement && ( */}
       <div className="mx-auto">
         <div className="reveal-text">
-          <h2 className="myH1  w-[790px] ">
+          <h2 className="myH1  w-[790px] text-LaBlack ">
             Empowering startups through
             <span className="text-[90px] text-LaBlack font-medium tracking-tight	">
               &nbsp;design & technology
             </span>
           </h2>
-          <h3 className="mt-10 font-light b2-desk">
+          <h3 className="mt-10 font-light b2-desk text-LaBlack">
             Full stack digital studio focused on generate impactful online
             presence.
           </h3>

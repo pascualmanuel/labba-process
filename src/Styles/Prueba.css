@@ -970,7 +970,7 @@ main {
   height: 42px;
   overflow: hidden;
   border: none;
-  color: black;
+  color: #2b2b2b;
   font-size: 16px;
 }
 .btn-floral-scent::before {
@@ -1008,4 +1008,3 @@ main {
 
 
 */
-
