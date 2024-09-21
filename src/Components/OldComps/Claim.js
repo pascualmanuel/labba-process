@@ -78,8 +78,18 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Claim() {
+  const screen = window.innerWidth / 2;
   const claimSectionRef = useRef(null);
+  const isMobile = window.innerWidth < 768; // Check for mobile screens
+  let startX = `-${2160 - screen}px`;
+  console.log(screen);
 
+  console.log(startX);
+
+  if (isMobile) {
+    startX = `-${1160 - screen}px`;
+  }
+  // const endX =
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -91,7 +101,7 @@ function Claim() {
 
     // Animate the section from the right to the left
     const claimAnimation = gsap.to(claimSectionRef.current, {
-      x: "-80%", // Move it to the left as the user scrolls
+      x: startX, // Move it to the left as the user scrolls
       y: "-50px",
       duration: 1,
       ease: "none",

@@ -12,7 +12,7 @@ const Works = () => {
       <section className="works-section  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px]">
         {/* Primer trabajo - Full width */}
         <div
-          className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]"
+          className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]  "
           style={{ backgroundImage: `url(${Work1})` }}
           id="pasando"
         >
@@ -43,7 +43,7 @@ const Works = () => {
         {/* Segunda fila de trabajos - Dos columnas */}
         <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
           <div
-            className="work-item relative mb-2 sm:mb-0  rounded-lg bg-cover bg-center h-[260px] md:h-[590px]"
+            className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
             style={{ backgroundImage: `url(${Work2})` }}
             id="pasando"
           >
@@ -71,7 +71,7 @@ const Works = () => {
             </div>
           </div>
           <div
-            className="work-item relative mb-2 sm:mb-0  rounded-lg bg-cover bg-center h-[260px] md:h-[590px]"
+            className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
             style={{ backgroundImage: `url(${Work3})` }}
             id="pasando"
           >
@@ -99,7 +99,7 @@ const Works = () => {
           </div>
         </div>
       </section>
-      <section className="works-section mx-auto px-6 sm:px-[53px] lg:px-[150px] lg:pt-5 max-w-[1500px]">
+      <section className="works-section mx-auto px-6 sm:px-[53px] lg:px-[150px] sm:pt-5 max-w-[1500px]">
         {/* Primer trabajo - Full width */}
         <div
           className="work-item relative mb-2 sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]  "
@@ -132,9 +132,9 @@ const Works = () => {
         </div>
 
         {/* Segunda fila de trabajos - Dos columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-[24px]">
+        <div className="grid item-sq grid-cols-1 md:grid-cols-2 sm:gap-[24px]">
           <div
-            className="work-item relative mb-2 sm:mb-0  rounded-lg bg-cover bg-center h-[260px] md:h-[590px]"
+            className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
             style={{ backgroundImage: `url(${Work5})` }}
             id="pasando"
           >
@@ -162,7 +162,7 @@ const Works = () => {
             </div>
           </div>
           <div
-            className="work-item relative mb-2 sm:mb-0  rounded-lg bg-cover bg-center h-[260px] md:h-[590px]"
+            className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
             style={{ backgroundImage: `url(${Work6})` }}
             id="pasando"
           >
