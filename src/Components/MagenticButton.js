@@ -86,14 +86,12 @@ const MagneticButton = ({ text, link }) => {
     <div className="">
       <Link to={link}>
         <div
-          className={`button-magnetic rounded-3xl ${
-            !isHome ? "border border-[#B5B5B5]" : ""
-          }`}
+          className={`button-magnetic button-contact  ${!isHome ? "" : ""}`}
           ref={buttonRef}
         >
-          <div className="button button--primary">
+          <div className="button">
             <span
-              className="text b3-desk flex flex-row items-center"
+              className="text flex flex-row items-center"
               style={{ fontSize: "16px" }}
             >
               {!isHome && <ReactSVG src={BackIcon} className="pr-2.5 " />}

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"; // Asegúrate de importar el CSS
-//
+import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import dotAnimation from "../Assets/icons/dot-animation.json"; // Make
 const HomeHero = () => {
   const [isSticky, setIsSticky] = useState(true);
   const [showDelayedElement, setShowDelayedElement] = useState(false);
@@ -29,6 +31,9 @@ const HomeHero = () => {
   return (
     <div className={`z-[-1] mt-36 ${isSticky ? "fixed" : "hidden"} `}>
       {/* {showDelayedElement && ( */}
+      <span className=" font-normal leading-4 text-sm ">
+        Available for new projects
+      </span>
       <div className="mx-auto">
         <div className="reveal-text lg:w-[1024px] px-6 sm:px-0">
           <h2

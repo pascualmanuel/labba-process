@@ -106,7 +106,7 @@ function Header() {
                 </div>
               </Link>
             ) : (
-              <Pruebas text={"Contact"} link={"/contact"} />
+              <Pruebas text={"Contact us"} link={"/contact"} />
             )}
           </div>
         </div>

@@ -20,8 +20,8 @@ function Home() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   let shadowOn = "ellipse-shadow";
-  let displayClaim = "";
-  let shrinkNumber = 170;
+  // let displayClaim = "";
+  // let shrinkNumber = 170;
   let widthButton = 247;
   let heightButton = 77;
 
@@ -30,17 +30,16 @@ function Home() {
     heightButton = 57;
   }
   if (isMobile) {
-    // console.log("ggg");
     shadowOn = "no";
-    displayClaim = "none";
-    shrinkNumber = 340;
+    // displayClaim = "none";
+    // shrinkNumber = 340;
     widthButton = 218;
   }
   const svgCode = `
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M23.3137 0.686267L0.686292 23.3137M23.3137 0.686267H0.686292M23.3137 0.686267V23.3137" stroke="#ECECEC"/>
-  </svg>
-`;
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.3137 0.686267L0.686292 23.3137M23.3137 0.686267H0.686292M23.3137 0.686267V23.3137" stroke="#ECECEC"/>
+    </svg>
+  `;
   useEffect(() => {
     const ellipseShadow = document.getElementById(shadowOn);
 
