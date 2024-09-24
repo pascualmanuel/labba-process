@@ -83,7 +83,7 @@ const MagneticButton = ({ text, link }) => {
   }
 
   return (
-    <div className="">
+    <div className="z-[10000]">
       <Link to={link}>
         <div
           className={`button-magnetic button-contact  ${!isHome ? "" : ""}`}

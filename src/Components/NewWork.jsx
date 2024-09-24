@@ -28,9 +28,10 @@ const Works = () => {
               writingMode: "vertical-rl", // Makes the text vertical
               transform: "rotate(180deg)", // Adjust the direction of the text
               position: "sticky", // Fix position relative to the container
-              top: "100px", // Align with the top of the section
+              top: "250px", // Align with the top of the section
               left: "60px", // Margin of 60px from the left
               zIndex: "10", // Ensure it stays on top
+              translate: "0px 100px",
             }}
           >
             Selected Work

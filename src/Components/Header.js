@@ -7,7 +7,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import BackIcon from "../Assets/Back.svg";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
-import Pruebas from "./MagenticButton";
+
+import MagneticButton from "./MagenticButton";
 
 function Header() {
   const navigate = useNavigate();
@@ -80,7 +81,7 @@ function Header() {
   if (location.pathname === "/") {
     return (
       <>
-        <div className="fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
+        <div className="z-[100] fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
           <Link to="/">
             <div
               className=""
@@ -106,7 +107,7 @@ function Header() {
                 </div>
               </Link>
             ) : (
-              <Pruebas text={"Contact us"} link={"/contact"} />
+              <MagneticButton text={"Contact us"} link={"/contact"} />
             )}
           </div>
         </div>
@@ -115,7 +116,8 @@ function Header() {
   } else {
     return (
       <>
-        <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 ">
+        {/* <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 "> */}
+        <div className="z-[100] center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
           <Link to="/#home">
             <div
               // className={logoPosition}
@@ -148,7 +150,7 @@ function Header() {
               </div>
             </Link>
           ) : (
-            <Pruebas text={"Back"} link={"/#home"} />
+            <MagneticButton text={"Back"} link={"/#home"} />
           )}
         </div>
       </>

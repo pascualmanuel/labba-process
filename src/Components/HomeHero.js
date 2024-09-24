@@ -3,7 +3,31 @@ import { ReactSVG } from "react-svg";
 import { Player } from "@lottiefiles/react-lottie-player";
 import dotAnimation from "../Assets/icons/dot-animation.json"; // Make
 import Calendar from "../Assets/icons/calendar.svg";
+import MagneticButton from "./MagenticButton";
 const HomeHero = () => {
+  const svgPlus = `<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#filter0_b_2501_3)">
+  <path d="M19 10L3.57628e-07 10" stroke="#212121"/>
+  </g>
+  <g filter="url(#filter1_b_2501_3)">
+  <path d="M9.5 19.5L9.5 0.5" stroke="#212121"/>
+  </g>
+  <defs>
+  <filter id="filter0_b_2501_3" x="-4" y="5.5" width="27" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+  <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2501_3"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2501_3" result="shape"/>
+  </filter>
+  <filter id="filter1_b_2501_3" x="5" y="-3.5" width="9" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+  <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2501_3"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2501_3" result="shape"/>
+  </filter>
+  </defs>
+  </svg>  
+`;
   const [isSticky, setIsSticky] = useState(true);
   const [showDelayedElement, setShowDelayedElement] = useState(false);
 
@@ -30,8 +54,9 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <div className={`z-[-1] mt-36 ${isSticky ? "fixed" : "hidden"} `}>
+    <div className={` mt-36 ${isSticky ? "fixed" : "hidden"} `}>
       {/* {showDelayedElement && ( */}
+      
       <span className=" flex font-normal leading-4 text-sm mb-6 ">
         <Player
           autoplay
@@ -50,7 +75,7 @@ const HomeHero = () => {
         <div className="reveal-text lg:w-[1024px] px-6 sm:px-0">
           <h2
             className=" text-[45px] sm:text-[60px] ms:text-[70px] lm:text-[80px] 
-           lg:text-[90px] font-mediums leading-[109%] sm:leading-[99%]  tracking-tight"
+           lg:text-[90px] font-medium leading-[109%] sm:leading-[99%]  tracking-tight"
           >
             Empowering startups through design & technology.
           </h2>
@@ -58,10 +83,31 @@ const HomeHero = () => {
             Full stack digital studio focused on generate impactful online
             presence.
           </h3>
-          <div className="mt-6 rounded-xl w-[173px] h-[46px] border border-[#5A5A5A] flex flex-row items-center justify-center">
-            <span className="flex items-center font-medium text-base">
-              <ReactSVG src={Calendar} className=" mr-2" /> Schedule a call
-            </span>
+          <div className="flex mt-10">
+            {/* <div className="mt-6 rounded-xl border border-[#2b2b2b] w-[173px] h-[46px] mr-[10px] flex flex-row items-center justify-center bg-white bg-opacity-[0.2]">
+              <span className="flex items-center font-medium text-base">
+                <ReactSVG src={Calendar} className=" mr-2" /> Schedule a call
+              </span>
+            </div> */}
+            {/* <div className="mt-6 rounded-xl w-[173px] h-[46px] border border-[#2b2b2b] flex flex-row items-center justify-center bg-white">
+              <span className="flex items-center font-medium text-base">
+                <ReactSVG src={Calendar} className=" mr-2" /> Schedule a call
+              </span>
+            </div> */}
+            {/* <MagneticButton text={`Schedule a call`} link={"/contact"} /> */}
+            <MagneticButton
+              text={
+                <span style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Calendar}
+                    alt="Calendar icon"
+                    style={{ marginRight: "8px" }}
+                  />
+                  Schedule a call
+                </span>
+              }
+              link="/contact"
+            />
           </div>
         </div>
       </div>
