@@ -82,9 +82,6 @@ function Claim() {
   const claimSectionRef = useRef(null);
   const isMobile = window.innerWidth < 768; // Check for mobile screens
   let startX = `-${2160 - screen}px`;
-  console.log(screen);
-
-  console.log(startX);
 
   if (isMobile) {
     startX = `-${1160 - screen}px`;

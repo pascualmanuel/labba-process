@@ -51,6 +51,26 @@
   border-radius: 12px;
   transition: 0.3s;
 }
+.transition-transform {
+  transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.translate-y-full {
+  transform: translateY(100%); /* Starts below the viewport */
+}
+
+.translate-y-0 {
+  transform: translateY(0); /* Moves to its original position */
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
 .project-info {
   opacity: 0;
   display: block;

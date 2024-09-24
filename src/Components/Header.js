@@ -80,7 +80,7 @@ function Header() {
   if (location.pathname === "/") {
     return (
       <>
-        <div className="fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-24 pl-[50px] pr-[50px] ">
+        <div className="fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
           <Link to="/">
             <div
               className=""

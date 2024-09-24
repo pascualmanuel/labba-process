@@ -7,7 +7,7 @@ import TextAnimated from "../Hooks/AnimatedWord";
 const NewServices = () => {
   return (
     <>
-      <section className="mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] h-[100vh]">
+      <section className="mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px]">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-[30px] lg:w-[50%]">
             <h2 className="l-desk uppercase">Services</h2>
