@@ -100,14 +100,16 @@ function Header() {
           <div>
             {isMobile ? (
               <Link to={"/contact"} className="">
-                <div className="fixed right-0 mt-[-7px]  mr-[18px]">
+                <div className="fixed right-0 mt-[-7px]  mr-[16px]">
                   <div className="contact">
                     <p className="text-LaBlack">Contact</p>
                   </div>
                 </div>
               </Link>
             ) : (
-              <MagneticButton text={"Contact us"} link={"/contact"} />
+              <div className="mr-[-30px]">
+                <MagneticButton text={"Contact us"} link={"/contact"} />
+              </div>
             )}
           </div>
         </div>
@@ -116,45 +118,76 @@ function Header() {
   } else {
     return (
       <>
-        {/* <div className="flex flex-row justify-between items-center h-[77px] sm:h-24 "> */}
-        <div className="z-[100] center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
-          <Link to="/#home">
+        <div className="z-[100] top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
+          <Link to="/">
             <div
-              // className={logoPosition}
+              className=""
               style={{
                 zIndex: "10006",
               }}
             >
               <ReactSVG
                 src={LabbaLogo}
-                className=" sm:ml-[50px] ml-[18px] "
+                className=" "
                 style={{ zIndex: "10006" }}
               />
             </div>
           </Link>
 
-          {isMobile ? (
-            <Link to={"/#home"} className="">
-              <div
-                className="absolute right-0 mt-[-7px]  mr-[18px]"
-                style={{
-                  zIndex: "10006",
-                }}
-              >
-                <div className="contact">
-                  <p className=" text-LaBlack flex items-center">
-                    <ReactSVG src={BackIcon} onClick={toggleContact} />
-                    <p className="b3-des pl-2.5 text-LaBlack ">Back</p>
-                  </p>
+          <div>
+            {isMobile ? (
+              <Link to={"/contact"} className="">
+                <div className="fixed right-0 mt-[-7px]  mr-[16px]">
+                  <div className="contact">
+                    <p className="text-LaBlack">Contact</p>
+                  </div>
                 </div>
+              </Link>
+            ) : (
+              <div className="mr-[-30px]">
+                <MagneticButton
+                  text={
+                    <span className="text flex flex-row items-center text-base">
+                      <ReactSVG src={BackIcon} className="mr-3" /> Back
+                    </span>
+                  }
+                  link={"/#home"}
+                />
               </div>
-            </Link>
-          ) : (
-            <MagneticButton text={"Back"} link={"/#home"} />
-          )}
+            )}
+          </div>
         </div>
       </>
     );
   }
 }
 export default Header;
+
+// {isMobile ? (
+//   <Link to={"/#home"} className="">
+//     <div
+//       className="absolute right-0 mt-[-7px]  mr-[18px]"
+//       style={{
+//         zIndex: "10006",
+//       }}
+//     >
+//       <div className="contact">
+//         <p className=" text-LaBlack flex items-center">
+//           <ReactSVG src={BackIcon} onClick={toggleContact} />
+//           <p className="b3-des pl-2.5 text-LaBlack ">Back</p>
+//         </p>
+//       </div>
+//     </div>
+//   </Link>
+// ) : (
+//   <div className="mr-[-30px]">
+//     <MagneticButton
+//       text={
+//         <span className="text flex flex-row items-center text-base">
+//           <ReactSVG src={BackIcon} className="mr-3" /> Back
+//         </span>
+//       }
+//       link={"/#home"}
+//     />
+//   </div>
+// )}

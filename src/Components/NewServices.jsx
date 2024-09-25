@@ -16,7 +16,7 @@ const NewServices = () => {
             </h3>
 
             <Magnetic>
-              <div className="mt-2 bg-[#D42374] text-white w-[108px] h-[38px] text-[16px] font-normal sm:w-[162px] sm:h-[59px] rounded-full flex items-center justify-center sm:font-medium sm:text-[20px]">
+              <div className="mt-2 bg-[#D42374] text-white w-[108px] h-[38px] text-[16px] font-normal sm:w-[162px] sm:h-[59px] rounded-[12px] flex items-center justify-center sm:font-medium sm:text-[20px]">
                 Contact Us
               </div>
             </Magnetic>

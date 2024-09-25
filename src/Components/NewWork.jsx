@@ -8,6 +8,7 @@ import Work6 from "../Assets/work/work-6.webp";
 import PlusIcon from "../Assets/icons/PlusIcon.svg";
 import { useState } from "react";
 import { ReactSVG } from "react-svg";
+import MagneticButton from "./MagenticButton";
 const Works = () => {
   const [showMoreWorks, setShowMoreWorks] = useState(false);
   const [test, setTest] = useState("auto");
@@ -21,7 +22,7 @@ const Works = () => {
   return (
     <>
       <div>
-        {isDesktop ? (
+        {isDesktop && (
           <span
             className="vertical-text text-xl font-light"
             style={{
@@ -31,15 +32,13 @@ const Works = () => {
               top: "250px", // Align with the top of the section
               left: "60px", // Margin of 60px from the left
               zIndex: "10", // Ensure it stays on top
-              translate: "0px 100px",
+              // translate: "0px 100px",
             }}
           >
             Selected Work
           </span>
-        ) : (
-          <span>Selected Work</span>
         )}
-        <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:mt-[-120px] lg:px-[150px] max-w-[1500px] ">
+        <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:mt-[-220px] lg:px-[150px] max-w-[1500px] ">
           <div
             className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]  "
             style={{ backgroundImage: `url(${Work1})` }}
@@ -129,18 +128,20 @@ const Works = () => {
           </div>
         </section>
         {/* Tercer trabajo - Full width */}
-        {!showMoreWorks && (
-          <div className="text-center my-6">
-            <button
-              className="bg-transparent py-2 px-4 rounded-lg border border-LaBlack transition duration-300"
-              onClick={handleShowMoreWorks}
-            >
-              <span className="flex flex-row items-center font-medium text-base">
-                <ReactSVG src={PlusIcon} className="mr-3" /> Load more work
-              </span>
-            </button>
+        {/* {!showMoreWorks && (
+          <div className="flex justify-center mt-16">
+            <div className=" w-[197px] h-[48px]" onClick={handleShowMoreWorks}>
+              <MagneticButton
+                text={
+                  <span className="flex flex-row items-center font-medium text-base">
+                    <ReactSVG src={PlusIcon} className="mr-3" /> Load more work
+                  </span>
+                }
+                link=""
+              />
+            </div>
           </div>
-        )}
+        )} */}
 
         <section
           className={`mx-auto px-6 sm:px-[53px] lg:px-[150px] sm:pt-5 max-w-[1500px] transition-transform duration-500 ${
@@ -241,6 +242,20 @@ const Works = () => {
           )}
         </section>
       </div>
+      {!showMoreWorks && (
+        <div className="flex justify-center mt-8">
+          <div className=" w-[197px] h-[48px]" onClick={handleShowMoreWorks}>
+            <MagneticButton
+              text={
+                <span className="flex flex-row items-center font-medium text-base">
+                  <ReactSVG src={PlusIcon} className="mr-3" /> Load more work
+                </span>
+              }
+              link=""
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };

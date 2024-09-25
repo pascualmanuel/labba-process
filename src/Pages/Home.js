@@ -184,7 +184,7 @@ function Home() {
       <div className="background-mobile"></div>
       <div className="grain"></div>
       <div
-        className="h-[90vh] sm:h-[90vh] max-w-[1500px] sm:px-[53px] lg:px-[150px] center"
+        className="h-[100vh] sm:h-[100vh] max-w-[1500px] sm:px-[53px] lg:px-[150px] center"
         style={{ minHeight: "510px" }}
       >
         <HomeHero />

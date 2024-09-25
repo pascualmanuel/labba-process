@@ -56,8 +56,8 @@ const HomeHero = () => {
   return (
     <div className={` mt-36 ${isSticky ? "fixed" : "hidden"} `}>
       {/* {showDelayedElement && ( */}
-      
-      <span className=" flex font-normal leading-4 text-sm mb-6 ">
+
+      <span className=" flex font-normal leading-4 text-sm mb-6 ml-5 sm:ml-0">
         <Player
           autoplay
           loop
@@ -67,15 +67,15 @@ const HomeHero = () => {
             width: "16px",
             marginRight: "7px",
             marginLeft: "5px",
-          }} // Adjust the size as needed
+          }}
         />
         Available for new projects
       </span>
       <div className="mx-auto">
-        <div className="reveal-text lg:w-[1024px] px-6 sm:px-0">
+        <div className="reveal-text lg:w-[900px] xl:w-[1024px] px-6 sm:px-0">
           <h2
-            className=" text-[45px] sm:text-[60px] ms:text-[70px] lm:text-[80px] 
-           lg:text-[90px] font-medium leading-[109%] sm:leading-[99%]  tracking-tight"
+            className=" text-[45px] sm:text-[60px] ms:text-[65px] lm:text-[80px] 
+           lg:text-[80px] xl:text-[90px] font-medium leading-[109%] sm:leading-[99%] tracking-tight"
           >
             Empowering startups through design & technology.
           </h2>
@@ -84,17 +84,6 @@ const HomeHero = () => {
             presence.
           </h3>
           <div className="flex mt-10">
-            {/* <div className="mt-6 rounded-xl border border-[#2b2b2b] w-[173px] h-[46px] mr-[10px] flex flex-row items-center justify-center bg-white bg-opacity-[0.2]">
-              <span className="flex items-center font-medium text-base">
-                <ReactSVG src={Calendar} className=" mr-2" /> Schedule a call
-              </span>
-            </div> */}
-            {/* <div className="mt-6 rounded-xl w-[173px] h-[46px] border border-[#2b2b2b] flex flex-row items-center justify-center bg-white">
-              <span className="flex items-center font-medium text-base">
-                <ReactSVG src={Calendar} className=" mr-2" /> Schedule a call
-              </span>
-            </div> */}
-            {/* <MagneticButton text={`Schedule a call`} link={"/contact"} /> */}
             <MagneticButton
               text={
                 <span style={{ display: "flex", alignItems: "center" }}>
