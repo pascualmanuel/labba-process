@@ -57,37 +57,37 @@ const Footer = () => {
   };
   return (
     <>
-      <div className="flex flex-col sm:flex-row pb-[50px]">
-        <div className="t-mail ml-[18px] sm:ml-[40px] lg:ml-[128px] mb-[15px] sm:mb-[0px] sm:mr-[20px]">
-          <p className="sayhi mb-3">Say hi</p>
-          <div className="btn-floral-border" onClick={handleCopyClick}>
-            <button
-              className=""
-              style={btnEmailCopyStyle}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => {
-                setHovered(false);
-                textToCopy.current.textContent = "click to copy";
-              }}
-            >
-              <div className="b4-desk text-red" style={beforeHover}>
-                hello@labba.studio
-              </div>
-              <div
-                className="b4-desk text-red"
-                style={afterHover}
-                ref={textToCopy}
+      <div className="flex flex-col lg:flex-row items-start ms:items-center  pb-[50px] justify-between  mx-6 lg:mx-20 xl:mx-40">
+        <div className="flex flex-col ms:flex-row">
+          <div className="ms:mr-2 md:mr-5">
+            <p className="sayhi mb-3">Say hi</p>
+            <div className="btn-floral-border" onClick={handleCopyClick}>
+              <button
+                className=""
+                style={btnEmailCopyStyle}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => {
+                  setHovered(false);
+                  textToCopy.current.textContent = "click to copy";
+                }}
               >
-                {isCopied ? "Copied!" : "click to copy"}
-              </div>
-            </button>
+                <div className="b4-desk text-red" style={beforeHover}>
+                  hello@labba.studio
+                </div>
+                <div
+                  className="b4-desk text-red"
+                  style={afterHover}
+                  ref={textToCopy}
+                >
+                  {isCopied ? "Copied!" : "click to copy"}
+                </div>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="ml-[18px] sm:ml-[0px] sm:mr-[40px] lg:mr-[128px] flex flex-col sm:flex-row">
-          <div className="mr-0 sm:mr-[20px] mb-[15px] sm:mb-[0px]">
+          <div className="ms:mr-2 md:mr-5 sm:mb-[0px]">
             <div>
-              <p className="sayhi mb-3">Argentina</p>
+              <p className="sayhi mb-3 mt-4 ms:mt-0">Argentina</p>
               <a
                 href="https://wa.me/+5491151632960"
                 className="whatsapp-link"
@@ -99,8 +99,8 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div>
-            <p className="sayhi mb-3">Spain</p>
+          <div className="">
+            <p className="sayhi mb-3 mt-4 ms:mt-0">Spain</p>
             <a
               href="https://wa.me/+34634269453"
               className="whatsapp-link"
@@ -113,9 +113,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex items-center mt-8">
-          <ReactSVG src={Facebook} className="mr-[20px]" />
+          <ReactSVG src={Instagram} className="mr-[20px]" />
           <ReactSVG src={Linkedin} className="mr-[20px]" />
-          <ReactSVG src={Instagram} className="" />
+          <ReactSVG src={Facebook} className="" />
         </div>
       </div>
       <div className="border-t-gray  ">

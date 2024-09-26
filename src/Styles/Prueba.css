@@ -660,16 +660,19 @@ main {
   .next-level {
     display: flex;
     height: 400px;
-    padding: 0px;
-    width: 290px;
+    padding-left: 25px;
+    padding-right: 25px;
     flex-direction: column;
     padding-top: 70px;
+    align-items: center;
   }
   .prefooter {
     height: 401px;
   }
   .border-t-gray {
     padding-bottom: 55px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
   .div-animado {
     height: 380px;
@@ -802,7 +805,7 @@ main {
 @media (max-width: 640px) {
   .card__content {
     width: 330px !important;
-    height: 300px !important;
+    height: 330px !important;
   }
   .card__content {
     animation: none !important;

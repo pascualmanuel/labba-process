@@ -93,7 +93,7 @@ const MagneticButton = ({ text, link }) => {
       buttonElement.removeEventListener("mouseleave", handleMouseLeave);
       buttonElement.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [isMagnetic]); // Depend on isMagnetic
+  }, [isMagnetic]);
 
   const location = useLocation();
   const isHome = location.pathname === "/";

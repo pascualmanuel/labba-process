@@ -98,7 +98,7 @@ function Header() {
           </Link>
 
           <div>
-            {isMobile ? (
+            {/* {isMobile ? (
               <Link to={"/contact"} className="">
                 <div className="fixed right-0 mt-[-7px]  mr-[16px]">
                   <div className="contact">
@@ -106,11 +106,18 @@ function Header() {
                   </div>
                 </div>
               </Link>
-            ) : (
-              <div className="mr-[-30px]">
+            ) : ( */}
+            <div className="mr-[-30px]">
+              {isMobile ? (
+                <Link to="/contact">
+                  <div className="w-[108px] h-[38px] border border-[#2b2b2b] rounded flex items-center justify-center bg-[#ffffff33]">
+                    <span>Contact us</span>
+                  </div>
+                </Link>
+              ) : (
                 <MagneticButton text={"Contact us"} link={"/contact"} />
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </>

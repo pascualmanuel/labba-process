@@ -11,8 +11,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Services() {
   return (
-    <div className="process-container sm:pt-0 pt-12 pb-0 sm:pb-28 ">
-      <main className="flex justify-center  sm:mb-0 mb-[-260px]">
+    <div className="process-container sm:pt-0 pt-12 pb-10 sm:pb-28 ">
+      <main className="flex justify-center  sm:mb-0 ms:mb-[-260px]">
         <ul id="cards">
           <li className="card w-[100vw] z-[10000] " id="card_2">
             <div className="absolute left-[0px] ml-[23px] sm:ml-[150px] top-[-72px] sm:top-[-120px]">

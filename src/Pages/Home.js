@@ -197,9 +197,9 @@ function Home() {
             <div
               className={` cursor next-level ${
                 isMoving ? "is-moving" : ""
-              } flex flex-row h-[100%] sm:items-center justify-center ml-[18px] sm:ml-0`}
+              } flex flex-row h-[100%] sm:items-center justify-center  sm:ml-0`}
             >
-              <p className="b1-desk py-0 pb-[45px] sm:pb-[0px] 	pl-0 sm:pr-[100px] text-white	text-left">
+              <p className="b1-desk py-0 pb-[45px] sm:pb-[0px] 	pl-0 sm:pr-[100px] text-white	text-center ls:text-left ">
                 {translateText(
                   "Llevamos tu idea a otro level",
                   " Let’s take your idea to the next level."
