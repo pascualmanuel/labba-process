@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import MorgensternImg from "../../Assets/work/work-1.webp";
 import Work1 from "../../Assets/work/work-1.webp";
@@ -14,6 +15,9 @@ import Video3 from "../../Assets/work/Morgenstern/Comunidad3.mp4";
 import NewWork from "../../Components/NewWork";
 const Morgenstern = () => {
   let isDesktop = window.innerWidth > 1024;
+  useEffect(() => {
+    document.title = "Morgenstern - Labba Studio";
+  }, []);
   return (
     <>
       <div
