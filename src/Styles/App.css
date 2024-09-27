@@ -443,7 +443,6 @@ select:focus-visible {
 .work-max-w {
   max-width: 775px;
 }
-
 @media (max-width: 1023px) {
   .myH1 {
     font-size: 90px;
