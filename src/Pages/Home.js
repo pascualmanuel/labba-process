@@ -155,32 +155,24 @@ function Home() {
       <div id={shadowOn}></div>
       <div className="background-mobile"></div>
       <div className="grain"></div>
-      <div
-        className="h-[100vh] sm:h-[100vh] max-w-[1500px] sm:px-[53px] lg:px-[150px] center"
-        style={{ minHeight: "510px" }}
-      >
-        <HomeHero />
-      </div>
-
+      <HomeHero />
       {/* <>
         <Works />
       </> */}
-
       <NewWorks />
-
       <div className="" style={{ overflow: "hidden" }}>
         <Claim />
       </div>
-
       {/* <div
         className="services-cont pt-[20px] mt-[-300px]"
         style={{ overflow: "hidden" }}
       >
         <Services />
       </div> */}
-      <div className=" mb-[350px] sm:mt-[-100px]">
+      <div className=" mb-[200px] mt-[-150px] sm:mt-[-120px]">
         <NewServices />
       </div>
+
       <Process />
       <div className="sm:h-screen sm:pb-0  	" style={{ background: " #ECECEC" }}>
         <div className="  ">
@@ -190,7 +182,6 @@ function Home() {
         </div>
         <Carousel />
       </div>
-
       <div style={{ backgroundColor: "#F2F2F2" }}>
         <div className={`prefooter ${shouldShrink ? "shrink" : ""}`}>
           <Link to={"/contact"}>

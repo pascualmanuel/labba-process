@@ -1032,3 +1032,21 @@ main {
 
 
 */
+.margin-hero {
+  margin-top: 9rem;
+}
+
+@media (max-height: 620px) {
+  .margin-hero {
+    margin-top: 4rem !important;
+  }
+  .none {
+    display: none;
+  }
+}
+
+@media (max-width: 1410px) {
+  .margin-hero {
+    margin-top: 7rem;
+  }
+}

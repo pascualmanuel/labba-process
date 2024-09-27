@@ -110,7 +110,7 @@ function Header() {
             <div className="mr-[-30px]">
               {isMobile ? (
                 <Link to="/contact">
-                  <div className="w-[108px] h-[38px] border border-[#2b2b2b] rounded flex items-center justify-center bg-[#ffffff33]">
+                  <div className="w-[108px] h-[38px] border border-[#2b2b2b] rounded-lg flex items-center justify-center bg-[#ffffff33]">
                     <span>Contact us</span>
                   </div>
                 </Link>
@@ -142,16 +142,8 @@ function Header() {
           </Link>
 
           <div>
-            {isMobile ? (
-              <Link to={"/contact"} className="">
-                <div className="fixed right-0 mt-[-7px]  mr-[16px]">
-                  <div className="contact">
-                    <p className="text-LaBlack">Contact</p>
-                  </div>
-                </div>
-              </Link>
-            ) : (
-              <div className="mr-[-30px]">
+            <div className="mr-[-30px]">
+              {!isMobile ? (
                 <MagneticButton
                   text={
                     <span className="text flex flex-row items-center text-base">
@@ -160,8 +152,16 @@ function Header() {
                   }
                   link={"/#home"}
                 />
-              </div>
-            )}
+              ) : (
+                <Link to="/">
+                  <div className="w-[108px] h-[38px] border border-[#2b2b2b] rounded-lg flex items-center justify-center bg-[#ffffff33]">
+                    <span className="text flex flex-row items-center text-base">
+                      <ReactSVG src={BackIcon} className="mr-3" /> Back
+                    </span>
+                  </div>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </>

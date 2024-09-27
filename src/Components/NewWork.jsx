@@ -26,13 +26,12 @@ const Works = () => {
           <span
             className="vertical-text text-xl font-light"
             style={{
-              writingMode: "vertical-rl", // Makes the text vertical
-              transform: "rotate(180deg)", // Adjust the direction of the text
-              position: "sticky", // Fix position relative to the container
-              top: "250px", // Align with the top of the section
-              left: "60px", // Margin of 60px from the left
-              zIndex: "10", // Ensure it stays on top
-              // translate: "0px 100px",
+              writingMode: "vertical-rl",
+              transform: "rotate(180deg)",
+              position: "sticky",
+              top: "250px",
+              left: "60px",
+              zIndex: "10",
             }}
           >
             Selected Work
@@ -75,7 +74,8 @@ const Works = () => {
               style={{ backgroundImage: `url(${Work2})` }}
               id="pasando"
             >
-              <div className="project-info w-[250px] sm:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
+              <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
+                {" "}
                 <div className="flex flex-row justify-between">
                   <div>
                     <p
@@ -103,7 +103,7 @@ const Works = () => {
               style={{ backgroundImage: `url(${Work3})` }}
               id="pasando"
             >
-              <div className="project-info w-[250px] sm:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
+              <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
                 <div className="flex flex-row justify-between">
                   <div>
                     <p
@@ -186,7 +186,8 @@ const Works = () => {
                   style={{ backgroundImage: `url(${Work5})` }}
                   id="pasando"
                 >
-                  <div className="project-info w-[250px] sm:w-[359px] bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
+                  <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
+                    {" "}
                     <div className="flex flex-row justify-between">
                       <div>
                         <p
@@ -213,7 +214,8 @@ const Works = () => {
                   style={{ backgroundImage: `url(${Work6})` }}
                   id="pasando"
                 >
-                  <div className="project-info w-[250px] sm:w-[359px] bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
+                  <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
+                    {" "}
                     <div className="flex flex-row justify-between">
                       <div>
                         <p
