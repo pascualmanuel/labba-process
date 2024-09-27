@@ -93,19 +93,25 @@ const HomeHero = () => {
                 presence.
               </h3>
               <div className={`flex mt-10 ${isStickyTwo ? "" : "hidden"}`}>
-                <MagneticButton
-                  text={
-                    <span style={{ display: "flex", alignItems: "center" }}>
-                      <img
-                        src={Calendar}
-                        alt="Calendar icon"
-                        style={{ marginRight: "8px" }}
-                      />
-                      Schedule a call
-                    </span>
-                  }
-                  link="/contact"
-                />
+                <a
+                  href="https://cal.com/labbastudio/discovery-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MagneticButton
+                    text={
+                      <span style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src={Calendar}
+                          alt="Calendar icon"
+                          style={{ marginRight: "8px" }}
+                        />
+                        Schedule a call
+                      </span>
+                    }
+                    // link="https://cal.com/labbastudio/discovery-call"
+                  />
+                </a>
               </div>
             </div>
           </div>

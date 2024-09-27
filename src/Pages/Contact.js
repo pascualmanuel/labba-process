@@ -273,7 +273,7 @@ function Contact() {
                   placeholder="e.g. www.labba.studio"
                   className="input-cursor sm:w-full w-[90vw] mb-5"
                 />
-                <label className="">Estimated budget</label>
+                <label className="">Your mini brief...</label>
 
                 <input
                   type="text"

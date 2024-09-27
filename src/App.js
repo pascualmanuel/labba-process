@@ -13,6 +13,7 @@ import { LanguageProvider } from "./Hooks/LanguageContext";
 import useCursorEffect from "./Hooks/useCursorEffect";
 import "./Styles/App.css";
 import AnimatedWords from "./Hooks/AnimatedWord";
+import Morgenstern from "./Pages/Works/Morgenstern";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -91,6 +92,7 @@ function App() {
             />
             <Route path="/contact" element={<Contact />} />
             <Route path="/pruebas" element={<PruebaPage />} />
+            <Route path="/morgenstern" element={<Morgenstern />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>
