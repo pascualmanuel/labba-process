@@ -154,7 +154,7 @@ function Home() {
     <>
       <div id={shadowOn}></div>
       <div className="background-mobile"></div>
-      <div className="grain"></div>
+      {/* <div className="grain"></div> */}
       <HomeHero />
       {/* <>
         <Works />

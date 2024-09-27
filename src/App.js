@@ -74,9 +74,10 @@ function App() {
       <GoogleAnalytics />
       {/* <Loader /> */}
       <BrowserRouter>
+        <div className="grain"></div>
+
         <LanguageProvider>
           <ScrollToTop />
-          {/* <div id="circleCursor" className="hidden sm:block"></div> */}
           <div id="circleCursor" className="hidden sm:block"></div>
 
           <Header />
