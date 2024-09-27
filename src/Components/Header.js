@@ -81,7 +81,7 @@ function Header() {
   if (location.pathname === "/") {
     return (
       <>
-        <div className="z-[100] fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
+        <div className="z-[100] fixed top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 px-[15px] sm:px-[50px] ">
           <Link to="/">
             <div
               className=""
@@ -107,7 +107,7 @@ function Header() {
                 </div>
               </Link>
             ) : ( */}
-            <div className="mr-[-30px]">
+            <div className="sm:mr-[-30px]">
               {isMobile ? (
                 <Link to="/contact">
                   <div className="w-[108px] h-[38px] border border-[#2b2b2b] rounded-lg flex items-center justify-center bg-[#ffffff33]">
@@ -125,7 +125,7 @@ function Header() {
   } else {
     return (
       <>
-        <div className="z-[100] top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 pl-[50px] pr-[50px] ">
+        <div className="z-[100] top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 px-[15px] sm:px-[50px] ">
           <Link to="/">
             <div
               className=""
@@ -142,7 +142,7 @@ function Header() {
           </Link>
 
           <div>
-            <div className="mr-[-30px]">
+            <div className="sm:mr-[-30px]">
               {!isMobile ? (
                 <MagneticButton
                   text={

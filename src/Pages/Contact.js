@@ -330,8 +330,8 @@ function Contact() {
                   name="selectedService"
                   value={selectedService}
                 />
-                <div className="flex sm:justify-end ">
-                  <button className=" mt-14 ">
+                <div className="flex sm:justify-end pb-[50px]">
+                  <button className=" mt-8 ">
                     <Rounded
                       widthButton={buttonContactWidth}
                       heightButton={38}
@@ -346,6 +346,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      {/* <div className="h-[200vh] bg-slate-400 w-[100vw]"></div> */}
     </>
   );
 }

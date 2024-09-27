@@ -28,6 +28,7 @@ body {
 }
 html {
   cursor: url("../Assets/dot-cursor.svg"), auto;
+  /* scroll-behavior:auto */
 }
 
 [role="button"],

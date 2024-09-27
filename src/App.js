@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import Contact from "./Pages/Contact";
-
+import GoToTop from "./Hooks/ScrollToTop";
 import PruebaPage from "./Pages/PruebaPage";
 import GoogleAnalytics from "./Components/GoogleAnalytics";
 import Loader from "./Components/Loader";
@@ -71,10 +71,10 @@ function App() {
   return (
     <>
       <GoogleAnalytics />
-
       {/* <Loader /> */}
       <BrowserRouter>
         <LanguageProvider>
+          <ScrollToTop />
           {/* <div id="circleCursor" className="hidden sm:block"></div> */}
           <div id="circleCursor" className="hidden sm:block"></div>
 
