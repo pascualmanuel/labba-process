@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import MorgensternImg from "../../Assets/work/work-1.webp";
+import WorkInmBg from "../../Assets/work/Inmobiliare/WorkInmBg.png";
+import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import Work1 from "../../Assets/work/work-1.webp";
 import Work2 from "../../Assets/work/work-2.webp";
 import Work3 from "../../Assets/work/work-3.webp";
@@ -12,40 +13,53 @@ import BgMorg from "../../Assets/work/Morgenstern/bg-morg.png";
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";
 import Video2 from "../../Assets/work/Morgenstern/About2.mp4";
 import Video3 from "../../Assets/work/Morgenstern/Comunidad3.mp4";
-import Footer from "../../Components/Footer";
+import NewWork from "../../Components/NewWork";
+import LabbaLogo from "../../Assets/labba/labba-iso.svg";
 import LabbaWhiteLogo from "../../Assets/labba/labba-iso-white.svg";
 import { ReactSVG } from "react-svg";
+import Footer from "../../Components/Footer";
 
 const Morgenstern = () => {
   let isDesktop = window.innerWidth > 1024;
+
+  let inmoBg = Work2;
+  if (window.innerWidth > 900) {
+    inmoBg = WorkInmBg;
+  }
+
   useEffect(() => {
-    document.title = "Morgenstern - Labba Studio";
+    document.title = "Inmobiliare - Labba Studio";
   }, []);
 
   return (
     <>
       <div
         className="h-[590px] w-[100vw] sm:h-[680px] bg-cover bg-center mt-[-77px] md:mt-[-8rem]"
-        style={{ backgroundImage: `url(${MorgensternImg})` }}
+        style={{ backgroundImage: `url(${inmoBg})` }}
       ></div>
       <h2 className="work-title py-20 hidden md:block px-6 max-w-[1200px] center">
-        Morgenstern
+        Inmobiliare
       </h2>
       <div className="max-w-[500px] sm:max-w-[768px] center px-4 sm:px-6">
-        <h2 className="work-title mt-8 mb-12 md:hidden">Morgenstern</h2>
+        <h2 className="work-title mt-8 mb-12 md:hidden">Inmobiliare</h2>
         <p className="work-p">
-          We designed a digital space for a transmedia project that blends
-          various artistic mediums, including drawing, animation, sound, text,
-          and interactive games. This project serves as an artistic essay that
-          explores how we connect with others, the world, and the flow of
-          information.
-        </p>{" "}
+          Inmobiliare approached us with the goal of redesigning inmobiliare’s
+          website for users to explore real estate news. They wanted to provide
+          an intuitive and visually appealing experience to their more than 500k
+          users.
+        </p>
         <p className="work-p mt-8">
-          We created a visually dynamic and interactive website that allows
-          users to engage with the character Morgenstern in different forms. The
-          design was centered around immersing the audience in a fluid
-          narrative, where Morgenstern evolves and takes on different shapes to
-          address contemporary issues.
+          The challenge was to simplify the navigation and search process for
+          users while showcasing news in an engaging way.
+        </p>
+
+        <p className="work-p mt-8">
+          We started by analyzing the user journey and identifying pain points
+          in the current real estate platforms. Through our UX/UI design
+          process, we created an interface that prioritized ease of use,
+          allowing users to quickly find properties that matched their needs. We
+          incorporated dynamic filtering, high-quality images, and a clean
+          layout to ensure users could explore properties with minimal friction.
         </p>
         <div className="mt-8 ssm:flex ssm:flex-row ssm:justify-between">
           <div className="w-[] ">
@@ -56,11 +70,13 @@ const Morgenstern = () => {
           </div>
           <div className="hidden ssm:block">
             <p className="l-desk text-[#b5b5b5] uppercase mb-4">year</p>
-            <p className=" text-lg sm:text-2xl ">2023 </p>
+            <p className=" text-lg sm:text-2xl ">2024 </p>
           </div>
           <div className="hidden ssm:block">
-            <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
-            <p className=" text-lg sm:text-2xl ">website</p>
+            <Link to={"https://inmobiliare.com/"} target="_blank">
+              <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
+              <p className=" text-lg sm:text-2xl underline">website</p>
+            </Link>
           </div>
 
           <div className="flex justify-between mt-8 ssm:hidden">
@@ -76,17 +92,13 @@ const Morgenstern = () => {
         </div>
       </div>
       <div
-        className="md:h-[590px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center"
-        style={{ backgroundImage: `url(${BgMorg})` }}
+        className="md:h-[890px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center"
+        style={{ backgroundColor: `#021F00` }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:p-6">
           <div className="w-full md:h-full rounded-[8px] overflow-hidden">
-            <video
-              src={Video1}
-              muted
-              autoPlay
-              loop
-              playsInline
+            <img
+              src={Inmo2}
               className="w-full md:h-full"
               style={{
                 objectFit: "cover",
@@ -95,54 +107,7 @@ const Morgenstern = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[500px] sm:max-w-[768px] center py-20 px-4 sm:px-6">
-        <p className="work-p">
-          The site integrated multimedia elements, making the user experience
-          both reflective and engaging. Animation, soundscapes, and interactive
-          components were seamlessly woven into the storytelling, creating a
-          unique and thought-provoking digital environment.
-        </p>
-      </div>
-      <div className="sm:h-[590px] w-[100vw] bg-cover bg-center  flex justify-center">
-        <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div
-            className="w-full sm:h-full rounded-[8px] overflow-hidden"
-            style={{ border: "solid black 1px" }}
-          >
-            <video
-              src={Video3}
-              muted
-              autoPlay
-              loop
-              playsInline
-              className="w-full sm:h-full"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="sm:h-[590px] w-[100vw] bg-cover bg-center mt-1 sm:mt-10 flex justify-center">
-        <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div
-            className="sm:w-full h-full rounded-[8px] overflow-hidden"
-            style={{ border: "solid black 1px" }}
-          >
-            <video
-              src={Video2}
-              muted
-              autoPlay
-              loop
-              playsInline
-              className="w-full sm:h-full"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-      </div>
+
       {!isDesktop && (
         <p className=" text-xl font-light b-4 pl-6 pb-5 pt-20 text-[#b5b5b5]">
           Other work

@@ -39,7 +39,7 @@ const Works = () => {
           </span>
         )}
         <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:mt-[-220px] lg:px-[150px] max-w-[1500px] ">
-          <Link to={"/morgenstern"} rel="noopener noreferrer">
+          <Link to={"/works/morgenstern"} rel="noopener noreferrer">
             <div
               className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]  "
               style={{ backgroundImage: `url(${Work1})` }}
@@ -71,11 +71,7 @@ const Works = () => {
           </Link>
           {/* Segunda fila de trabajos - Dos columnas */}
           <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
-            <Link
-              to="https://inmobiliare.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to="/works/inmobiliare" rel="noopener noreferrer">
               <div
                 className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
                 style={{ backgroundImage: `url(${Work2})` }}

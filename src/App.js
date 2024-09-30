@@ -14,6 +14,7 @@ import useCursorEffect from "./Hooks/useCursorEffect";
 import "./Styles/App.css";
 import AnimatedWords from "./Hooks/AnimatedWord";
 import Morgenstern from "./Pages/Works/Morgenstern";
+import Inmobiliare from "./Pages/Works/Inmobiliare";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -93,7 +94,8 @@ function App() {
             />
             <Route path="/contact" element={<Contact />} />
             <Route path="/pruebas" element={<PruebaPage />} />
-            <Route path="/morgenstern" element={<Morgenstern />} />
+            <Route path="/works/morgenstern" element={<Morgenstern />} />
+            <Route path="/works/inmobiliare" element={<Inmobiliare />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>

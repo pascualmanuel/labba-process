@@ -23,19 +23,7 @@ function Home() {
   let shadowOn = "ellipse-shadow";
   // let displayClaim = "";
   // let shrinkNumber = 170;
-  let widthButton = 247;
-  let heightButton = 77;
 
-  if (window.innerWidth <= 1040) {
-    widthButton = 207;
-    heightButton = 57;
-  }
-  if (isMobile) {
-    shadowOn = "no";
-    // displayClaim = "none";
-    // shrinkNumber = 340;
-    widthButton = 218;
-  }
   const svgCode = `
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M23.3137 0.686267L0.686292 23.3137M23.3137 0.686267H0.686292M23.3137 0.686267V23.3137" stroke="#ECECEC"/>
@@ -91,40 +79,40 @@ function Home() {
     };
   }, []);
 
-  const prefooterRef = useRef(null);
-  const footerRef = useRef(null);
+  // const prefooterRef = useRef(null);
+  // const footerRef = useRef(null);
 
-  const [shouldShrink, setShouldShrink] = useState(
-    localStorage.getItem("shouldShrink") === "true"
-  );
+  // const [shouldShrink, setShouldShrink] = useState(
+  //   localStorage.getItem("shouldShrink") === "true"
+  // );
 
-  useEffect(() => {
-    function handleScroll() {
-      const prefooter = document.querySelector(".prefooter");
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     const prefooter = document.querySelector(".prefooter");
 
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.body.clientHeight;
-      const scrollTop =
-        window.scrollY ||
-        window.pageYOffset ||
-        document.documentElement.scrollTop;
-      const bottomThreshold = 100; // 100px arriba del bottom
-      const scrolledToThreshold =
-        scrollTop + windowHeight >= documentHeight - bottomThreshold;
+  //     const windowHeight = window.innerHeight;
+  //     const documentHeight = document.body.clientHeight;
+  //     const scrollTop =
+  //       window.scrollY ||
+  //       window.pageYOffset ||
+  //       document.documentElement.scrollTop;
+  //     const bottomThreshold = 100; // 100px arriba del bottom
+  //     const scrolledToThreshold =
+  //       scrollTop + windowHeight >= documentHeight - bottomThreshold;
 
-      if (scrolledToThreshold) {
-        prefooter.classList.add("shrink");
-      } else {
-        prefooter.classList.remove("shrink");
-        prefooter.style.opacity = 1;
-      }
-    }
+  //     if (scrolledToThreshold) {
+  //       prefooter.classList.add("shrink");
+  //     } else {
+  //       prefooter.classList.remove("shrink");
+  //       prefooter.style.opacity = 1;
+  //     }
+  //   }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const [isMoving, setIsMoving] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -182,7 +170,7 @@ function Home() {
         </div>
         <Carousel />
       </div>
-      <div style={{ backgroundColor: "#F2F2F2" }}>
+      {/* <div style={{ backgroundColor: "#F2F2F2" }}>
         <div className={`prefooter ${shouldShrink ? "shrink" : ""}`}>
           <Link to={"/contact"}>
             <div
@@ -213,7 +201,8 @@ function Home() {
         <div className="footer" ref={footerRef}>
           <Footer />
         </div>
-      </div>
+      </div> */}
+      <Footer />
     </>
   );
 }
