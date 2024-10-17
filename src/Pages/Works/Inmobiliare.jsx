@@ -19,7 +19,7 @@ import LabbaWhiteLogo from "../../Assets/labba/labba-iso-white.svg";
 import { ReactSVG } from "react-svg";
 import Footer from "../../Components/Footer";
 
-const Morgenstern = () => {
+const Inmobiliare = () => {
   let isDesktop = window.innerWidth > 1024;
 
   let inmoBg = Work2;
@@ -131,7 +131,7 @@ const Morgenstern = () => {
       )}
       <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  ">
         <Link
-          to="https://holamorgenstern.com"
+          to="https://inmobiliare.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -243,4 +243,4 @@ const Morgenstern = () => {
   );
 };
 
-export default Morgenstern;
+export default Inmobiliare;
