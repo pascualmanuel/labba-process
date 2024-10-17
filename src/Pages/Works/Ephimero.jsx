@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import WorkInmBg from "../../Assets/work/Inmobiliare/WorkInmBg.png";
+import ephiBg from "../../Assets/work/Ephimero/hero_ephi.jpg";
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import Work1 from "../../Assets/work/work-1.webp";
 import Work4 from "../../Assets/work/work-4.webp";
@@ -20,7 +20,7 @@ const Ephimero = () => {
 
   let inmoBg = Work2;
   if (window.innerWidth > 900) {
-    inmoBg = WorkInmBg;
+    inmoBg = ephiBg;
   }
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Ephimero = () => {
     <>
       <div
         className="h-[590px] w-[100vw] sm:h-[680px] bg-cover bg-center mt-[-77px] md:mt-[-8rem]"
-        style={{ backgroundImage: `url(${inmoBg})` }}
+        style={{ backgroundImage: `url(${ephiBg})` }}
       ></div>
       <h2 className="work-title py-20 hidden md:block px-6 max-w-[1200px] center">
         Ephimero
@@ -39,34 +39,28 @@ const Ephimero = () => {
       <div className="max-w-[500px] sm:max-w-[768px] center px-4 sm:px-6">
         <h2 className="work-title mt-8 mb-12 md:hidden">Inmobiliare</h2>
         <p className="work-p">
-          Inmobiliare approached us with the goal of redesigning inmobiliare’s
-          website for users to explore real estate news. They wanted to provide
-          an intuitive and visually appealing experience to their more than 500k
-          users.
+          The challenge was to create a seamless eCommerce experience that would
+          appeal to both design enthusiasts and consumers looking for premium
+          home decor.
         </p>
         <p className="work-p mt-8">
-          The challenge was to simplify the navigation and search process for
-          users while showcasing news in an engaging way.
+          We focused on creating an elegant and minimalist design that
+          emphasized the quality and aesthetic of Ephimero's candles. The
+          website was built with a mobile-first approach, ensuring that
+          customers could easily browse and purchase products on any device.
         </p>
 
-        <p className="work-p mt-8">
-          We started by analyzing the user journey and identifying pain points
-          in the current real estate platforms. Through our UX/UI design
-          process, we created an interface that prioritized ease of use,
-          allowing users to quickly find properties that matched their needs. We
-          incorporated dynamic filtering, high-quality images, and a clean
-          layout to ensure users could explore properties with minimal friction.
-        </p>
         <div className="mt-8 ssm:flex ssm:flex-row ssm:justify-between">
           <div className="w-[] ">
             <p className="l-desk text-[#b5b5b5] uppercase mb-4">Service</p>
             <p className=" text-lg sm:text-2xl ">UX/UI Design </p>
             <p className=" text-lg sm:text-2xl ">Development</p>
-            <p className=" text-lg sm:text-2xl ">SEO</p>
+            <p className=" text-lg sm:text-2xl ">Product renders</p>
+            <p className=" text-lg sm:text-2xl ">Growth</p>
           </div>
           <div className="hidden ssm:block">
             <p className="l-desk text-[#b5b5b5] uppercase mb-4">year</p>
-            <p className=" text-lg sm:text-2xl ">2024 </p>
+            <p className=" text-lg sm:text-2xl ">2023</p>
           </div>
           <div className="hidden ssm:block">
             <Link to={"https://ephimero.com/"} target="_blank">
