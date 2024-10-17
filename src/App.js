@@ -15,6 +15,7 @@ import "./Styles/App.css";
 import AnimatedWords from "./Hooks/AnimatedWord";
 import Morgenstern from "./Pages/Works/Morgenstern";
 import Inmobiliare from "./Pages/Works/Inmobiliare";
+import Ephimero from "./Pages/Works/Ephimero";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -50,7 +51,6 @@ function App() {
       setLenis(lenisInstance);
     }
   }, [loading]);
-  // const cursorRef = useRef(null);
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -96,6 +96,7 @@ function App() {
             <Route path="/pruebas" element={<PruebaPage />} />
             <Route path="/works/morgenstern" element={<Morgenstern />} />
             <Route path="/works/inmobiliare" element={<Inmobiliare />} />
+            <Route path="/works/ephimero" element={<Ephimero />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>
