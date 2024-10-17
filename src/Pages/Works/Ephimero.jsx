@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import WorkInmBg from "../../Assets/work/Inmobiliare/WorkInmBg.png";
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import Work1 from "../../Assets/work/work-1.webp";
+import Work4 from "../../Assets/work/work-4.webp";
 import Work2 from "../../Assets/work/work-2.webp";
 import Work3 from "../../Assets/work/work-3.webp";
 
-import Work6 from "../../Assets/work/work-6.webp";
+import Work6 from "../../Assets/work/work-manno.webp";
 
 import LabbaLogo from "../../Assets/labba/labba-iso.svg";
 import LabbaWhiteLogo from "../../Assets/labba/labba-iso-white.svg";
@@ -68,7 +69,7 @@ const Ephimero = () => {
             <p className=" text-lg sm:text-2xl ">2024 </p>
           </div>
           <div className="hidden ssm:block">
-            <Link to={"https://inmobiliare.com/"} target="_blank">
+            <Link to={"https://ephimero.com/"} target="_blank">
               <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
               <p className=" text-lg sm:text-2xl underline">website</p>
             </Link>
@@ -125,11 +126,7 @@ const Ephimero = () => {
         </span>
       )}
       <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  ">
-        <Link
-          to="https://ephimero.co"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link to="https://ephimero.co">
           <div
             className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
             style={{ backgroundImage: `url(${Work6})` }}
@@ -162,11 +159,7 @@ const Ephimero = () => {
         </Link>
         {/* Segunda fila de trabajos - Dos columnas */}
         <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
-          <Link
-            to="https://inmobiliare.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/inmobiliare">
             <div
               className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
               style={{ backgroundImage: `url(${Work2})` }}
@@ -198,14 +191,10 @@ const Ephimero = () => {
             </div>
           </Link>
 
-          <Link
-            to="https://ephimero.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/trebol" target="_blank" rel="noopener noreferrer">
             <div
               className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
-              style={{ backgroundImage: `url(${Work3})` }}
+              style={{ backgroundImage: `url(${Work4})` }}
               id="pasando"
             >
               <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
@@ -215,7 +204,7 @@ const Ephimero = () => {
                       className="l-desk text-[#ECECEC]"
                       style={{ fontWeight: 500 }}
                     >
-                      Ephimero
+                      Trebol
                     </p>
                   </div>
                   <div className="flex flex-row">
@@ -225,7 +214,9 @@ const Ephimero = () => {
                 </div>
                 <div className="mt-[10px]">
                   <p className="b4-desk text-[#ECECEC]">
-                    Candles ecommerce with ethics & aesthetics
+                    With Trebol, users can join various lotteries and keep tabs
+                    on the winning numbers, all without the need to visit a
+                    physical store.
                   </p>
                 </div>
               </div>

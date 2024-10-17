@@ -7,7 +7,7 @@ import Work2 from "../../Assets/work/work-2.webp";
 import Work3 from "../../Assets/work/work-3.webp";
 import Work4 from "../../Assets/work/work-4.webp";
 import Work5 from "../../Assets/work/work-5.webp";
-import Work6 from "../../Assets/work/work-6.webp";
+import Work6 from "../../Assets/work/work-manno.webp";
 import BgMorg from "../../Assets/work/Morgenstern/bg-morg.png";
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";
 import Video2 from "../../Assets/work/Morgenstern/About2.mp4";
@@ -202,11 +202,7 @@ const Morgenstern = () => {
         </Link>
         {/* Segunda fila de trabajos - Dos columnas */}
         <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
-          <Link
-            to="https://inmobiliare.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/inmobiliare">
             <div
               className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
               style={{ backgroundImage: `url(${Work2})` }}
@@ -238,11 +234,7 @@ const Morgenstern = () => {
             </div>
           </Link>
 
-          <Link
-            to="https://ephimero.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/ephimero">
             <div
               className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
               style={{ backgroundImage: `url(${Work3})` }}

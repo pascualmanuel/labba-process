@@ -1,14 +1,14 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import WorkInmBg from "../../Assets/work/Inmobiliare/WorkInmBg.png";
+import WorkInmBg from "../../Assets/work/Inmobiliare/inmobiliare_bg.webp";
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import Work1 from "../../Assets/work/work-1.webp";
 import Work2 from "../../Assets/work/work-2.webp";
 import Work3 from "../../Assets/work/work-3.webp";
 import Work4 from "../../Assets/work/work-4.webp";
 import Work5 from "../../Assets/work/work-5.webp";
-import Work6 from "../../Assets/work/work-6.webp";
+import Work6 from "../../Assets/work/work-manno.webp";
 import BgMorg from "../../Assets/work/Morgenstern/bg-morg.png";
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";
 import Video2 from "../../Assets/work/Morgenstern/About2.mp4";
@@ -130,11 +130,7 @@ const Inmobiliare = () => {
         </span>
       )}
       <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  ">
-        <Link
-          to="https://inmobiliare.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link to="/works/manno" target="_blank" rel="noopener noreferrer">
           <div
             className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
             style={{ backgroundImage: `url(${Work6})` }}
@@ -167,14 +163,10 @@ const Inmobiliare = () => {
         </Link>
         {/* Segunda fila de trabajos - Dos columnas */}
         <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
-          <Link
-            to="https://inmobiliare.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/daewoo">
             <div
               className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
-              style={{ backgroundImage: `url(${Work2})` }}
+              style={{ backgroundImage: `url(${Work5})` }}
               id="pasando"
             >
               <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
@@ -185,7 +177,7 @@ const Inmobiliare = () => {
                       className="l-desk text-[#ECECEC]"
                       style={{ fontWeight: 500 }}
                     >
-                      Inmobiliare
+                      Daewoo
                     </p>
                   </div>
                   <div className="flex flex-row">
@@ -195,19 +187,14 @@ const Inmobiliare = () => {
                 </div>
                 <div className="mt-[10px]">
                   <p className="b4-desk text-[#ECECEC]">
-                    Redesigning the experience of the largest real estate news
-                    portal in Mexico
+                    Explore and find your perfect home appliance.
                   </p>
                 </div>
               </div>
             </div>
           </Link>
 
-          <Link
-            to="https://ephimero.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/ephimero">
             <div
               className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
               style={{ backgroundImage: `url(${Work3})` }}
