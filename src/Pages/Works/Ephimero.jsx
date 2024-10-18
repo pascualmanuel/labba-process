@@ -6,7 +6,13 @@ import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import Work1 from "../../Assets/work/work-1.webp";
 import Work4 from "../../Assets/work/work-4.webp";
 import Work2 from "../../Assets/work/work-2.webp";
-import Work3 from "../../Assets/work/work-3.webp";
+import EphiMob1 from "../../Assets/work/Ephimero/ephi-mob1.jpg";
+import EphiMob2 from "../../Assets/work/Ephimero/ephi-mob2.jpg";
+import EphiMob3 from "../../Assets/work/Ephimero/ephi-mob3.jpg";
+import EphiMob4 from "../../Assets/work/Ephimero/ephi-mob4.jpg";
+import EphiMob5 from "../../Assets/work/Ephimero/ephi-mob5.jpg";
+import EphiMob6 from "../../Assets/work/Ephimero/ephi-mob6.jpg";
+import EphiGroup from "../../Assets/work/Ephimero/ephi-desk-group.png";
 
 import Work6 from "../../Assets/work/work-manno.webp";
 
@@ -82,13 +88,28 @@ const Ephimero = () => {
         </div>
       </div>
       <div
-        className="md:h-[890px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center"
-        style={{ backgroundColor: `#021F00` }}
+        className="md:h-[710px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center"
+        style={{ backgroundColor: `#DBD9C5` }}
+      >
+        <div className="w-full max-w-[1060px] p-4 sm:p-6">
+          <div className="w-full md:h-full rounded-[8px] overflow-hidden flex flex-row  justify-around items-center">
+            <img src={EphiMob1} className="w-[237px] h-[579px]" />
+            <img src={EphiMob2} className="w-[237px] h-[579px]" />
+            <img src={EphiMob3} className="w-[237px] h-[579px]" />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="md:h-[710px] w-[100vw] bg-cover bg-center mt-6 md:mt-6 flex justify-center"
+        style={{
+          background: `linear-gradient(76.23deg, #DBD9C5 -0.93%, #CCBDA2 100%)`,
+        }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:p-6">
           <div className="w-full md:h-full rounded-[8px] overflow-hidden">
             <img
-              src={Inmo2}
+              src={EphiGroup}
               className="w-full md:h-full"
               style={{
                 objectFit: "cover",
@@ -98,6 +119,31 @@ const Ephimero = () => {
         </div>
       </div>
 
+      <div>
+        <div className="max-w-[500px] sm:max-w-[768px] center px-4 sm:px-6 py-24">
+          <p className="work-p">
+            High-quality imagery, product storytelling, and an intuitive
+            interface were key elements of the design. We also incorporated
+            features like product reviews, scent descriptions, and recommended
+            pairings to enhance the shopping experience.
+          </p>
+        </div>
+      </div>
+
+      <div
+        className="md:h-[710px] w-[100vw] bg-cover bg-center mt-6 md:mt-6 flex justify-center"
+        style={{
+          background: `linear-gradient(76.23deg, #DBD9C5 -0.93%, #CCBDA2 100%)`,
+        }}
+      >
+        <div className="w-full max-w-[1060px] p-4 sm:p-6">
+          <div className="w-full md:h-full rounded-[8px] overflow-hidden flex flex-row  justify-around items-center">
+            <img src={EphiMob4} className="w-[237px] h-[579px]" />
+            <img src={EphiMob5} className="w-[237px] h-[579px]" />
+            <img src={EphiMob6} className="w-[237px] h-[579px]" />
+          </div>
+        </div>
+      </div>
       {!isDesktop && (
         <p className=" text-xl font-light b-4 pl-6 pb-5 pt-20 text-[#b5b5b5]">
           Other work
@@ -120,7 +166,7 @@ const Ephimero = () => {
         </span>
       )}
       <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  ">
-        <Link to="https://ephimero.co">
+        <Link to="/works/mannno">
           <div
             className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
             style={{ backgroundImage: `url(${Work6})` }}
