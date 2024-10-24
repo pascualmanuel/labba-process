@@ -87,12 +87,12 @@ function Header() {
       <>
         <div
           className={`z-[100] top-0 left-0 right-0 center flex flex-row justify-between items-center 
-        h-[77px] max-w-[1500px] sm:h-32 px-[15px] sm:px-[50px]
+        h-[77px] max-w-[1500px] sm:h-32 px-[15px] sm:px-[50px] pointer-events-none
          ${isWorkPage ? "" : "fixed"}`}
         >
           <Link to="/">
             <div
-              className=""
+              className=" pointer-events-auto"
               style={{
                 zIndex: "10006",
               }}
