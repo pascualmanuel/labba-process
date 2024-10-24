@@ -5,7 +5,7 @@ import Rounded from "../Hooks/Rounded";
 
 function Contact() {
   useEffect(() => {
-    document.title = "Labba - Contact /testing";
+    document.title = "Labba - Contact";
   }, []);
 
   const [selectedService, setSelectedService] = useState("");
@@ -21,6 +21,7 @@ function Contact() {
     { value: "USD 15000 - 20000", label: "USD 15K - 20K" },
   ];
 
+  console.log(selectedService);
   const handleSelect = (option) => {
     setSelectedOption(option.value);
     setFormData((prevData) => ({
@@ -154,7 +155,7 @@ function Contact() {
   return (
     <>
       <div className="flex flex-column sm:justify-center ml-[18px] sm:ml-[0px]">
-        {/* <div className="grain"></div> */}
+        <div className="grain"></div>
         <div className="flex lg:flex-row flex-col lg:items-center mt-6 lg:mt-0 sm:px-5">
           <div className=" mr-12 mg:mr-[170px]  w-[340px] sm:w-auto lg:mt-[-170px]">
             <h2 className=" contact-text-1 ">
@@ -190,7 +191,7 @@ function Contact() {
                 }`}
                 onClick={() => handleServiceClick("Development")}
               >
-                <span style={{ userSelect: "none" }}>Development</span>
+                <span style={{ userSelect: "none" }}>Design + Development</span>
               </div>
 
               <div
@@ -204,6 +205,17 @@ function Contact() {
 
               <div
                 className={`contact-buttons  ${
+                  selectedService.includes("ecommerce")
+                    ? "contact-b-active"
+                    : ""
+                }`}
+                onClick={() => handleServiceClick("ecommerce")}
+              >
+                <span style={{ userSelect: "none" }}>E-Commerce</span>
+              </div>
+
+              <div
+                className={`contact-buttons  ${
                   selectedService.includes("Marketing")
                     ? "contact-b-active"
                     : ""
@@ -212,6 +224,7 @@ function Contact() {
               >
                 <span style={{ userSelect: "none" }}>Marketing</span>
               </div>
+
               <div
                 className={`contact-buttons  ${
                   selectedService.includes("SocialMedia")
@@ -220,7 +233,9 @@ function Contact() {
                 }`}
                 onClick={() => handleServiceClick("SocialMedia")}
               >
-                <span style={{ userSelect: "none" }}>Social media design</span>
+                <span style={{ userSelect: "none" }}>
+                  Social media packages
+                </span>
               </div>
               <div
                 className={`contact-buttons  ${
@@ -273,7 +288,7 @@ function Contact() {
                   placeholder="e.g. www.labba.studio"
                   className="input-cursor sm:w-full w-[90vw] mb-5"
                 />
-                <label className="">Your mini brief...</label>
+                <label className="">Project summary</label>
 
                 <input
                   type="text"
@@ -288,7 +303,7 @@ function Contact() {
                   <label>Estimated budget</label>
 
                   <div
-                    className={`absolute sm:w-full w-[90vw] select-none border border-gray-300 bg-white text-gray-700 rounded-md transition-all duration-300 ease-in-out overflow-hidden z-[2] ${
+                    className={`absolute sm:w-full w-[90vw] select-none border border-gray-300 bg-white text-gray-700 rounded-md transition-all duration-700 ease-in-out overflow-hidden z-[2] ${
                       isOpen ? "max-h-80" : "max-h-[48px]"
                     }`}
                     onClick={() => setIsOpen(!isOpen)}
@@ -324,7 +339,7 @@ function Contact() {
 
                     {/* Menú de opciones */}
                     <ul
-                      className={`transition-opacity duration-300 ${
+                      className={`transition-opacity duration-700 ${
                         isOpen ? "opacity-100 " : "opacity-100"
                       }`}
                     >
