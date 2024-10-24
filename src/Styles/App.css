@@ -266,7 +266,7 @@ a {
   );
   filter: blur(300px);
   pointer-events: none; /* To allow interactions with elements beneath it */
-  z-index: -1;
+  z-index: -5;
   transform: rotate3D(0, 0, 1, 180deg);
 }
 
