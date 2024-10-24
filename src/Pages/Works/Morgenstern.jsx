@@ -51,16 +51,18 @@ const Morgenstern = () => {
           <div className="w-[] ">
             <p className="l-desk text-[#b5b5b5] uppercase mb-4">Service</p>
             <p className=" text-lg sm:text-2xl ">UX/UI Design </p>
-            <p className=" text-lg sm:text-2xl ">Development</p>
             <p className=" text-lg sm:text-2xl ">SEO</p>
+            <p className=" text-lg sm:text-2xl ">Development</p>
           </div>
           <div className="hidden ssm:block">
             <p className="l-desk text-[#b5b5b5] uppercase mb-4">year</p>
             <p className=" text-lg sm:text-2xl ">2023 </p>
           </div>
           <div className="hidden ssm:block">
-            <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
-            <p className=" text-lg sm:text-2xl ">website</p>
+            <Link to={"https://holamorgenstern.com/"} target="_blank">
+              <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
+              <p className=" text-lg sm:text-2xl underline">website</p>
+            </Link>
           </div>
 
           <div className="flex justify-between mt-8 ssm:hidden">
@@ -69,8 +71,10 @@ const Morgenstern = () => {
               <p className=" text-lg sm:text-2xl ">2023 </p>
             </div>
             <div className="mr-14">
-              <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
-              <p className=" text-lg sm:text-2xl ">website</p>
+              <Link to={"https://holamorgenstern.com/"} target="_blank">
+                <p className="l-desk text-[#b5b5b5] uppercase mb-4">link</p>
+                <p className=" text-lg sm:text-2xl underline">website</p>
+              </Link>
             </div>
           </div>
         </div>

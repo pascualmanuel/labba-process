@@ -130,7 +130,7 @@ const Inmobiliare = () => {
         </span>
       )}
       <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  ">
-        <Link to="/works/manno" target="_blank" rel="noopener noreferrer">
+        <Link to="/works/manno" target="" rel="noopener noreferrer">
           <div
             className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
             style={{ backgroundImage: `url(${Work6})` }}
