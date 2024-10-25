@@ -127,7 +127,7 @@ const Morgenstern = () => {
           </div>
         </div>
       </div>
-      <div className="sm:h-[590px] w-[100vw] bg-cover bg-center mt-1 sm:mt-10 flex justify-center">
+      <div className="sm:h-[590px] w-[100vw] bg-cover bg-center mt-1 sm:mt-10 flex justify-center lg:mb-[300px] ">
         <div className="w-full max-w-[1060px] p-4 sm:p-6">
           <div
             className="sm:w-full h-full rounded-[8px] overflow-hidden"
@@ -152,75 +152,42 @@ const Morgenstern = () => {
           Other work
         </p>
       )}
-      {isDesktop && (
-        <span
-          className="vertical-text text-xl font-light text-[#b5b5b5]"
-          style={{
-            writingMode: "vertical-rl",
-            transform: "rotate(180deg)",
-            position: "sticky",
-            top: "200px",
-            left: "60px",
-            zIndex: "10",
-            translate: "0px 170px",
-          }}
-        >
-          Other work
-        </span>
-      )}
-      <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  ">
-        <Link
-          to="https://holamorgenstern.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
-            style={{ backgroundImage: `url(${Work6})` }}
-            id="pasando"
+      <div>
+        {isDesktop && (
+          <span
+            className="vertical-text text-xl font-light text-[#b5b5b5]"
+            style={{
+              writingMode: "vertical-rl",
+              transform: "rotate(180deg)",
+              position: "sticky",
+              top: "200px",
+              left: "60px",
+              zIndex: "10",
+              translate: " 0px -110px",
+            }}
           >
-            <div className="project-info w-[250px] sm:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
-              <div className="flex flex-row justify-between">
-                <div>
-                  <p
-                    className="l-desk text-[#ECECEC]"
-                    style={{ fontWeight: 500 }}
-                  >
-                    Manno
-                  </p>
-                </div>
-                <div className="flex flex-row">
-                  <p className="tags p-12 mr-[6px]">Design</p>
-                  <p className="tags p-12">Development</p>
-                </div>
-              </div>
-              <div className="mt-[10px]">
-                <p className="b4-desk text-[#ECECEC]">
-                  A trusted community app that connects people who need to
-                  outsource tasks and find local services, with people looking
-                  to earn money and ready to work.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Link>
-        {/* Segunda fila de trabajos - Dos columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
-          <Link to="/works/inmobiliare">
+            Other work
+          </span>
+        )}
+        <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  lg:mt-[-300px]">
+          <Link
+            to="https://holamorgenstern.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div
-              className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
-              style={{ backgroundImage: `url(${Work2})` }}
+              className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
+              style={{ backgroundImage: `url(${Work6})` }}
               id="pasando"
             >
-              <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
-                {" "}
+              <div className="project-info w-[250px] sm:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
                 <div className="flex flex-row justify-between">
                   <div>
                     <p
                       className="l-desk text-[#ECECEC]"
                       style={{ fontWeight: 500 }}
                     >
-                      Inmobiliare
+                      Manno
                     </p>
                   </div>
                   <div className="flex flex-row">
@@ -230,45 +197,80 @@ const Morgenstern = () => {
                 </div>
                 <div className="mt-[10px]">
                   <p className="b4-desk text-[#ECECEC]">
-                    Redesigning the experience of the largest real estate news
-                    portal in Mexico
+                    A trusted community app that connects people who need to
+                    outsource tasks and find local services, with people looking
+                    to earn money and ready to work.
                   </p>
                 </div>
               </div>
             </div>
           </Link>
+          {/* Segunda fila de trabajos - Dos columnas */}
+          <div className="grid grid-cols-1 md:grid-cols-2  sm:gap-[24px]">
+            <Link to="/works/inmobiliare">
+              <div
+                className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
+                style={{ backgroundImage: `url(${Work2})` }}
+                id="pasando"
+              >
+                <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
+                  {" "}
+                  <div className="flex flex-row justify-between">
+                    <div>
+                      <p
+                        className="l-desk text-[#ECECEC]"
+                        style={{ fontWeight: 500 }}
+                      >
+                        Inmobiliare
+                      </p>
+                    </div>
+                    <div className="flex flex-row">
+                      <p className="tags p-12 mr-[6px]">Design</p>
+                      <p className="tags p-12">Development</p>
+                    </div>
+                  </div>
+                  <div className="mt-[10px]">
+                    <p className="b4-desk text-[#ECECEC]">
+                      Redesigning the experience of the largest real estate news
+                      portal in Mexico
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
 
-          <Link to="/works/ephimero">
-            <div
-              className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
-              style={{ backgroundImage: `url(${Work3})` }}
-              id="pasando"
-            >
-              <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
-                <div className="flex flex-row justify-between">
-                  <div>
-                    <p
-                      className="l-desk text-[#ECECEC]"
-                      style={{ fontWeight: 500 }}
-                    >
-                      Ephimero
+            <Link to="/works/ephimero">
+              <div
+                className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
+                style={{ backgroundImage: `url(${Work3})` }}
+                id="pasando"
+              >
+                <div className="project-info w-[359px] md:w-[300px] mg:w-[359px]  bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] md:left-[12px] mg:left-[30px] blur-bg">
+                  <div className="flex flex-row justify-between">
+                    <div>
+                      <p
+                        className="l-desk text-[#ECECEC]"
+                        style={{ fontWeight: 500 }}
+                      >
+                        Ephimero
+                      </p>
+                    </div>
+                    <div className="flex flex-row">
+                      <p className="tags p-12 mr-[6px]">Design</p>
+                      <p className="tags p-12">Development</p>
+                    </div>
+                  </div>
+                  <div className="mt-[10px]">
+                    <p className="b4-desk text-[#ECECEC]">
+                      Candles ecommerce with ethics & aesthetics
                     </p>
                   </div>
-                  <div className="flex flex-row">
-                    <p className="tags p-12 mr-[6px]">Design</p>
-                    <p className="tags p-12">Development</p>
-                  </div>
-                </div>
-                <div className="mt-[10px]">
-                  <p className="b4-desk text-[#ECECEC]">
-                    Candles ecommerce with ethics & aesthetics
-                  </p>
                 </div>
               </div>
-            </div>
-          </Link>
-        </div>
-      </section>
+            </Link>
+          </div>
+        </section>
+      </div>
       <Footer />
     </>
   );
