@@ -220,7 +220,7 @@ const Works = () => {
                   </div>
                 </Link>
 
-                <Link to="/works/daewoo">
+                <Link to="/works/manno">
                   <div
                     className="work-item item-sq relative mb-2 sm:mb-0 rounded-lg bg-cover bg-center h-[268px] sm:aspect-square sm:w-full md:h-auto"
                     style={{ backgroundImage: `url(${Work6})` }}
