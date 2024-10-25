@@ -16,6 +16,7 @@ import AnimatedWords from "./Hooks/AnimatedWord";
 import Morgenstern from "./Pages/Works/Morgenstern";
 import Inmobiliare from "./Pages/Works/Inmobiliare";
 import Ephimero from "./Pages/Works/Ephimero";
+import Daewoo from "./Pages/Works/Daewoo";
 import Manno from "./Pages/Works/Manno";
 function ScrollToTop() {
   const location = useLocation();
@@ -98,6 +99,7 @@ function App() {
             <Route path="/works/morgenstern" element={<Morgenstern />} />
             <Route path="/works/inmobiliare" element={<Inmobiliare />} />
             <Route path="/works/ephimero" element={<Ephimero />} />
+            <Route path="/works/daewoo" element={<Daewoo />} />
             <Route path="/works/manno" element={<Manno />} />
           </Routes>
         </LanguageProvider>
