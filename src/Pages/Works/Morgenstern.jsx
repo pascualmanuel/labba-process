@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import MorgensternImg from "../../Assets/work/work-1.webp";
-import Work1 from "../../Assets/work/work-1.webp";
-import Work2 from "../../Assets/work/work-2.webp";
-import Work3 from "../../Assets/work/work-3.webp";
-import Work4 from "../../Assets/work/work-4.webp";
-import Work5 from "../../Assets/work/work-5.webp";
+import MorgensternImg from "../../Assets/work/work-morgenstern.webp";
+
+import Work2 from "../../Assets/work/work-inmobiliare.webp";
+import Work3 from "../../Assets/work/work-ephimero.webp";
+
 import Work6 from "../../Assets/work/work-manno.webp";
 import BgMorg from "../../Assets/work/Morgenstern/bg-morg.png";
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";
@@ -170,11 +169,7 @@ const Morgenstern = () => {
           </span>
         )}
         <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  lg:mt-[-300px]">
-          <Link
-            to="https://holamorgenstern.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/manno" rel="noopener noreferrer">
             <div
               className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
               style={{ backgroundImage: `url(${Work6})` }}

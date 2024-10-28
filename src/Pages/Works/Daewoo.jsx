@@ -1,12 +1,12 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import DaewooHero from "../../Assets/work/Daewoo/Daewoo-hero.png";
-import Work1 from "../../Assets/work/work-1.webp";
-import Work2 from "../../Assets/work/work-2.webp";
-import Work3 from "../../Assets/work/work-3.webp";
-import Work4 from "../../Assets/work/work-4.webp";
-import Work5 from "../../Assets/work/work-5.webp";
+
+import Work1 from "../../Assets/work/work-morgenstern.webp";
+import Work2 from "../../Assets/work/work-inmobiliare.webp";
+import Work3 from "../../Assets/work/work-ephimero.webp";
+import Work4 from "../../Assets/work/work-trebol.webp";
+import Work5 from "../../Assets/work/work-daewoo.webp";
 import Work6 from "../../Assets/work/work-manno.webp";
 import BgDaewoo from "../../Assets/work/Daewoo/Daewoo-bg.jpg";
 import DaewooMov from "../../Assets/work/Daewoo/daewoo-product-mov.mp4";
@@ -28,7 +28,7 @@ const Daewoo = () => {
     <>
       <div
         className="h-[590px] w-[100vw] sm:h-[680px] bg-cover bg-center mt-[-77px] md:mt-[-8rem]"
-        style={{ backgroundImage: `url(${DaewooHero})` }}
+        style={{ backgroundImage: `url(${Work5})` }}
       ></div>
       <h2 className="work-title py-20 hidden md:block px-6 max-w-[1200px] center">
         Daewoo

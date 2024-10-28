@@ -13,6 +13,15 @@ import Rounded from "../Hooks/Rounded";
 import NewWorks from "../Components/NewWork";
 import NewServices from "../Components/NewServices";
 import Footer from "../Components/Footer";
+import MannoHero from "../Assets/work/Manno/MannoHero.webp";
+
+import ephiHero from "../Assets/work/Ephimero/hero_ephi.jpg";
+import ephiHeroMob from "../Assets/work/Ephimero/hero-principal-mob.webp";
+import WorkInmBg from "../Assets/work/Inmobiliare/inmobiliare_bg.webp";
+
+import Work4 from "../Assets/work/work-trebol.webp";
+import Work5 from "../Assets/work/work-manno.webp";
+import Work6 from "../Assets/work/work-morgenstern.webp";
 
 function Home() {
   const { userLanguage, translateText } = useLanguage();
@@ -83,84 +92,18 @@ function Home() {
     };
   }, []);
 
-  // const prefooterRef = useRef(null);
-  // const footerRef = useRef(null);
-
-  // const [shouldShrink, setShouldShrink] = useState(
-  //   localStorage.getItem("shouldShrink") === "true"
-  // );
-
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     const prefooter = document.querySelector(".prefooter");
-
-  //     const windowHeight = window.innerHeight;
-  //     const documentHeight = document.body.clientHeight;
-  //     const scrollTop =
-  //       window.scrollY ||
-  //       window.pageYOffset ||
-  //       document.documentElement.scrollTop;
-  //     const bottomThreshold = 100; // 100px arriba del bottom
-  //     const scrolledToThreshold =
-  //       scrollTop + windowHeight >= documentHeight - bottomThreshold;
-
-  //     if (scrolledToThreshold) {
-  //       prefooter.classList.add("shrink");
-  //     } else {
-  //       prefooter.classList.remove("shrink");
-  //       prefooter.style.opacity = 1;
-  //     }
-  //   }
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  const [isMoving, setIsMoving] = useState(false);
-  const [hovered, setHovered] = useState(false);
-  // const [isCopied, setIsCopied] = useState(false);
-
-  // function copyToClipboard(textToCopy) {
-  //   const textArea = document.createElement("textarea");
-  //   textArea.value = textToCopy;
-  //   document.body.appendChild(textArea);
-  //   textArea.select();
-  //   document.execCommand("copy");
-  //   document.body.removeChild(textArea);
-  //   setIsCopied(true); // Set isCopied to true when the text is copied
-  // }
-
-  // const email = "hello@labba.studio";
-  // const textToCopy = useRef(null);
-
-  // const handleCopyClick = () => {
-  //   copyToClipboard(email);
-  //   if (textToCopy.current) {
-  //     textToCopy.current.textContent = "Copied!";
-  //   }
-  // };
-
   return (
     <>
       <div id={shadowOn}></div>
       <div className="background-mobile"></div>
-      {/* <div className="grain"></div> */}
+
       <HomeHero />
-      {/* <>
-        <Works />
-      </> */}
+
       <NewWorks />
       <div className="" style={{ overflow: "hidden" }}>
         <Claim />
       </div>
-      {/* <div
-        className="services-cont pt-[20px] mt-[-300px]"
-        style={{ overflow: "hidden" }}
-      >
-        <Services />
-      </div> */}
+
       <div className=" mb-[200px] mt-[-150px] sm:mt-[-120px]">
         <NewServices />
       </div>
@@ -174,39 +117,16 @@ function Home() {
         </div>
         <Carousel />
       </div>
-      {/* <div style={{ backgroundColor: "#F2F2F2" }}>
-        <div className={`prefooter ${shouldShrink ? "shrink" : ""}`}>
-          <Link to={"/contact"}>
-            <div
-              className={` cursor next-level ${
-                isMoving ? "is-moving" : ""
-              } flex flex-row h-[100%] sm:items-center justify-center  sm:ml-0`}
-            >
-              <p className="b1-desk py-0 pb-[45px] sm:pb-[0px] 	pl-0 sm:pr-[100px] text-white	text-center ls:text-left ">
-                {translateText(
-                  "Llevamos tu idea a otro level",
-                  " Let’s take your idea to the next level."
-                )}
-              </p>
-
-              <Rounded
-                widthButton={widthButton}
-                heightButton={heightButton}
-                buttonBorderColor={"white"}
-              >
-                <p className="button-font" style={{ color: "white" }}>
-                  Drop us a line
-                </p>
-              </Rounded>
-            </div>
-          </Link>
-        </div>
-        <div className="h-[45px] sm:h-[65px]"></div>
-        <div className="footer" ref={footerRef}>
-          <Footer />
-        </div>
-      </div> */}
       <Footer />
+
+      <img src={MannoHero} className="hidden" />
+
+      <img src={ephiHero} className="hidden" />
+      <img src={ephiHeroMob} className="hidden" />
+      <img src={WorkInmBg} className="hidden" />
+      <img src={Work4} className="hidden" />
+      <img src={Work5} className="hidden" />
+      <img src={Work6} className="hidden" />
     </>
   );
 }

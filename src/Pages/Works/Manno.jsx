@@ -5,9 +5,9 @@ import MannoHero from "../../Assets/work/Manno/MannoHero.webp";
 import ephiHeroMob from "../../Assets/work/Ephimero/hero-principal-mob.webp";
 
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
-import Work1 from "../../Assets/work/work-1.webp";
-import Work4 from "../../Assets/work/work-4.webp";
-import Work2 from "../../Assets/work/work-2.webp";
+import Work1 from "../../Assets/work/work-morgenstern.webp";
+import Work4 from "../../Assets/work/work-trebol.webp";
+import Work2 from "../../Assets/work/work-inmobiliare.webp";
 import MannoMob1 from "../../Assets/work/Manno/MannoMob1.webp";
 import MannoMob2 from "../../Assets/work/Manno/MannoMob2.webp";
 import MannoMob3 from "../../Assets/work/Manno/MannoMob3.webp";
@@ -15,7 +15,7 @@ import MannoMob4 from "../../Assets/work/Manno/MannoMob4.webp";
 
 import MannoGroup from "../../Assets/work/Manno/MannoScreens.webp";
 
-import Work5 from "../../Assets/work/work-5.webp";
+import Work5 from "../../Assets/work/work-daewoo.webp";
 
 import LabbaLogo from "../../Assets/labba/labba-iso.svg";
 import LabbaWhiteLogo from "../../Assets/labba/labba-iso-white.svg";
@@ -159,7 +159,7 @@ const Manno = () => {
           </span>
         )}
         <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  lg:mt-[-300px]">
-          <Link to="/works/manno">
+          <Link to="/works/daewoo">
             <div
               className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
               style={{ backgroundImage: `url(${Work5})` }}

@@ -5,9 +5,9 @@ import ephiHero from "../../Assets/work/Ephimero/hero_ephi.jpg";
 import ephiHeroMob from "../../Assets/work/Ephimero/hero-principal-mob.webp";
 
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
-import Work1 from "../../Assets/work/work-1.webp";
-import Morgenstern from "../../Assets/work/work-1.webp";
-import Work2 from "../../Assets/work/work-2.webp";
+import Work1 from "../../Assets/work/work-morgenstern.webp";
+import Morgenstern from "../../Assets/work/work-morgenstern.webp";
+import Work2 from "../../Assets/work/work-inmobiliare.webp";
 import EphiMob1 from "../../Assets/work/Ephimero/ephi-mob1.jpg";
 import EphiMob2 from "../../Assets/work/Ephimero/ephi-mob2.webp";
 import EphiMob3 from "../../Assets/work/Ephimero/ephi-mob3.jpg";

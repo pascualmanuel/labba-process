@@ -8,11 +8,11 @@ import InmoMob2 from "../../Assets/work/Inmobiliare/Inmo-Mob2.webp";
 import InmoMob3 from "../../Assets/work/Inmobiliare/Inmo-Mob3.jpg";
 import InmoMob4 from "../../Assets/work/Inmobiliare/Inmo-Mob4.webp";
 
-import Work1 from "../../Assets/work/work-1.webp";
-import Work2 from "../../Assets/work/work-2.webp";
-import Work3 from "../../Assets/work/work-3.webp";
-import Work4 from "../../Assets/work/work-4.webp";
-import Work5 from "../../Assets/work/work-5.webp";
+import Work1 from "../../Assets/work/work-morgenstern.webp";
+import Work2 from "../../Assets/work/work-inmobiliare.webp";
+import Work3 from "../../Assets/work/work-ephimero.webp";
+import Work4 from "../../Assets/work/work-trebol.webp";
+import Work5 from "../../Assets/work/work-daewoo.webp";
 import Work6 from "../../Assets/work/work-manno.webp";
 import BgMorg from "../../Assets/work/Morgenstern/bg-morg.png";
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";

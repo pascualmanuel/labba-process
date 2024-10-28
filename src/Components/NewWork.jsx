@@ -1,9 +1,9 @@
 import React from "react";
-import Work1 from "../Assets/work/work-1.webp";
-import Work2 from "../Assets/work/work-2.webp";
-import Work3 from "../Assets/work/work-3.webp";
-import Work4 from "../Assets/work/work-4.webp";
-import Work5 from "../Assets/work/work-5.webp";
+import Work1 from "../Assets/work/work-morgenstern.webp";
+import Work2 from "../Assets/work/work-inmobiliare.webp";
+import Work3 from "../Assets/work/work-ephimero.webp";
+import Work4 from "../Assets/work/work-trebol.webp";
+import Work5 from "../Assets/work/work-daewoo.webp";
 import Work6 from "../Assets/work/work-manno.webp";
 import PlusIcon from "../Assets/icons/PlusIcon.svg";
 import { useState } from "react";
@@ -161,7 +161,7 @@ const Works = () => {
                 <div
                   className="work-item relative mb-2 sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px]"
                   style={{ backgroundImage: `url(${Work4})` }}
-                  id=""
+                  id="pasando"
                 >
                   <div className="project-info w-[250px] sm:w-[359px] bg-[#FFFFFF33] rounded-[10px] absolute top-[25px] left-[30px] blur-bg">
                     <div className="flex flex-row justify-between">

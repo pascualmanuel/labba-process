@@ -9,11 +9,11 @@ import TrebolMob2 from "../../Assets/work/Trebol/iPhone-quini.webp";
 import InmoMob3 from "../../Assets/work/Inmobiliare/Inmo-Mob3.jpg";
 import InmoMob4 from "../../Assets/work/Inmobiliare/Inmo-Mob4.webp";
 
-import Work1 from "../../Assets/work/work-1.webp";
-import Work2 from "../../Assets/work/work-2.webp";
-import Work3 from "../../Assets/work/work-3.webp";
-import Work4 from "../../Assets/work/work-4.webp";
-import Work5 from "../../Assets/work/work-5.webp";
+import Work1 from "../../Assets/work/work-morgenstern.webp";
+import Work2 from "../../Assets/work/work-inmobiliare.webp";
+import Work3 from "../../Assets/work/work-ephimero.webp";
+import Work4 from "../../Assets/work/work-trebol.webp";
+import Work5 from "../../Assets/work/work-daewoo.webp";
 import Work6 from "../../Assets/work/work-manno.webp";
 import BgMorg from "../../Assets/work/Morgenstern/bg-morg.png";
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";
@@ -28,9 +28,9 @@ import Footer from "../../Components/Footer";
 const Trebol = () => {
   let isDesktop = window.innerWidth > 1024;
 
-  let inmoBg = Work4;
+  let TrebolBg = Work4;
   if (window.innerWidth > 900) {
-    inmoBg = Work4;
+    TrebolBg = Work4;
   }
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const Trebol = () => {
     <>
       <div
         className="h-[590px] w-[100vw] sm:h-[680px] bg-cover bg-center mt-[-77px] md:mt-[-8rem]"
-        style={{ backgroundImage: `url(${inmoBg})` }}
+        style={{ backgroundImage: `url(${TrebolBg})` }}
       ></div>
       <h2 className="work-title py-20 hidden md:block px-6 max-w-[1200px] center">
         Trebol
