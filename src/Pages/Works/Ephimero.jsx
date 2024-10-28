@@ -1,18 +1,20 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import ephiBg from "../../Assets/work/Ephimero/hero_ephi.jpg";
+import ephiHero from "../../Assets/work/Ephimero/hero_ephi.jpg";
+import ephiHeroMob from "../../Assets/work/Ephimero/hero-principal-mob.webp";
+
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import Work1 from "../../Assets/work/work-1.webp";
 import Work4 from "../../Assets/work/work-4.webp";
 import Work2 from "../../Assets/work/work-2.webp";
 import EphiMob1 from "../../Assets/work/Ephimero/ephi-mob1.jpg";
-import EphiMob2 from "../../Assets/work/Ephimero/ephi-mob2.jpg";
+import EphiMob2 from "../../Assets/work/Ephimero/ephi-mob2.webp";
 import EphiMob3 from "../../Assets/work/Ephimero/ephi-mob3.jpg";
 import EphiMob4 from "../../Assets/work/Ephimero/ephi-mob4.jpg";
 import EphiMob5 from "../../Assets/work/Ephimero/ephi-mob5.jpg";
 import EphiMob6 from "../../Assets/work/Ephimero/ephi-mob6.jpg";
-import EphiGroup from "../../Assets/work/Ephimero/ephi-desk-group.png";
+import EphiGroup from "../../Assets/work/Ephimero/ephi-desk-group-2.webp";
 
 import Work6 from "../../Assets/work/work-manno.webp";
 
@@ -24,9 +26,10 @@ import Footer from "../../Components/Footer";
 const Ephimero = () => {
   let isDesktop = window.innerWidth > 1024;
 
-  let inmoBg = Work2;
-  if (window.innerWidth > 900) {
-    inmoBg = ephiBg;
+  let ephiBg = ephiHeroMob;
+
+  if (isDesktop) {
+    ephiBg = ephiHero;
   }
 
   useEffect(() => {
@@ -43,7 +46,7 @@ const Ephimero = () => {
         Ephimero
       </h2>
       <div className="max-w-[500px] sm:max-w-[768px] center px-4 sm:px-6">
-        <h2 className="work-title mt-8 mb-12 md:hidden">Inmobiliare</h2>
+        <h2 className="work-title mt-8 mb-12 md:hidden">Ephimero</h2>
         <p className="work-p">
           The challenge was to create a seamless eCommerce experience that would
           appeal to both design enthusiasts and consumers looking for premium
@@ -91,11 +94,11 @@ const Ephimero = () => {
         className="md:h-[710px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center"
         style={{ backgroundColor: `#DBD9C5` }}
       >
-        <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div className="w-full md:h-full rounded-[8px] overflow-hidden flex flex-row  justify-around items-center">
-            <img src={EphiMob1} className="w-[237px] h-[579px]" />
-            <img src={EphiMob2} className="w-[237px] h-[579px]" />
-            <img src={EphiMob3} className="w-[237px] h-[579px]" />
+        <div className="w-full max-w-[1060px] p-4 sm:px-6 flex items-center">
+          <div className="w-full h-[80%]  overflow-hidden flex justify-around  space-x-3">
+            <img src={EphiMob1} className="w-1/3 h-auto object-contain" />
+            <img src={EphiMob2} className="w-1/3 h-auto object-contain" />
+            <img src={EphiMob3} className="w-1/3 h-auto object-contain" />
           </div>
         </div>
       </div>
@@ -107,12 +110,12 @@ const Ephimero = () => {
         }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div className="w-full md:h-full rounded-[8px] overflow-hidden">
+          <div className="w-full md:h-full overflow-hidden">
             <img
               src={EphiGroup}
               className="w-full md:h-full"
               style={{
-                objectFit: "cover",
+                objectFit: "contain",
               }}
             />
           </div>
@@ -136,11 +139,11 @@ const Ephimero = () => {
           background: `linear-gradient(76.23deg, #DBD9C5 -0.93%, #CCBDA2 100%)`,
         }}
       >
-        <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div className="w-full md:h-full rounded-[8px] overflow-hidden flex flex-row  justify-around items-center">
-            <img src={EphiMob4} className="w-[237px] h-[579px]" />
-            <img src={EphiMob5} className="w-[237px] h-[579px]" />
-            <img src={EphiMob6} className="w-[237px] h-[579px]" />
+        <div className="w-full max-w-[1060px] p-4 sm:px-6 flex items-center">
+          <div className="w-full h-[80%]  overflow-hidden flex justify-around  space-x-3">
+            <img src={EphiMob4} className="w-1/3 h-auto object-contain" />
+            <img src={EphiMob5} className="w-1/3 h-auto object-contain" />
+            <img src={EphiMob6} className="w-1/3 h-auto object-contain" />
           </div>
         </div>
       </div>
