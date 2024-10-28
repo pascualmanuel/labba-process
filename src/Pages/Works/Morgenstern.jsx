@@ -49,7 +49,7 @@ const Morgenstern = () => {
         </p>
         <div className="mt-8 ssm:flex ssm:flex-row ssm:justify-between">
           <div className="w-[] ">
-            <p className="l-desk text-[#b5b5b5] uppercase mb-4">Service</p>
+            <p className="l-desk text-[#b5b5b5] uppercase mb-4">Services</p>
             <p className=" text-lg sm:text-2xl ">UX/UI Design </p>
             <p className=" text-lg sm:text-2xl ">SEO</p>
             <p className=" text-lg sm:text-2xl ">Development</p>
