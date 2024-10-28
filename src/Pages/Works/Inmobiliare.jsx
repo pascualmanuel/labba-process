@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import WorkInmBg from "../../Assets/work/Inmobiliare/inmobiliare_bg.webp";
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
 import InmoMob1 from "../../Assets/work/Inmobiliare/Inmo-Mob1.jpg";
-import InmoMob2 from "../../Assets/work/Inmobiliare/Inmo-Mob2.jpg";
+import InmoMob2 from "../../Assets/work/Inmobiliare/Inmo-Mob2.webp";
 import InmoMob3 from "../../Assets/work/Inmobiliare/Inmo-Mob3.jpg";
-import InmoMob4 from "../../Assets/work/Inmobiliare/Inmo-Mob4.jpg";
+import InmoMob4 from "../../Assets/work/Inmobiliare/Inmo-Mob4.webp";
 
 import Work1 from "../../Assets/work/work-1.webp";
 import Work2 from "../../Assets/work/work-2.webp";
@@ -103,7 +103,7 @@ const Inmobiliare = () => {
         style={{ backgroundColor: `#021F00` }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div className="w-full md:h-full rounded-[8px] overflow-hidden">
+          <div className="w-full md:h-full overflow-hidden">
             <img
               src={Inmo2}
               className="w-full md:h-full"
@@ -116,7 +116,7 @@ const Inmobiliare = () => {
       </div>
 
       <div
-        className="md:h-[800px] w-[100vw] bg-cover bg-center mt-28 md:mt-8 flex justify-center lg:mb-[300px]"
+        className="h-[340px] md:h-[800px] w-[100vw] bg-cover bg-center flex justify-center lg:mb-[300px]"
         style={{ backgroundColor: `#021F00` }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:px-6 flex items-center">
