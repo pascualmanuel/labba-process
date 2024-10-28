@@ -3,6 +3,11 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import WorkInmBg from "../../Assets/work/Inmobiliare/inmobiliare_bg.webp";
 import Inmo2 from "../../Assets/work/Inmobiliare/Inmo2.png";
+import InmoMob1 from "../../Assets/work/Inmobiliare/Inmo-Mob1.jpg";
+import InmoMob2 from "../../Assets/work/Inmobiliare/Inmo-Mob2.jpg";
+import InmoMob3 from "../../Assets/work/Inmobiliare/Inmo-Mob3.jpg";
+import InmoMob4 from "../../Assets/work/Inmobiliare/Inmo-Mob4.jpg";
+
 import Work1 from "../../Assets/work/work-1.webp";
 import Work2 from "../../Assets/work/work-2.webp";
 import Work3 from "../../Assets/work/work-3.webp";
@@ -94,7 +99,7 @@ const Inmobiliare = () => {
         </div>
       </div>
       <div
-        className="md:h-[890px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center lg:mb-[300px]"
+        className="md:h-[890px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center mb-6 lg:mb-[40px]"
         style={{ backgroundColor: `#021F00` }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:p-6">
@@ -106,6 +111,20 @@ const Inmobiliare = () => {
                 objectFit: "cover",
               }}
             />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="md:h-[800px] w-[100vw] bg-cover bg-center mt-28 md:mt-8 flex justify-center lg:mb-[300px]"
+        style={{ backgroundColor: `#021F00` }}
+      >
+        <div className="w-full max-w-[1060px] p-4 sm:px-6 flex items-center">
+          <div className="w-full h-[80%] overflow-hidden flex justify-between ">
+            <img src={InmoMob1} className="w-[24%] h-auto object-contain" />
+            <img src={InmoMob2} className="w-[24%] h-auto object-contain" />
+            <img src={InmoMob3} className="w-[24%] h-auto object-contain" />
+            <img src={InmoMob4} className="w-[24%] h-auto object-contain" />
           </div>
         </div>
       </div>
