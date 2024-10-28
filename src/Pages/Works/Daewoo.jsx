@@ -50,7 +50,7 @@ const Daewoo = () => {
         </p>
         <div className="mt-8 ssm:flex ssm:flex-row ssm:justify-between">
           <div className="w-[] ">
-            <p className="l-desk text-[#b5b5b5] uppercase mb-4">Service</p>
+            <p className="l-desk text-[#b5b5b5] uppercase mb-4">Services</p>
             <p className=" text-lg sm:text-2xl ">UX/UI Design </p>
             <p className=" text-lg sm:text-2xl ">Development</p>
             <p className=" text-lg sm:text-2xl ">SEO</p>
@@ -144,11 +144,7 @@ const Daewoo = () => {
           </span>
         )}
         <section className="works-section relative  mx-auto px-6 sm:px-[53px] lg:px-[150px] max-w-[1500px] flex flex-col-reverse  lg:mt-[-300px]">
-          <Link
-            to="https://holamorgenstern.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/works/manno" rel="noopener noreferrer">
             <div
               className="work-item relative mb-2 cursor-none sm:mb-6 rounded-lg bg-cover bg-center h-[260px] md:h-[580px] mt-6  "
               style={{ backgroundImage: `url(${Work6})` }}
@@ -161,7 +157,7 @@ const Daewoo = () => {
                       className="l-desk text-[#ECECEC]"
                       style={{ fontWeight: 500 }}
                     >
-                      Daewoo
+                      Manno
                     </p>
                   </div>
                   <div className="flex flex-row">
