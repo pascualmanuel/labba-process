@@ -20,6 +20,10 @@ function Home() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
+  useEffect(() => {
+    document.title = "Labba Studio";
+  }, []);
+
   let shadowOn = "ellipse-shadow";
   // let displayClaim = "";
   // let shrinkNumber = 170;
