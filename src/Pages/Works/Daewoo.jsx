@@ -9,6 +9,8 @@ import Work4 from "../../Assets/work/work-4.webp";
 import Work5 from "../../Assets/work/work-5.webp";
 import Work6 from "../../Assets/work/work-manno.webp";
 import BgDaewoo from "../../Assets/work/Daewoo/Daewoo-bg.jpg";
+import DaewooMov from "../../Assets/work/Daewoo/daewoo-product-mov.mp4";
+
 import Video1 from "../../Assets/work/Morgenstern/Home1.mp4";
 import Video2 from "../../Assets/work/Morgenstern/About2.mp4";
 import Video3 from "../../Assets/work/Morgenstern/Comunidad3.mp4";
@@ -79,12 +81,30 @@ const Daewoo = () => {
           </div>
         </div>
       </div>
+
       <div
-        className="md:h-[690px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center"
-        style={{ backgroundImage: `url(${BgDaewoo})` }}
+        className="md:h-[800px] w-[100vw] bg-cover bg-center flex justify-center mt-28 md:mt-40"
+        style={{
+          background: `linear-gradient(78.38deg, #201C33 -0.96%, #2B2944 107.05%)`,
+        }}
       >
-        {/* <div className="w-full max-w-[1060px] p-4 sm:p-6"></div> */}
+        <div className="w-full max-w-[1240px] p-4 sm:p-6">
+          <div className="w-full md:h-full  overflow-hidden">
+            <video
+              src={DaewooMov}
+              muted
+              autoPlay
+              loop
+              playsInline
+              className="w-full md:h-full"
+              style={{
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        </div>
       </div>
+
       <div className="max-w-[500px] sm:max-w-[768px] center py-24 px-4 sm:px-6">
         <p className="work-p">
           Our approach was to create a website that showcases their extensive
@@ -95,26 +115,10 @@ const Daewoo = () => {
       </div>
 
       <div
-        className="md:h-[800px] w-[100vw] bg-cover bg-center mt-28 md:mt-0 flex justify-center lg:mb-[300px]"
-        style={{
-          background: `linear-gradient(78.38deg, #201C33 -0.96%, #2B2944 107.05%)`,
-        }}
+        className="h-[250px] sm:h-[350px] md:h-[450px] lg:h-[690px] w-[100vw] bg-cover bg-center  flex justify-center lg:mb-[300px]"
+        style={{ backgroundImage: `url(${BgDaewoo})` }}
       >
-        <div className="w-full max-w-[1060px] p-4 sm:p-6">
-          <div className="w-full md:h-full rounded-[8px] overflow-hidden">
-            <video
-              src={""}
-              muted
-              autoPlay
-              loop
-              playsInline
-              className="w-full md:h-full"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
+        {/* <div className="w-full max-w-[1060px] p-4 sm:p-6"></div> */}
       </div>
 
       {!isDesktop && (

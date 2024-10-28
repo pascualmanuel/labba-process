@@ -99,7 +99,7 @@ const Inmobiliare = () => {
         </div>
       </div>
       <div
-        className="md:h-[890px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center mb-6 lg:mb-[40px]"
+        className="md:h-[890px] w-[100vw] bg-cover bg-center mt-28 md:mt-40 flex justify-center mb-6 lg:mb-[40px] "
         style={{ backgroundColor: `#021F00` }}
       >
         <div className="w-full max-w-[1060px] p-4 sm:p-6">

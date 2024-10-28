@@ -18,6 +18,7 @@ import Inmobiliare from "./Pages/Works/Inmobiliare";
 import Ephimero from "./Pages/Works/Ephimero";
 import Daewoo from "./Pages/Works/Daewoo";
 import Manno from "./Pages/Works/Manno";
+import Trebol from "./Pages/Works/Trebol";
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -101,6 +102,7 @@ function App() {
             <Route path="/works/ephimero" element={<Ephimero />} />
             <Route path="/works/daewoo" element={<Daewoo />} />
             <Route path="/works/manno" element={<Manno />} />
+            <Route path="/works/trebol" element={<Trebol />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>
