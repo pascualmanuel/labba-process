@@ -90,7 +90,7 @@ function Header() {
         h-[77px] max-w-[1500px] sm:h-32 px-[15px] sm:px-[50px] pointer-events-none
          ${isWorkPage ? "" : "fixed"}`}
         >
-          <Link to="/">
+          <Link to="/#home">
             <div
               className=" pointer-events-auto"
               style={{
@@ -135,7 +135,7 @@ function Header() {
     return (
       <>
         <div className="z-[100] top-0 left-0 right-0 center flex flex-row justify-between items-center h-[77px] max-w-[1500px] sm:h-32 px-[15px] sm:px-[50px] ">
-          <Link to="/">
+          <Link to="/#home">
             <div
               className=""
               style={{
@@ -165,7 +165,7 @@ function Header() {
                   link={"/#home"}
                 />
               ) : (
-                <Link to="/">
+                <Link to="/#home">
                   <div className="w-[108px] h-[38px] border border-[#2b2b2b] rounded-lg flex items-center justify-center bg-[#ffffff33]">
                     <span className="text flex flex-row items-center text-base">
                       <ReactSVG src={BackIcon} className="mr-3" /> Back
