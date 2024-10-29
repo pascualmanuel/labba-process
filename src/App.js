@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     // Simulate loader duration for testing
-    console.log("first");
+
     setTimeout(() => setLoading(false), 3800); // Simulated 3 second loading time
   }, []);
 
