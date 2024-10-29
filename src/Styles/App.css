@@ -665,12 +665,6 @@ select:focus-visible {
   transform-origin: top center;
 }
 
-.hero-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
 .swift-up-text span {
   display: inline-block;
   overflow: hidden;
@@ -734,4 +728,48 @@ select:focus-visible {
   max-height: 0px;
   transition: max-height 0.5s ease; /* Smooth open/close effect */
   margin-top: -10px;
+}
+
+.reveal-text {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-text span {
+  display: block;
+  /* animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0s; */
+  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) backwards;
+  z-index: 100;
+}
+
+.reveal-text-span {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-span {
+  display: block; /* Mantén esto para el efecto de revelado */
+  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) backwards;
+  z-index: 100;
+  overflow: hidden;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 150%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.hero-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.heroAnimation {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
