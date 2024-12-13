@@ -19,6 +19,7 @@ import Ephimero from "./Pages/Works/Ephimero";
 import Daewoo from "./Pages/Works/Daewoo";
 import Manno from "./Pages/Works/Manno";
 import Trebol from "./Pages/Works/Trebol";
+import Test from "./Components/Test";
 
 function App() {
   // const [scrollXEnabled, setScrollXEnabled] = useState(true);
@@ -53,12 +54,12 @@ function App() {
       <GoogleAnalytics />
       <Loader />
       <BrowserRouter>
-        <div className="grain"></div>
+        {/* <div className="grain"></div> */}
 
         <ScrollToTop lenis={lenis} />
         <LanguageProvider>
           <div id="circleCursor" className="hidden sm:block"></div>
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -69,6 +70,7 @@ function App() {
             <Route path="/works/daewoo" element={<Daewoo />} />
             <Route path="/works/manno" element={<Manno />} />
             <Route path="/works/trebol" element={<Trebol />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>
