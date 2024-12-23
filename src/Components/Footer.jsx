@@ -185,12 +185,12 @@ const Footer = () => {
               <div className="">
                 <p className="sayhi mb-3 mt-4 ms:mt-0">Spain</p>
                 <a
-                  href="https://wa.me/+34634269453"
+                  href="https://wa.me/+34692358594"
                   className="whatsapp-link"
                   target="_blank"
                 >
                   <div className="btn-floral-border">
-                    <div className="btn-floral-scent  b4-desk before:content-['+34_0634_0269_453'] after:content-['Open_in_WhatsApp'] "></div>
+                    <div className="btn-floral-scent  b4-desk before:content-['+34_692_3585_94'] after:content-['Open_in_WhatsApp'] "></div>
                   </div>
                 </a>
               </div>
