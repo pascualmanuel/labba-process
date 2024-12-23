@@ -112,7 +112,7 @@ function Home() {
       <div className="sm:h-screen sm:pb-0  	" style={{ background: " #ECECEC" }}>
         <div className="  ">
           <h3 className="b1-desk ml-[23px] sm:ml-36 pt-24 sm:pt-72">
-            <Link to={"/test"}> We love our clients</Link>
+            We love our clients
           </h3>
         </div>
         <Carousel />
