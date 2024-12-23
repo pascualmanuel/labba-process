@@ -54,12 +54,12 @@ function App() {
       <GoogleAnalytics />
       <Loader />
       <BrowserRouter>
-        {/* <div className="grain"></div> */}
+        <div className="grain"></div>
 
         <ScrollToTop lenis={lenis} />
         <LanguageProvider>
           <div id="circleCursor" className="hidden sm:block"></div>
-          {/* <Header /> */}
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
