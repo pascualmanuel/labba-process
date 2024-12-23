@@ -19,7 +19,6 @@ import Ephimero from "./Pages/Works/Ephimero";
 import Daewoo from "./Pages/Works/Daewoo";
 import Manno from "./Pages/Works/Manno";
 import Trebol from "./Pages/Works/Trebol";
-import Test from "./Components/Test";
 
 function App() {
   // const [scrollXEnabled, setScrollXEnabled] = useState(true);
@@ -70,7 +69,6 @@ function App() {
             <Route path="/works/daewoo" element={<Daewoo />} />
             <Route path="/works/manno" element={<Manno />} />
             <Route path="/works/trebol" element={<Trebol />} />
-            <Route path="/test" element={<Test />} />
           </Routes>
         </LanguageProvider>
       </BrowserRouter>
